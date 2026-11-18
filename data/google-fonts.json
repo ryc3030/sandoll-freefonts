@@ -1,0 +1,1244 @@
+{
+  "source": "https://fonts.google.com/?subset=korean",
+  "fonts": [
+    {
+      "family": "Noto Sans KR",
+      "name": "본고딕 (Noto Sans KR)",
+      "tags": [
+        "neutral",
+        "formal",
+        "academic"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Thin",
+        "ExtraLight",
+        "Light",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold",
+        "ExtraBold",
+        "Black"
+      ],
+      "weightValues": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "variable": true,
+      "designers": [
+        "Google"
+      ],
+      "popularity": 39,
+      "dateAdded": "2018-02-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Noto+Sans+KR"
+    },
+    {
+      "family": "Nanum Gothic",
+      "name": "나눔고딕",
+      "tags": [
+        "neutral",
+        "formal"
+      ],
+      "use": [
+        "body"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular",
+        "Bold",
+        "ExtraBold"
+      ],
+      "weightValues": [
+        400,
+        700,
+        800
+      ],
+      "variable": false,
+      "designers": [
+        "Sandoll Communication"
+      ],
+      "popularity": 118,
+      "dateAdded": "2018-02-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Nanum+Gothic"
+    },
+    {
+      "family": "Noto Serif KR",
+      "name": "본명조 (Noto Serif KR)",
+      "tags": [
+        "formal",
+        "academic",
+        "traditional",
+        "elegant"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "ExtraLight",
+        "Light",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold",
+        "ExtraBold",
+        "Black"
+      ],
+      "weightValues": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "variable": true,
+      "designers": [
+        "Google"
+      ],
+      "popularity": 201,
+      "dateAdded": "2018-08-22",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;800;900&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Noto+Serif+KR"
+    },
+    {
+      "family": "Nanum Myeongjo",
+      "name": "나눔명조",
+      "tags": [
+        "traditional",
+        "academic",
+        "calm"
+      ],
+      "use": [
+        "body"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "Regular",
+        "Bold",
+        "ExtraBold"
+      ],
+      "weightValues": [
+        400,
+        700,
+        800
+      ],
+      "variable": false,
+      "designers": [
+        "Sandoll Communication"
+      ],
+      "popularity": 205,
+      "dateAdded": "2018-02-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Nanum+Myeongjo"
+    },
+    {
+      "family": "Nanum Gothic Coding",
+      "name": "나눔고딕코딩",
+      "tags": [
+        "tech"
+      ],
+      "use": [
+        "code"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Regular",
+        "Bold"
+      ],
+      "weightValues": [
+        400,
+        700
+      ],
+      "variable": false,
+      "designers": [
+        "Sandoll Communication"
+      ],
+      "popularity": 256,
+      "dateAdded": "2018-02-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Nanum+Gothic+Coding"
+    },
+    {
+      "family": "Gothic A1",
+      "name": "고딕 A1",
+      "tags": [
+        "neutral",
+        "formal",
+        "tech"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Thin",
+        "ExtraLight",
+        "Light",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold",
+        "ExtraBold",
+        "Black"
+      ],
+      "weightValues": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "variable": false,
+      "designers": [
+        "HanYang I&C Co"
+      ],
+      "popularity": 264,
+      "dateAdded": "2018-02-24",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gothic+A1"
+    },
+    {
+      "family": "Nanum Pen Script",
+      "name": "나눔손글씨 펜",
+      "tags": [
+        "handwritten",
+        "friendly",
+        "calm"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Sandoll Communication"
+      ],
+      "popularity": 400,
+      "dateAdded": "2018-02-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Nanum+Pen+Script:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Nanum+Pen+Script"
+    },
+    {
+      "family": "Jua",
+      "name": "배민 주아체",
+      "tags": [
+        "cute",
+        "friendly",
+        "playful"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Woowahan Brothers"
+      ],
+      "popularity": 402,
+      "dateAdded": "2018-02-24",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Jua:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Jua"
+    },
+    {
+      "family": "Black Han Sans",
+      "name": "검은고딕",
+      "tags": [
+        "impact"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Zess Type"
+      ],
+      "popularity": 420,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Black+Han+Sans:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Black+Han+Sans"
+    },
+    {
+      "family": "IBM Plex Sans KR",
+      "name": "IBM Plex Sans KR",
+      "tags": [
+        "tech",
+        "neutral",
+        "formal"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Thin",
+        "ExtraLight",
+        "Light",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold"
+      ],
+      "weightValues": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "variable": false,
+      "designers": [
+        "Mike Abbink",
+        "Bold Monday"
+      ],
+      "popularity": 468,
+      "dateAdded": "2021-06-18",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/IBM+Plex+Sans+KR"
+    },
+    {
+      "family": "Dongle",
+      "name": "동글",
+      "tags": [
+        "cute",
+        "playful",
+        "friendly"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Light",
+        "Regular",
+        "Bold"
+      ],
+      "weightValues": [
+        300,
+        400,
+        700
+      ],
+      "variable": false,
+      "designers": [
+        "Yanghee Ryu"
+      ],
+      "popularity": 507,
+      "dateAdded": "2021-06-14",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Dongle"
+    },
+    {
+      "family": "Do Hyeon",
+      "name": "배민 도현체",
+      "tags": [
+        "retro",
+        "impact",
+        "playful"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Woowahan Brothers"
+      ],
+      "popularity": 529,
+      "dateAdded": "2018-02-24",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Do+Hyeon:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Do+Hyeon"
+    },
+    {
+      "family": "Gowun Batang",
+      "name": "고운바탕",
+      "tags": [
+        "elegant",
+        "calm",
+        "traditional"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "Regular",
+        "Bold"
+      ],
+      "weightValues": [
+        400,
+        700
+      ],
+      "variable": false,
+      "designers": [
+        "Yanghee Ryu"
+      ],
+      "popularity": 593,
+      "dateAdded": "2021-06-10",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gowun+Batang"
+    },
+    {
+      "family": "Gowun Dodum",
+      "name": "고운돋움",
+      "tags": [
+        "friendly",
+        "calm"
+      ],
+      "use": [
+        "body"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Yanghee Ryu"
+      ],
+      "popularity": 681,
+      "dateAdded": "2021-06-10",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gowun+Dodum:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gowun+Dodum"
+    },
+    {
+      "family": "Hahmlet",
+      "name": "함렛",
+      "tags": [
+        "elegant",
+        "academic",
+        "formal"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "Thin",
+        "ExtraLight",
+        "Light",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold",
+        "ExtraBold",
+        "Black"
+      ],
+      "weightValues": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "variable": true,
+      "designers": [
+        "Hypertype"
+      ],
+      "popularity": 705,
+      "dateAdded": "2021-05-13",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Hahmlet"
+    },
+    {
+      "family": "Nanum Brush Script",
+      "name": "나눔손글씨 붓",
+      "tags": [
+        "handwritten",
+        "traditional"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Sandoll Communication"
+      ],
+      "popularity": 712,
+      "dateAdded": "2018-02-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Nanum+Brush+Script:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Nanum+Brush+Script"
+    },
+    {
+      "family": "Gaegu",
+      "name": "개구",
+      "tags": [
+        "handwritten",
+        "cute",
+        "playful"
+      ],
+      "use": [
+        "title",
+        "accent"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Light",
+        "Regular",
+        "Bold"
+      ],
+      "weightValues": [
+        300,
+        400,
+        700
+      ],
+      "variable": false,
+      "designers": [
+        "JIKJI SOFT"
+      ],
+      "popularity": 788,
+      "dateAdded": "2018-02-28",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gaegu"
+    },
+    {
+      "family": "Hi Melody",
+      "name": "하이멜로디",
+      "tags": [
+        "handwritten",
+        "cute"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "YoonDesign Inc"
+      ],
+      "popularity": 840,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Hi+Melody:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Hi+Melody"
+    },
+    {
+      "family": "Sunflower",
+      "name": "해바라기",
+      "tags": [
+        "friendly",
+        "retro"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Light",
+        "Medium",
+        "Bold"
+      ],
+      "weightValues": [
+        300,
+        500,
+        700
+      ],
+      "variable": false,
+      "designers": [
+        "JIKJISOFT"
+      ],
+      "popularity": 867,
+      "dateAdded": "2018-02-27",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Sunflower"
+    },
+    {
+      "family": "Asta Sans",
+      "name": "아스타 산스",
+      "tags": [
+        "tech",
+        "neutral",
+        "friendly"
+      ],
+      "use": [
+        "title",
+        "body"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Light",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold",
+        "ExtraBold"
+      ],
+      "weightValues": [
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "variable": true,
+      "designers": [
+        "42dot"
+      ],
+      "popularity": 920,
+      "dateAdded": "2025-05-28",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300;400;500;600;700;800&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Asta+Sans"
+    },
+    {
+      "family": "Song Myung",
+      "name": "송명",
+      "tags": [
+        "traditional",
+        "elegant"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "JIKJI"
+      ],
+      "popularity": 944,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Song+Myung:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Song+Myung"
+    },
+    {
+      "family": "Bagel Fat One",
+      "name": "베이글 팻",
+      "tags": [
+        "playful",
+        "impact",
+        "cute"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Kyungwon Kim",
+        "JAMO"
+      ],
+      "popularity": 953,
+      "dateAdded": "2023-06-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Bagel+Fat+One:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Bagel+Fat+One"
+    },
+    {
+      "family": "Single Day",
+      "name": "싱글데이",
+      "tags": [
+        "cute",
+        "playful"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "DXKorea Inc"
+      ],
+      "popularity": 1001,
+      "dateAdded": "2018-02-22",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Single+Day:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Single+Day"
+    },
+    {
+      "family": "Gamja Flower",
+      "name": "감자꽃",
+      "tags": [
+        "handwritten",
+        "cute"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "YoonDesign Inc"
+      ],
+      "popularity": 1063,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gamja+Flower:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gamja+Flower"
+    },
+    {
+      "family": "Gasoek One",
+      "name": "가석",
+      "tags": [
+        "impact",
+        "retro"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Jiashuo Zhang",
+        "JAMO"
+      ],
+      "popularity": 1122,
+      "dateAdded": "2023-05-17",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gasoek+One:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gasoek+One"
+    },
+    {
+      "family": "Dokdo",
+      "name": "독도",
+      "tags": [
+        "handwritten",
+        "playful"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "FONTRIX"
+      ],
+      "popularity": 1224,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Dokdo:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Dokdo"
+    },
+    {
+      "family": "East Sea Dokdo",
+      "name": "동해독도",
+      "tags": [
+        "handwritten",
+        "impact"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Handwriting",
+      "style": "handwriting",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "YoonDesign Inc"
+      ],
+      "popularity": 1230,
+      "dateAdded": "2018-03-12",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=East+Sea+Dokdo:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/East+Sea+Dokdo"
+    },
+    {
+      "family": "Gugi",
+      "name": "구기",
+      "tags": [
+        "retro",
+        "playful"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "TAE System & Typefaces Co."
+      ],
+      "popularity": 1239,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Gugi:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Gugi"
+    },
+    {
+      "family": "Stylish",
+      "name": "스타일리시",
+      "tags": [
+        "elegant",
+        "retro"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "AsiaSoft Inc"
+      ],
+      "popularity": 1292,
+      "dateAdded": "2018-02-27",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Stylish:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Stylish"
+    },
+    {
+      "family": "Poor Story",
+      "name": "서툰이야기",
+      "tags": [
+        "handwritten",
+        "cute"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Yoon Design"
+      ],
+      "popularity": 1349,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Poor+Story:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Poor+Story"
+    },
+    {
+      "family": "Yeon Sung",
+      "name": "연성",
+      "tags": [
+        "retro",
+        "friendly"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Woowahan brothers"
+      ],
+      "popularity": 1354,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Yeon+Sung:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Yeon+Sung"
+    },
+    {
+      "family": "Cute Font",
+      "name": "귀여운폰트",
+      "tags": [
+        "cute",
+        "handwritten"
+      ],
+      "use": [
+        "accent"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "TypoDesign Lab. Inc"
+      ],
+      "popularity": 1367,
+      "dateAdded": "2018-02-23",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Cute+Font:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Cute+Font"
+    },
+    {
+      "family": "Orbit",
+      "name": "오르빗",
+      "tags": [
+        "tech",
+        "retro"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Sans Serif",
+      "style": "sans",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Sooun Cho",
+        "JAMO"
+      ],
+      "popularity": 1516,
+      "dateAdded": "2023-06-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Orbit:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Orbit"
+    },
+    {
+      "family": "Diphylleia",
+      "name": "산하엽",
+      "tags": [
+        "elegant",
+        "traditional"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Minha Hyung",
+        "JAMO"
+      ],
+      "popularity": 1545,
+      "dateAdded": "2023-06-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Diphylleia:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Diphylleia"
+    },
+    {
+      "family": "Kirang Haerang",
+      "name": "기랑해랑",
+      "tags": [
+        "retro",
+        "playful"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Woowahan Brothers"
+      ],
+      "popularity": 1619,
+      "dateAdded": "2018-02-24",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Kirang+Haerang:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Kirang+Haerang"
+    },
+    {
+      "family": "Black And White Picture",
+      "name": "흑백사진",
+      "tags": [
+        "retro",
+        "traditional"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "AsiaSoft Inc."
+      ],
+      "popularity": 1666,
+      "dateAdded": "2018-02-27",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Black+And+White+Picture:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Black+And+White+Picture"
+    },
+    {
+      "family": "Grandiflora One",
+      "name": "그랜디플로라",
+      "tags": [
+        "elegant",
+        "traditional"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Serif",
+      "style": "serif",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Haesung Cho",
+        "JAMO"
+      ],
+      "popularity": 1829,
+      "dateAdded": "2023-05-17",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Grandiflora+One:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Grandiflora+One"
+    },
+    {
+      "family": "Moirai One",
+      "name": "모이라이",
+      "tags": [
+        "impact",
+        "playful"
+      ],
+      "use": [
+        "title"
+      ],
+      "category": "Display",
+      "style": "display",
+      "weights": [
+        "Regular"
+      ],
+      "weightValues": [
+        400
+      ],
+      "variable": false,
+      "designers": [
+        "Jiyeon Park",
+        "JAMO"
+      ],
+      "popularity": 1839,
+      "dateAdded": "2023-06-05",
+      "license": "OFL",
+      "redistributable": true,
+      "css": "https://fonts.googleapis.com/css2?family=Moirai+One:wght@400&display=swap",
+      "specimenUrl": "https://fonts.google.com/specimen/Moirai+One"
+    }
+  ],
+  "updatedAt": "2026-11-18T13:35:16+09:00"
+}

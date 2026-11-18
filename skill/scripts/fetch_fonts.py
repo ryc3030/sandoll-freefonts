@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""무료폰트 색인(fontfiles.json)에서 OFL 폰트 파일을 내려받고, PowerPoint가 쓰는 실제 글꼴 이름을 알려 준다.
+"""무료폰트 색인에서 폰트 파일을 내려받고, PowerPoint가 쓰는 실제 글꼴 이름을 알려 준다.
+
+출처 두 가지
+  - 산돌구름 무료폰트 중 OFL 폰트(fontfiles.json): 제작사·네이버·jsDelivr 등 공개 배포처에서 받는다.
+  - Google Fonts 한국어 폰트(google-fonts.json): Google Fonts가 굵기별로 만든 정적 TTF를 받는다.
 
 사용 예
   python fetch_fonts.py --list                      # 받을 수 있는 폰트 목록
   python fetch_fonts.py 프리텐다드 --weights Regular,Bold,ExtraBold --out fonts
   python fetch_fonts.py 16951 264 --out fonts --install
+  python fetch_fonts.py "Gothic A1" 함렛 --weights Regular,Black --out fonts
 
 결과: <out>/<파일들> 과 <out>/manifest.json
   manifest의 각 항목 = {font, weight, file, family(PowerPoint에 넣을 이름), bold(굵게 스타일 여부)}
@@ -37,6 +42,49 @@ def font_names(path):
     return {"family": fam, "subfamily": sub, "typoFamily": g(16) or fam, "bold": sub.lower() in ("bold", "bold italic")}
 
 
+GW = {"Thin": 100, "ExtraLight": 200, "Light": 300, "Regular": 400, "Medium": 500,
+      "SemiBold": 600, "Bold": 700, "ExtraBold": 800, "Black": 900, "Heavy": 900}
+
+
+def fetch_google(g, weights, out):
+    """Google Fonts CSS API에 TTF를 요청해 굵기별 정적 파일을 받는다(브라우저가 아닌 UA면 TTF를 준다)."""
+    import re
+    have = dict(zip(g["weights"], g["weightValues"]))
+    want = list(have) if weights == "all" else [w.strip() for w in weights.split(",")]
+    vals = []
+    for w in want:
+        if w in have:
+            vals.append((w, have[w]))
+        elif w in GW and have:
+            alt = min(have, key=lambda x: abs(have[x] - GW[w]))
+            print(f"  - {g['name']} {w}: 없어 {alt}로 대체", file=sys.stderr)
+            if (alt, have[alt]) not in vals:
+                vals.append((alt, have[alt]))
+    if not vals:
+        return []
+    fam = g["family"].replace(" ", "+")
+    css_url = f"https://fonts.googleapis.com/css2?family={fam}:wght@{';'.join(str(v) for _, v in sorted(vals, key=lambda x: x[1]))}"
+    with urllib.request.urlopen(urllib.request.Request(css_url, headers={"User-Agent": "Wget/1.21"}), timeout=60) as r:
+        css = r.read().decode("utf-8")
+    urls = {int(m.group(1)): m.group(2) for m in re.finditer(r"font-weight:\s*(\d+);.*?url\((https://[^)]+\.ttf)\)", css, re.S)}
+    res = []
+    for w, v in vals:
+        url = urls.get(v)
+        if not url:
+            print(f"  - {g['name']} {w}: 파일 주소를 찾지 못함", file=sys.stderr); continue
+        dest = out / f"{g['family'].replace(' ', '')}-{w}.ttf"
+        if not dest.exists():
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=180) as r, open(dest, "wb") as fp:
+                shutil.copyfileobj(r, fp)
+        info = font_names(dest)
+        res.append({"font": "G:" + g["family"], "name": g["name"], "weight": w, "file": str(dest), **info, "latinOnly": False})
+        print(f"  ✓ {g['name']} {w:<10} → PowerPoint 이름 '{info['family']}'{' (굵게)' if info['bold'] else ''}")
+    (out / f"LICENSE-{g['family'].replace(' ', '')}.txt").write_text(
+        f"{g['name']} ({g['family']})\n{g['license']} — Google Fonts 배포\n{g['specimenUrl']}\n"
+        f"라이선스 원문: https://openfontlicense.org/open-font-license-official-text/\n", "utf-8")
+    return res
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("fonts", nargs="*", help="산돌구름 ID, 한글 이름 또는 family 이름")
@@ -52,10 +100,22 @@ def main():
         catalog = {str(f["id"]): f for f in load("fonts.json", a.data)["fonts"]}
     except Exception:
         catalog = {}
+    try:
+        google = {g["family"]: g for g in load("google-fonts.json", a.data)["fonts"] if g.get("redistributable")}
+    except Exception:
+        google = {}
+    # 산돌구름 목록에 이미 있는 Google 폰트는 산돌 쪽 항목으로 받는다.
+    sandoll_families = {f["family"].replace(" ", "").lower() for f in files.values()}
 
     if a.list or not a.fonts:
+        print("[산돌구름 OFL]")
         for k, f in files.items():
             print(f"{k:>6}  {f['name']:<14} {f['family']:<18} {f['style']:<8} {'/'.join(f['use']):<11} {','.join(f['files'])}  — {f['tone']}")
+        print("\n[Google Fonts 한국어]")
+        for g in google.values():
+            if g["family"].replace(" ", "").lower() in sandoll_families:
+                continue
+            print(f"{'G':>6}  {g['name']:<14} {g['family']:<18} {g['style']:<8} {'/'.join(g['use']):<11} {','.join(g['weights'])}  — {', '.join(g['tags'])}")
         return
 
     def find(q):
@@ -63,6 +123,11 @@ def main():
         for k, f in files.items():
             if ql in (k, f["name"].lower().replace(" ", ""), f["family"].lower().replace(" ", "")):
                 return k
+        for fam, g in google.items():
+            names = {fam.lower().replace(" ", ""), g["name"].lower().replace(" ", ""),
+                     g["name"].split(" (")[0].lower().replace(" ", "")}
+            if ql in names:
+                return "G:" + fam
         for k, c in catalog.items():
             if ql in (k, c.get("name", "").lower().replace(" ", ""), (c.get("nameEn") or "").lower().replace(" ", "")):
                 return k
@@ -74,6 +139,9 @@ def main():
         k = find(q)
         if k is None:
             print(f"! '{q}'을(를) 찾지 못했습니다. --list로 목록을 보세요.", file=sys.stderr); continue
+        if k.startswith("G:"):
+            manifest += fetch_google(google[k[2:]], a.weights, out)
+            continue
         if k not in files:
             c = catalog.get(k, {})
             skipped.append(k)

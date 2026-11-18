@@ -3,6 +3,8 @@
 
   python apply_fonts.py in.pptx out.pptx --title "Pretendard ExtraBold" --body "Pretendard"
   python apply_fonts.py in.pptx out.pptx --title "Instrument Serif" --title-ea "MaruBuri" --body "MaruBuri"
+  # fetch_fonts.py의 manifest를 주면 '이름:굵기'로 지정할 수 있다(실제 글꼴 이름·굵게 여부를 알아서 맞춤)
+  python apply_fonts.py in.pptx out.pptx --manifest fonts/manifest.json --title 프리텐다드:ExtraBold --body 프리텐다드:Regular
 
 하는 일
   1) 테마(ppt/theme/*.xml)의 제목 글꼴(majorFont)·본문 글꼴(minorFont)을 latin·ea(한글)·Hang 항목까지 바꾼다.
@@ -107,7 +109,28 @@ def main():
     ap.add_argument("--mode", choices=["theme", "force"], default="theme")
     ap.add_argument("--title-bold", action="store_true",
                     help="제목을 굵게 스타일로(제목 글꼴의 PowerPoint 이름이 Regular와 같고 '(굵게)'로 나온 경우)")
+    ap.add_argument("--manifest", help="fetch_fonts.py가 만든 manifest.json")
     a = ap.parse_args()
+    if a.manifest:
+        import json
+        man = json.load(open(a.manifest, encoding="utf-8"))
+
+        def resolve(spec):
+            if ":" not in spec:
+                return spec, False
+            name, w = spec.rsplit(":", 1)
+            key = name.replace(" ", "").lower()
+            for m in man:
+                names = {m["name"].replace(" ", "").lower(), m["family"].replace(" ", "").lower(),
+                         (m.get("typoFamily") or "").replace(" ", "").lower(), m["font"].replace("G:", "").replace(" ", "").lower()}
+                if key in names and m["weight"].lower() == w.lower():
+                    return m["family"], m["bold"]
+            sys.exit(f"manifest에서 '{spec}'을(를) 찾지 못했습니다. 받은 굵기: " + ", ".join(f"{m['name']}:{m['weight']}" for m in man))
+        a.title, tb = resolve(a.title)
+        a.body, _ = resolve(a.body)
+        a.title_bold = a.title_bold or tb
+        if a.title_ea: a.title_ea, _ = resolve(a.title_ea)
+        if a.body_ea: a.body_ea, _ = resolve(a.body_ea)
     title_ea, body_ea = a.title_ea or a.title, a.body_ea or a.body
     keep = {k.strip().lower() for k in a.keep.split(",") if k.strip()}
     fonts = {("title", "latin"): a.title, ("title", "ea"): title_ea, ("body", "latin"): a.body, ("body", "ea"): body_ea}
@@ -134,7 +157,7 @@ def main():
             zout.writestr(item, data)
     shutil.move(tmp, a.dst)
     print(f"완료: {a.dst}  (테마 항목 {stats['theme']}곳, 글자 서식 {stats['runs']}곳, XML {stats['parts']}개)")
-    print(f"  제목: {a.title}" + (f" / 한글 {title_ea}" if title_ea != a.title else ""))
+    print(f"  제목: {a.title}" + (" (굵게)" if a.title_bold else "") + (f" / 한글 {title_ea}" if title_ea != a.title else ""))
     print(f"  본문: {a.body}" + (f" / 한글 {body_ea}" if body_ea != a.body else ""))
 
 

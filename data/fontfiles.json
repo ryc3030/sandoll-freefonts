@@ -1,5 +1,5 @@
 {
-  "_note": "PPT 적용 스킬용 폰트 파일 연결표. 키는 산돌구름 폰트 ID. 산돌구름 표기상 OFL(재배포 허용)인 폰트만 넣고, 제작사·Google Fonts·네이버·jsDelivr 등 공개 배포처 주소만 쓴다. 굵기 이름은 Light/Regular/Medium/SemiBold/Bold/ExtraBold/Black/Heavy로 통일.",
+  "_note": "PPT 적용 스킬용 폰트 파일 연결표. 키는 산돌구름 폰트 ID. 산돌구름 표기상 OFL(재배포 허용)인 폰트만 넣고, 제작사·Google Fonts·네이버·jsDelivr 등 공개 배포처 주소만 쓴다. 굵기 이름은 Light/Regular/Medium/SemiBold/Bold/ExtraBold/Black/Heavy로 통일. tags는 분석 스킬의 추천에 쓰는 성격 태그(formal·neutral·friendly·playful·cute·handwritten·retro·elegant·traditional·academic·tech·impact·calm).",
   "fonts": {
     "16951": {
       "name": "프리텐다드",
@@ -18,7 +18,12 @@
         "Bold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Bold.otf",
         "ExtraBold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-ExtraBold.otf",
         "Black": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Black.otf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "formal",
+        "tech"
+      ]
     },
     "17576": {
       "name": "SUIT",
@@ -37,7 +42,12 @@
         "Bold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Bold.otf",
         "ExtraBold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-ExtraBold.otf",
         "Heavy": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Heavy.otf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "tech",
+        "formal"
+      ]
     },
     "19795": {
       "name": "Wanted Sans",
@@ -55,7 +65,12 @@
         "Bold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-Bold.otf",
         "ExtraBold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-ExtraBold.otf",
         "Black": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-Black.otf"
-      }
+      },
+      "tags": [
+        "tech",
+        "neutral",
+        "friendly"
+      ]
     },
     "21071": {
       "name": "페이퍼로지",
@@ -74,7 +89,11 @@
         "Bold": "https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-7Bold.ttf",
         "ExtraBold": "https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-8ExtraBold.ttf",
         "Black": "https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.ttf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "friendly"
+      ]
     },
     "20485": {
       "name": "프리젠테이션",
@@ -92,7 +111,11 @@
         "ExtraBold": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-8ExtraBold.ttf",
         "Black": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-9Black.ttf",
         "Bold": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-7Bold.otf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "friendly"
+      ]
     },
     "15744": {
       "name": "G마켓 산스",
@@ -106,7 +129,12 @@
         "Light": "https://cdn.jsdelivr.net/gh/fonts-archive/GmarketSans/GmarketSansLight.ttf",
         "Medium": "https://cdn.jsdelivr.net/gh/fonts-archive/GmarketSans/GmarketSansMedium.ttf",
         "Bold": "https://cdn.jsdelivr.net/gh/fonts-archive/GmarketSans/GmarketSansBold.ttf"
-      }
+      },
+      "tags": [
+        "friendly",
+        "impact",
+        "playful"
+      ]
     },
     "15882": {
       "name": "Noto Sans KR",
@@ -122,7 +150,12 @@
         "Medium": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Medium.otf",
         "Bold": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Bold.otf",
         "Black": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Black.otf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "formal",
+        "academic"
+      ]
     },
     "264": {
       "name": "본명조",
@@ -140,7 +173,13 @@
         "SemiBold": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-SemiBold.otf",
         "Bold": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Bold.otf",
         "Black": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Black.otf"
-      }
+      },
+      "tags": [
+        "formal",
+        "academic",
+        "traditional",
+        "elegant"
+      ]
     },
     "229": {
       "name": "나눔스퀘어",
@@ -156,7 +195,11 @@
         "Regular": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf",
         "Bold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.ttf",
         "ExtraBold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.ttf"
-      }
+      },
+      "tags": [
+        "formal",
+        "neutral"
+      ]
     },
     "17678": {
       "name": "나눔스퀘어 네오",
@@ -172,7 +215,11 @@
         "Bold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf",
         "ExtraBold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.ttf",
         "Heavy": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.ttf"
-      }
+      },
+      "tags": [
+        "formal",
+        "neutral"
+      ]
     },
     "278": {
       "name": "나눔스퀘어라운드",
@@ -188,7 +235,12 @@
         "Regular": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.ttf",
         "Bold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundB.ttf",
         "ExtraBold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundEB.ttf"
-      }
+      },
+      "tags": [
+        "friendly",
+        "cute",
+        "calm"
+      ]
     },
     "206": {
       "name": "나눔바른고딕",
@@ -202,7 +254,11 @@
         "Light": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.ttf",
         "Regular": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.ttf",
         "Bold": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWebBold.ttf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "formal"
+      ]
     },
     "16193": {
       "name": "마루 부리",
@@ -218,7 +274,12 @@
         "Regular": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf",
         "SemiBold": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.ttf",
         "Bold": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf"
-      }
+      },
+      "tags": [
+        "elegant",
+        "calm",
+        "academic"
+      ]
     },
     "204": {
       "name": "나눔고딕",
@@ -232,7 +293,11 @@
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumgothic/NanumGothic-Regular.ttf",
         "Bold": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumgothic/NanumGothic-Bold.ttf",
         "ExtraBold": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumgothic/NanumGothic-ExtraBold.ttf"
-      }
+      },
+      "tags": [
+        "neutral",
+        "formal"
+      ]
     },
     "205": {
       "name": "나눔명조",
@@ -246,7 +311,12 @@
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/NanumMyeongjo-Regular.ttf",
         "Bold": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/NanumMyeongjo-Bold.ttf",
         "ExtraBold": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/NanumMyeongjo-ExtraBold.ttf"
-      }
+      },
+      "tags": [
+        "traditional",
+        "academic",
+        "calm"
+      ]
     },
     "16934": {
       "name": "고운돋움",
@@ -258,7 +328,11 @@
       "tone": "손맛 있는 부드러운 돋움, 에세이·감성",
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/gowundodum/GowunDodum-Regular.ttf"
-      }
+      },
+      "tags": [
+        "friendly",
+        "calm"
+      ]
     },
     "16935": {
       "name": "고운바탕",
@@ -272,7 +346,12 @@
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/gowunbatang/GowunBatang-Regular.ttf",
         "Bold": "https://raw.githubusercontent.com/google/fonts/main/ofl/gowunbatang/GowunBatang-Bold.ttf"
-      }
+      },
+      "tags": [
+        "elegant",
+        "calm",
+        "traditional"
+      ]
     },
     "16051": {
       "name": "검은고딕",
@@ -284,7 +363,10 @@
       "tone": "아주 굵은 제목 전용, 임팩트·포스터",
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackhansans/BlackHanSans-Regular.ttf"
-      }
+      },
+      "tags": [
+        "impact"
+      ]
     },
     "219": {
       "name": "배민 도현체",
@@ -296,7 +378,12 @@
       "tone": "복고 간판 느낌 제목",
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/dohyeon/DoHyeon-Regular.ttf"
-      }
+      },
+      "tags": [
+        "retro",
+        "impact",
+        "playful"
+      ]
     },
     "210": {
       "name": "배민 주아체",
@@ -308,7 +395,12 @@
       "tone": "둥글고 귀여운 제목, 아동·이벤트",
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/jua/Jua-Regular.ttf"
-      }
+      },
+      "tags": [
+        "cute",
+        "friendly",
+        "playful"
+      ]
     },
     "18441": {
       "name": "베이글 팻",
@@ -320,7 +412,12 @@
       "tone": "통통한 장식 제목, 행사·홍보",
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/bagelfatone/BagelFatOne-Regular.ttf"
-      }
+      },
+      "tags": [
+        "playful",
+        "impact",
+        "cute"
+      ]
     },
     "17349": {
       "name": "갈무리9",
@@ -332,7 +429,12 @@
       "tone": "픽셀 글꼴, 게임·레트로 콘셉트",
       "files": {
         "Regular": "https://cdn.jsdelivr.net/npm/galmuri@latest/dist/Galmuri9.ttf"
-      }
+      },
+      "tags": [
+        "retro",
+        "tech",
+        "playful"
+      ]
     },
     "22999": {
       "name": "Instrument Serif",
@@ -345,7 +447,11 @@
       "latinOnly": true,
       "files": {
         "Regular": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/InstrumentSerif-Regular.ttf"
-      }
+      },
+      "tags": [
+        "elegant",
+        "formal"
+      ]
     }
   }
 }

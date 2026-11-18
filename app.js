@@ -9,7 +9,7 @@
     get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 저장 불가 환경 */ } },
   };
-  state.favs = new Set(store.get("ff:favs", []));
+  state.favs = new Set(store.get("ff:favs", []).map(String));
   state.sample = store.get("ff:sample", $("#sample").value);
   state.size = store.get("ff:size", 34);
 
@@ -26,11 +26,14 @@
     for (const e of ents) if (e.isIntersecting) { loadCss(e.target.dataset.css); io.unobserve(e.target); }
   }, { rootMargin: "400px" }) : null;
 
+  const TAGKO = { formal: "격식", neutral: "중립", friendly: "친근", playful: "발랄", cute: "귀여움", handwritten: "손글씨",
+    retro: "복고", elegant: "우아", traditional: "전통", academic: "학술", tech: "기술", impact: "강한 제목", calm: "차분" };
   const isCond = (t) => /조건부/.test(t);
   function tagHtml(f) {
     const t = [];
     for (const x of f.tags || []) t.push(`<span class="tag ${x === "OFL" ? "ofl" : ""} ${isCond(x) ? "cond" : ""}">${esc(x.replace("•", "·"))}</span>`);
     if (f.isNew) t.push(`<span class="tag new">신규</span>`);
+    if (f.source === "google" || f.alsoGoogle) t.push(`<span class="tag src-g">Google Fonts</span>`);
     if (state.web[f.id]) t.push(`<span class="tag">웹폰트</span>`);
     return t.join("");
   }
@@ -55,7 +58,9 @@
     if (fl === "new" && !(f.sections || []).includes("new")) return false;
     if (fl === "steady" && !(f.sections || []).includes("steady")) return false;
     if (fl === "live" && !state.web[f.id]) return false;
-    if (fl === "fav" && !state.favs.has(f.id)) return false;
+    if (fl === "fav" && !state.favs.has(String(f.id))) return false;
+    if (fl === "src-sandoll" && f.source !== "sandoll") return false;
+    if (fl === "src-google" && !(f.source === "google" || f.alsoGoogle)) return false;
     if (state.q) {
       const hay = [f.name, f.nameEn, f.slug, f.maker, f.copyright, f.category, f.fileName, ...(f.moods || []), ...(f.tags || [])].join(" ").toLowerCase();
       return state.q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
@@ -77,13 +82,13 @@
     $("#empty").hidden = list.length > 0;
     $("#grid").innerHTML = list.map((f) => {
       const w = state.web[f.id];
-      return `<li class="card" data-id="${f.id}">
+      return `<li class="card" data-id="${esc(f.id)}">
         <div class="card-head"><div class="titles"><h2>${esc(f.name)}</h2><p class="meta" title="${esc(meta(f))}">${esc(meta(f))}</p></div>
-          <button class="fav" aria-pressed="${state.favs.has(f.id)}" aria-label="${esc(f.name)} 찜하기" data-act="fav">♥</button></div>
+          <button class="fav" aria-pressed="${state.favs.has(String(f.id))}" aria-label="${esc(f.name)} 찜하기" data-act="fav">♥</button></div>
         <div class="preview" data-act="open" ${w ? `data-css="${esc(w.css)}"` : ""}>${previewHtml(f)}</div>
         <div class="tags">${tagHtml(f)}</div>
         <div class="actions">
-          <a class="btn primary" href="${esc(f.makerUrl || f.sandollUrl)}" target="_blank" rel="noopener">${f.makerUrl ? "공식 배포처에서 받기" : "산돌구름에서 받기"}</a>
+          <a class="btn primary" href="${esc(f.makerUrl || f.sandollUrl)}" target="_blank" rel="noopener">${f.source === "google" ? "Google Fonts에서 받기" : f.makerUrl ? "공식 배포처에서 받기" : "산돌구름에서 받기"}</a>
           <button class="btn ghost" data-act="open">라이선스</button>
         </div></li>`;
     }).join("");
@@ -93,7 +98,7 @@
   function allowedClass(v) { return /불가|금지/.test(v) ? "no" : /조건|문의|허락/.test(v) ? "cond" : /가능/.test(v) ? "ok" : ""; }
 
   function openDetail(id) {
-    const f = state.fonts.find((x) => x.id === id);
+    const f = state.fonts.find((x) => String(x.id) === String(id));
     if (!f) return;
     const w = state.web[f.id];
     if (w) loadCss(w.css);
@@ -109,10 +114,12 @@
       ${w ? '<p class="note">위 상자에 직접 글을 써 볼 수 있습니다.</p>' : ""}
       <div class="d-actions">
         ${f.makerUrl ? `<a class="btn primary" href="${esc(f.makerUrl)}" target="_blank" rel="noopener">공식 배포처에서 받기</a>` : ""}
-        <a class="btn ${f.makerUrl ? "ghost" : "primary"}" href="${esc(f.sandollUrl)}" target="_blank" rel="noopener">산돌구름 상세 보기</a>
+        ${f.sandollUrl ? `<a class="btn ${f.makerUrl ? "ghost" : "primary"}" href="${esc(f.sandollUrl)}" target="_blank" rel="noopener">산돌구름 상세 보기</a>` : ""}
+        ${f.googleUrl && f.googleUrl !== f.makerUrl ? `<a class="btn ghost" href="${esc(f.googleUrl)}" target="_blank" rel="noopener">Google Fonts에서 보기</a>` : ""}
       </div>
       <h3>폰트 정보</h3><dl class="kv">${kv}</dl>
       ${sum ? `<h3>라이선스 요약 <span class="note" style="font-weight:400">(산돌구름 표기)</span></h3><table class="lic"><thead><tr><th>용도</th><th>범위</th><th>허용</th></tr></thead><tbody>${sum}</tbody></table>` : ""}
+      ${f.source === "google" ? `<h3>라이선스</h3><p class="lic-text">${esc(f.license)} — 개인·상업 용도 모두 자유롭게 쓸 수 있고, 수정·재배포도 됩니다. 폰트 파일만 따로 파는 것은 금지됩니다.</p>` : ""}
       ${f.licenseText ? `<h3>라이선스 원문 안내</h3><p class="lic-text">${esc(f.licenseText)}</p>` : ""}
       <p class="note">라이선스는 바뀔 수 있습니다. 실제로 쓰기 전에 배포처의 최신 원문을 확인하세요.</p>
       ${w ? `<h3>웹에서 바로 쓰기</h3><div class="code"><pre>${esc(snippet)}</pre><button class="btn ghost" data-copy>복사</button></div><p class="note">공개 웹폰트 배포처의 CSS를 그대로 연결하는 코드입니다.</p>` : ""}`;
@@ -129,7 +136,7 @@
   // 이벤트
   $("#grid").addEventListener("click", (e) => {
     const card = e.target.closest(".card"); if (!card) return;
-    const id = Number(card.dataset.id);
+    const id = card.dataset.id;
     const act = e.target.closest("[data-act]")?.dataset.act;
     if (act === "fav") {
       const b = e.target.closest("[data-act=fav]");
@@ -159,18 +166,40 @@
   $("#detail").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 
   // 데이터 불러오기
-  Promise.all([fetch("data/fonts.json").then((r) => r.json()), fetch("data/webfonts.json").then((r) => r.json()).catch(() => ({}))])
-    .then(([data, web]) => {
-      state.fonts = data.fonts || [];
+  Promise.all([
+    fetch("data/fonts.json").then((r) => r.json()),
+    fetch("data/webfonts.json").then((r) => r.json()).catch(() => ({})),
+    fetch("data/google-fonts.json").then((r) => r.json()).catch(() => ({ fonts: [] })),
+  ])
+    .then(([data, web, gdata]) => {
       state.web = Object.fromEntries(Object.entries(web).filter(([k]) => /^\d+$/.test(k)));
+      const sandoll = (data.fonts || []).map((f) => ({ ...f, source: "sandoll" }));
+      // 산돌구름 폰트 중 Google Fonts와 같은 폰트는 하나로 합친다.
+      const byFamily = {};
+      for (const f of sandoll) { const w = state.web[f.id]; if (w) byFamily[w.family] = f; }
+      const google = [];
+      for (const g of gdata.fonts || []) {
+        const dup = byFamily[g.family];
+        if (dup) { dup.alsoGoogle = true; dup.googleUrl = g.specimenUrl; continue; }
+        const id = "g-" + g.family.replace(/\s+/g, "-");
+        state.web[id] = { css: g.css, family: g.family };
+        google.push({
+          id, source: "google", name: g.name || g.family, nameEn: g.family, slug: g.family,
+          maker: (g.designers || []).join(", "), category: g.category, weights: (g.weights || []).length + "종",
+          year: (g.dateAdded || "").slice(0, 4), tags: ["OFL", "상업용", "임베딩", "로고•CI"], ofl: true,
+          license: g.license, makerUrl: g.specimenUrl, googleUrl: g.specimenUrl, moods: (g.tags || []).map((t) => TAGKO[t] || t), sections: [],
+        });
+      }
+      state.fonts = [...sandoll, ...google];
+      $("#stat-google").textContent = google.length + "종";
       $("#stat-total").textContent = state.fonts.length + "종";
       $("#stat-ofl").textContent = state.fonts.filter((f) => f.ofl).length + "종";
       $("#stat-live").textContent = state.fonts.filter((f) => state.web[f.id]).length + "종";
       if (data.updatedAt) $("#stat-updated").textContent = new Date(data.updatedAt).toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" });
       applySize();
       render();
-      const m = location.hash.match(/^#font-(\d+)/);
-      if (m) openDetail(Number(m[1]));
+      const m = location.hash.match(/^#font-(.+)/);
+      if (m) openDetail(m[1]);
     })
     .catch(() => { $("#result-count").textContent = "목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."; });
 })();

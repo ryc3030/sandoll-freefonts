@@ -1,6 +1,6 @@
 # 무료폰트 색인
 
-[산돌구름 무료폰트](https://www.sandollcloud.com/freefonts)에 올라온 폰트를 매주 자동으로 모아 보여 주는 정적 웹앱입니다. GitHub Pages에서 그대로 돌아갑니다.
+[산돌구름 무료폰트](https://www.sandollcloud.com/freefonts)와 [Google Fonts 한국어 폰트](https://fonts.google.com/?subset=korean)를 매주 자동으로 모아 보여 주는 정적 웹앱입니다. GitHub Pages에서 그대로 돌아갑니다.
 
 - **검색·필터**: 이름·제작사·분류·분위기 검색, OFL / 상업용 / 임베딩 / 로고·CI / 신규 / 스테디 / 실시간 미리보기 / 찜
 - **미리보기**: 공개 웹폰트가 있는 폰트는 입력한 문구로 실시간 미리보기, 나머지는 견본 이미지
@@ -8,22 +8,28 @@
 - **다운로드**: 제작사 공식 배포처(없으면 산돌구름 상세 페이지)로 연결
 - **자동 갱신**: GitHub Actions가 매주 월요일 목록을 다시 수집하고, 바뀐 것이 있을 때만 커밋
 
-## Claude 스킬: 무료 한글 폰트 → PPT 자동 적용
+## Claude 스킬: PPT 분석 → 무료 한글 폰트 자동 적용
 
 `skill/` 폴더는 Claude 스킬입니다. "이 피피티에 어울리는 무료 폰트 적용해 줘"라고 하면 Claude가
-목적에 맞는 폰트 짝을 고르고, OFL 폰트를 공개 배포처에서 받아, PPTX의 테마·마스터·슬라이드·표·차트 글꼴을 한 번에 바꾼 뒤
+덱을 분석해(분야·글의 문체·밀도·색감) 어울리는 서체 성격과 폰트 짝을 고르고, OFL 폰트(산돌 OFL 23종 + Google Fonts 38종)를 공개 배포처에서 받아, PPTX의 테마·마스터·슬라이드·표·차트 글꼴을 한 번에 바꾼 뒤
 렌더링으로 확인하고, 덱과 폰트 묶음(라이선스 포함)을 함께 넘깁니다.
 
 - `skill/SKILL.md` — 스킬 본문
+- `skill/scripts/analyze_deck.py` — PPTX 진단과 폰트 짝 추천
 - `skill/scripts/fetch_fonts.py` — `data/fontfiles.json`의 OFL 폰트를 받아 PowerPoint 글꼴 이름을 알려 줌
 - `skill/scripts/apply_fonts.py` — PPTX 글꼴을 제목/본문 두 가지로 통일
 - `data/fontfiles.json` — 자동 다운로드 대상(OFL 23종)과 굵기별 파일 주소
 
 ```bash
+python3 skill/scripts/analyze_deck.py in.pptx
 python3 skill/scripts/fetch_fonts.py --list
 python3 skill/scripts/fetch_fonts.py 프리텐다드 --weights Regular,ExtraBold --out fonts
-python3 skill/scripts/apply_fonts.py in.pptx out.pptx --title "Pretendard ExtraBold" --body "Pretendard"
+python3 skill/scripts/apply_fonts.py in.pptx out.pptx --manifest fonts/manifest.json --title 프리텐다드:ExtraBold --body 프리텐다드:Regular
 ```
+
+## 눈누(noonnu.cc)를 넣지 않은 이유
+
+눈누 이용약관은 사이트 내용을 스크래핑으로 복사·배포·공개하는 것과 로봇·스파이더 같은 자동 수집을 금지합니다. 그래서 이 색인은 눈누를 수집하지 않습니다.
 
 ## 폰트 파일을 담지 않는 이유
 
@@ -35,7 +41,9 @@ python3 skill/scripts/apply_fonts.py in.pptx out.pptx --title "Pretendard ExtraB
 index.html, style.css, app.js     화면
 data/fonts.json                   수집 결과 (자동 생성)
 data/webfonts.json                실시간 미리보기용 웹폰트 연결표 (직접 관리)
-data/fontfiles.json               PPT 스킬용 OFL 폰트 파일 주소 (직접 관리)
+data/fontfiles.json               PPT 스킬용 산돌 OFL 폰트 파일 주소·성격 태그 (직접 관리)
+data/google-fonts.json            Google Fonts 한국어 폰트 (자동 생성)
+scripts/google_fonts.py           Google Fonts 수집기
 skill/                            Claude 스킬 (PPT 자동 적용)
 scripts/scrape.py                 수집기 (Python 3 + beautifulsoup4)
 .github/workflows/update.yml      매주 자동 갱신

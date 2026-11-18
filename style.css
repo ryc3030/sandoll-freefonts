@@ -68,6 +68,7 @@ a { color: inherit; }
 .tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: var(--paper); color: var(--ink-2); border: 1px solid var(--rule); }
 .tag.ofl { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .tag.cond { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, var(--rule)); }
+.tag.src-g { color: #1a5fb4; border-color: color-mix(in srgb, #1a5fb4 40%, var(--rule)); }
 .tag.new { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--rule)); }
 .actions { margin-top: auto; display: flex; gap: 8px; padding: 16px 20px 18px; }
 .btn { font: inherit; font-size: 14px; font-weight: 600; text-decoration: none; text-align: center; border-radius: 10px; padding: 9px 12px; border: 1px solid var(--ink); cursor: pointer; background: var(--card); color: var(--ink); }
