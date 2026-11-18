@@ -1,0 +1,4375 @@
+{
+  "source": "https://www.sandollcloud.com/freefonts",
+  "fonts": [
+    {
+      "id": 16951,
+      "slug": "Pretendard",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "프리텐다드",
+      "nameEn": "Pretendard",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16951/Pretendard",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260522105140_Pretendard-Regular.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "10종",
+      "year": "2021",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "프리텐다드 / Pretendard",
+      "languages": "영어,한국어",
+      "maker": "길형진",
+      "copyright": "길형진",
+      "spec": "Hangul 14,716 glyphs / Latin / Kanji / Kana / Latin / Cyrillic / Greek",
+      "licenseText": "프리텐다드(Pretendard)는 한글 및 영문 무료로 제공되는 무료폰트입니다.\n개인용, 기업용, 상업용 등 모든 라이선스 조건에서 자유롭게 사용할 수 있으며, 저작권은 ‘길형진’님에게 있습니다.\n프리텐다드(Pretendard)는 SIL OFL(오픈 폰트 라이선스)를 따르며, 폰트 단독 판매나 라이선스 변경을 제외하고 자유롭게 상업적 사용, 수정 및 재배포가 가능합니다. 수정한 폰트 역시 단독 유료 판매는 금지됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://cactus.tistory.com/306",
+      "ofl": true
+    },
+    {
+      "id": 15744,
+      "slug": "Gmarket-Sans",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "G마켓 산스",
+      "nameEn": "Gmarket Sans",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/15744/Gmarket-Sans",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/GmarketSansLight.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "3종",
+      "year": "2019",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "G마켓 산스 / Gmarket Sans",
+      "languages": "영어,한국어",
+      "copyright": "Gmarket",
+      "licenseText": "Gmarket Sans는 'SIL Open Font License'에 따라 개인 또는 기업이 영리적, 비영리적 목적으로 자유롭게 사용할 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://corp.gmarket.com/fonts/",
+      "ofl": true
+    },
+    {
+      "id": 229,
+      "slug": "NanumSquareOTF",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "나눔스퀘어",
+      "nameEn": "NanumSquareOTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/229/NanumSquareOTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/NanumSquareB.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "4종",
+      "year": "2016",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "나눔스퀘어 / NanumSquareOTF",
+      "languages": "영어,한국어,기타",
+      "maker": "Sandoll Inc.",
+      "copyright": "NAVER Corporation",
+      "spec": "한글 2,350자 / 라틴 94자 / 부호 986자",
+      "licenseText": "네이버에서 제작한 나눔 글꼴과 마루 부리 글꼴, 클로바 나눔손글씨(이하 네이버 글꼴)의 지적 재산권은 네이버와 네이버 문화재단에 있습니다.\n네이버 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 글꼴 자체를 유료로 판매하는 것을 제외한 상업적인 사용이 가능합니다.\n네이버 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능하고 자유롭게 수정, 재배포하실 수 있습니다.\n네이버 글꼴 라이선스 전문을 포함하기 어려울 경우 출처 표기를 권장합니다. 예) 이 페이지에는 네이버에서 제공한 나눔 고딕 글꼴이 적용되어 있습니다.\n네이버 글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔 글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 네이버 나눔 글꼴 라이선스 전문을 참고하시기 바랍니다.\n네이버 마루 부리 글꼴과 클로바 나눔손글씨도 나눔 글꼴과 같은 오픈 라이선스 글꼴로 동일한 저작권 규정을 적용받습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://hangeul.naver.com/fonts/search?f=nanum",
+      "ofl": true
+    },
+    {
+      "id": 17229,
+      "slug": "LeeSeoyun",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "이서윤체",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/17229/LeeSeoyun",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/LeeSeoyun.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2022",
+      "category": "Script,손글씨",
+      "format": "OTF / TTF",
+      "fileName": "이서윤체 / LeeSeoyun",
+      "languages": "영어,한국어",
+      "maker": "투게더그룹",
+      "copyright": "흥국생명보험㈜",
+      "licenseText": "흥국생명 서체는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 사용할 수 있습니다.\n온/오프라인, 상품, 광고 등 상업적인 목적으로 사용할 수 있습니다.\n단, 해당 서체를 유료로 판매하거나, 어떠한 형태로든 임의 수정 및 개작하여 서체를 재배포하는 것을 금하며, 배포되는 형태 그대로 사용해야 합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://drive.google.com/file/d/13ZgVMLRsL5zroBtXdXrkUY7TW84o14bi/view",
+      "ofl": false
+    },
+    {
+      "id": 19493,
+      "slug": "Jalnan-Gothic",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "여기어때 잘난체 고딕",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/19493/Jalnan-Gothic",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20231024111125_JalnanGothic_rep.png",
+      "tags": [
+        "임베딩 조건부",
+        "로고•CI 조건부"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2023",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "여기어때 잘난체 고딕 / Jalnan Gothic",
+      "languages": "영어,한국어,기타",
+      "maker": "Sandoll Inc.",
+      "copyright": "(주)여기어때컴퍼니",
+      "spec": "한글 11,172자 / 라틴 95자 / 부호 967자 / 딩뱃 127자",
+      "licenseText": "- ‘여기어때 잘난체’는 여기어때에서 배포하는 글꼴(잘난체·잘난체2·잘난체 고딕)이 모두 포함된 명칭으로,\n'여기어때 잘난체'의 지적재산권은 ㈜여기어때컴퍼니가 소유하고 있습니다.\n- ‘여기어때 잘난체’는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 사용할 수 있습니다.\n- '여기어때 잘난체' 글꼴 자체를 유료로 판매하거나 어떠한 형태로든 임의 수정/개작하여\n글꼴을 재배포 하는 것은 금지합니다.\n- ‘여기어때 잘난체’는 인쇄물, 광고물(온/오프라인), 상품, CI/BI 등 상업적 목적으로 사용할 수 있습니다.\n① 글꼴 그대로의 사용을 권장하며, 형태 변환이 필요할 경우 글꼴의 조형성을 해치지 않는 범위 내에서 간단한 변형이 가능합니다.\n② 상품에 사용 시 여기어때 잘난체 라이선스 혹은 출처 표기를 권장합니다.\n③ CI/BI에 사용 시 상표권 등록은 불가합니다.\n- ‘여기어때 잘난체’는 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어에 임베딩 또는 번들하여 판매하거나 재배포가 가능합니다.\n임베딩 된 폰트는 별도 판매 불가합니다.\n- '여기어때 잘난체' 사용 시 라이선스 전문을 포함하기 어려울 경우 ‘여기어때 잘난체’의 출처 표기를 권장합니다.\n예) 이 상품에는 ㈜여기어때컴퍼니가 제공한 여기어때 잘난체·잘난체 고딕이 적용되어 있습니다.\n- ‘여기어때 잘난체’를 사용한 인쇄물, 광고물(온/오프라인), 상품, CI/BI 등의 이미지는 여기어때의\n마케팅을 위해 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "조건부 허용"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "조건부 허용"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://gccompany.co.kr/font",
+      "ofl": false
+    },
+    {
+      "id": 21096,
+      "slug": "BM-Kkubulim",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "배달의민족 꾸불림체",
+      "nameEn": "BM Kkubulim",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/21096/BM-Kkubulim",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260515114235_ggubulim_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2024",
+      "category": "Script,손글씨",
+      "format": "OTF / TTF",
+      "fileName": "배달의민족 꾸불림체 / BM Kkubulim",
+      "languages": "영어,한국어",
+      "maker": "(주)우아한형제들",
+      "copyright": "(주)우아한형제들",
+      "spec": "Hangul / Latin",
+      "licenseText": "배달의민족 한나체, 한나체 Air, 한나체 Pro, 주아체, 도현체, 연성체, 기랑해랑체, 을지로체, 을지로10년후체, 을지로 오래오래체, 글림체, 꾸불림체 글꼴의 지식재산권은 ㈜우아한형제들이 보유합니다.\n배달의민족에서 무료로 배포하는 글꼴은(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro·을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체) 자유롭게 수정·변경하여 영리적·비영리적 목적으로 개인 및 기업 사용자가 모두 사용하실 수 있습니다.\n다만, 글꼴 폰트 파일(otf/ttf)자체를 유상으로 판매하는 것은 금지하고 있으니 유의 부탁드립니다.\n- 사용 가능 범위 : 간판, 현수막, 브로슈어, 포스터, 책, 잡지, 명함, 스티커, 패키지, 제품, 웹페이지, 광고 배너, E브로슈어, 영상 자막, 영화, TV광고, 웹툰, 게임 UI, 앱 UI, 뉴스레터, 웹진, 프리젠테이션, E-book, 메신저 스티커, 로고, 마크, 신문 광고, 잡지 광고, 지면 광고, 컵홀더, 부채, 쇼핑백, 컵홀더, 포장지, 핸드폰 케이스, 노트, 가방, 신발, 옷 등 상업적·비상업적 목적의 제작물 등\n- 사용 불가능 범위 : 폰트파일(otf/ttf)의 유료 판매\n글꼴(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro· 을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체)를 사용한 인쇄물, 광고물(온라인 포함)등의 이미지는 당사의 자료 수집 및 연구 목적으로 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사 고객센터(1600-0987 / CS@woowahan.com)로 요청 부탁드립니다.\n아래 “지식재산권 안내 및 라이선스” 전문을 표시하는 경우 다른 소프트웨어와 번들, 재배포 또는 판매하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.woowahan.com/fonts",
+      "ofl": true
+    },
+    {
+      "id": 778,
+      "slug": "S-CoreDream",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "에스코어 드림",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/778/S-CoreDream",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/SCDream5.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "9종",
+      "year": "2018",
+      "category": "민부리",
+      "format": "OTF",
+      "fileName": "에스코어 드림 / S-CoreDream",
+      "languages": "영어,한국어",
+      "copyright": "S-Core",
+      "licenseText": "에스코어의 글꼴의 지적 재산권은 (주)에스코어에 있습니다. 에스코어 홈페이지를 통해 배포되는 에스코어 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 재배포가 가능합니다.\n(단, 파일의 수정 및 폰트 자체를 판매하는 행위는 불가합니다.)\n1. 에스코어 홈페이지를 통해 배포되는 에스코어 폰트의 지적 재산권은 에스코어 주식회사에 있습니다.\n2. 에스코어 폰트는 개인 및 기업 사용자를 포함한 모든 사용자에게 상업적 사용이 가능하도록 무료로 제공되며 자유롭게 재배포 하실 수 있습니다.\n3. 어떠한 이유로도 폰트 파일을 수정, 판매할 수 없으며 배포되는 파일 형태 그대로 사용해야 합니다. (단, 기울기 적용, 형태 변형 등의 디자인 수정은 자유롭게 가능합니다.)\n4. 에스코어 폰트는 본 저작권 안내를 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능합니다. 에스코어 폰트 저작권 안내를 포함하기 어려울 경우, 에스코어 폰트의 출처 표기를 권장합니다. 예) 이 페이지에는 에스코어가 제공한 에스코어 드림 폰트가 적용되어 있습니다. *출처 표기는 반드시 하지 않으셔도 됩니다.\n5. 에스코어 폰트를 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 에스코어의 프로모션을 위해 활용될 수 있습니다. 이를 원치 않을 경우 언제든지 에스코어에 요청하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://s-core.co.kr/company/font2/",
+      "ofl": false
+    },
+    {
+      "id": 21071,
+      "slug": "Paperlogy",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "페이퍼로지",
+      "nameEn": "Paperlogy",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/21071/Paperlogy",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260507133029_paperlogy_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "9종",
+      "year": "2024",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "페이퍼로지 / Paperlogy",
+      "languages": "영어,한국어",
+      "maker": "이주임, 김도균",
+      "copyright": "피티앤",
+      "licenseText": "페이퍼로지체는 상업용으로 사용 가능한 무료 폰트입니다.\nSIL 오픈폰트라이선스(OFL)에 따라 글꼴 단독 판매 또는 글꼴 라이선스 변경을 제외한 모든 상업적 행위 및 수정, 재배포가 가능합니다.\n(v1.001)",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://freesentation.blog/paperlogyfont",
+      "ofl": true
+    },
+    {
+      "id": 20536,
+      "slug": "HSSanTokki-2.0",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "HS산토끼체 2.0",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/20536/HSSanTokki-2.0",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20240502182835_HSSanTokki2.0_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [
+        "제목용",
+        "개성적",
+        "유쾌한"
+      ],
+      "weights": "1종",
+      "year": "2024",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "HS산토끼체 2.0 / HSSanTokki 2.0",
+      "languages": "영어,한국어",
+      "maker": "토끼네활자공장",
+      "copyright": "토끼네활자공장",
+      "licenseText": "개인용, 상업용 전면 무료 사용 가능\n개인 및 기업 사용자를 포함한 모든 사용자에게\n무료로 제공되며 자유롭게 수정하고 재배포하실 수 있습니다.\n단, 글꼴 자체를 유료로 판매하는 것은 금지합니다.\n사용범위:\n문서제작(비영리 교재 시험지, 무료배포 공익 홍보문서, 광고 등 마케팅용 배포문서, 단체 내부 문서, 사내 배포용 프리젠테이션, 영리 목적의 교재)\n서식(증서, 원서, 신고서, 무료배포공문서식, 마케팅용 배포 문서, 단체 내부 문서및 서식)\n배포용(브로슈어, 포스터, 자료작성, 보고서, 리포터, 뉴스레터, 벽면장식, 서적)\n잡지/신문(일반잡지, 전문지, 중앙지(일간,스포츠,시사지), 대학지, 학술지, 학회지, 사보, 지방지, 무가지, 대학신문)\n판매용 인쇄/출판물(제품포장패키지, 포장지, 티켓(영화, 연극, 공연, 스포츠), CD/DVD 커버, 자켓, 문구, 엽서, 카드)\n인쇄출판(브로슈어, 소식지, 카달로그, 팜플렛, 리플렛, 현수막, 쿠폰, 명함, 전단지, 매장 내 POP물, 봉투, 메뉴판, 사용설명서, 연하장, 초대장, 카드, 엽서, 자료집, 사보, 간행물, 단행본)\n도서류(참고서, 학습지, 교과서, 백과사전, 잡지, 만화책, 신문기사)\n웹사이트(이메일, 웹툰, 웹페이지 이미지 제작, 이미지배너, 배너광고)\n영상물(영상 광고(CF, 극장, 가상광고, 온라인 등), 영화 자막(예고편, 본편, 오프닝 엔딩 등), 공중파 및 케이블 자막, 일반 동영상)\n모바일 APP(각종 스마트폰 어플리케이션 적용 (UI디자인, 임베딩)\n2차 제작물(직접 판매 목적의 이미지 제작(PT템플릿, 콘텐츠 상품, 이모티콘 등), 폰트 형태를 직접적으로 이용한 상품 제작(의류, 머그컵, 물병, 수건, 에코백, 네임스티커 등)\ne-Learning(교육용 온라인 동영상 강좌, 플래시 강좌 등)\ne-Book(도서, 문서, 잡지 등을 e-Book 형식으로 제작 및 변환하여 온라인상에 배포 및 게시)\nCI, BI(사명, 로고, 마크, 슬로건, 캐치프레이즈 등, 브랜드명, 상품명, 각종 패키지 디자인 등)\n옥내외광고물(일단 단독간판, 옥내외 간판, 옥상간판, 선전탑, 전기 이용 간판, 공공시설물 이용 광고물, 교통시설 이용 광고물, 교통수단 이용 광고물)\n임베딩(각종 디바이스, 서버, 프로그램, 게임 등에 폰트파일 탑재)\n상기 기재된 범위 내에서 사용할 경우 청구되는 라이센스 비용은 없으며 사용 범위에 대한 문의가 있을 경우 메일(hp0@naver.com) 부탁드립니다.\n무단으로 폰트를 유료로 판매하는 행위는 저작권법, 계약법 및 기타 해당법률에 의해 민형사상의 책임이 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://blog.naver.com/hp0/223429922940",
+      "ofl": true
+    },
+    {
+      "id": 19893,
+      "slug": "WAGURI",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "와구리체",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/19893/WAGURI",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20240304174705_WAGURI_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2024",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "와구리체 / WAGURI",
+      "languages": "영어,한국어,기타",
+      "maker": "투게더그룹",
+      "copyright": "구리시",
+      "spec": "한글 2,780자 / 라틴 95자 / 부호 985자",
+      "licenseText": "와구리체의 지적 재산권은 구리시에 있습니다. 와구리체는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 사용할 수 있고 상업적 이용이 가능합니다.\n주의) 본 서체는 글꼴 자체를 유료로 판매하거나 왜곡 변형할 수 없습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.guri.go.kr/www/contents.do?key=6397",
+      "ofl": false
+    },
+    {
+      "id": 15882,
+      "slug": "Noto-Sans-KR",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "Noto Sans KR",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/15882/Noto-Sans-KR",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/Noto_Sans_KR_Regular.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "6종",
+      "year": "2018",
+      "category": "민부리",
+      "format": "OTF",
+      "fileName": "Noto Sans KR",
+      "languages": "영어,한국어",
+      "copyright": "Google",
+      "licenseText": "Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'\nThis Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.google.com/noto/specimen/Noto+Sans+KR",
+      "ofl": true
+    },
+    {
+      "id": 16242,
+      "slug": "ChosunGu",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "조선굴림체",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16242/ChosunGu",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/ChosunGuR.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2020",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "조선굴림체 / ChosunGu",
+      "languages": "영어,한국어",
+      "copyright": "조선일보",
+      "licenseText": "조선일보 전용서체 9종의 지적재산권은 (주)조선일보사에 있습니다.\n조선일보 전용서체 9종은 개인 및 기업 사용자에게 무료로 제공됩니다.\n사용자들은 이를 다른 이에게 자유롭게 배포할 수 있습니다.\n다만 어떠한 경우에도 복사 또는 배포에 따른 대가를 요구하거나 수정해서 판매할 수 없으며, 배포된 형태 그대로 사용해야 합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://event.chosun.com/100/100font.html",
+      "ofl": false
+    },
+    {
+      "id": 20485,
+      "slug": "Freesentation",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "프리젠테이션",
+      "nameEn": "Freesentation",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/20485/Freesentation",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260507132936_freesentation_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [
+        "제목용",
+        "중립적"
+      ],
+      "weights": "10종",
+      "year": "2024",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "프리젠테이션 / Freesentation",
+      "languages": "영어,한국어",
+      "maker": "이주임",
+      "copyright": "피티앤",
+      "licenseText": "Freesentation은 상업용으로 사용 가능한 완전 무료 폰트입니다.\nFreesentation은 노토산스(본고딕), Heebo와 같은 SIL 오픈폰트라이선스(OFL)에 따라\n글꼴 단독 판매 또는 글꼴 라이선스 변경을 제외한 모든 상업적 행위 및 수정, 재배포가 가능합니다. 맘껏 쓰세요!\n(ver 2.001)",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://freesentation.blog/",
+      "ofl": true
+    },
+    {
+      "id": 17576,
+      "slug": "SUIT",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Suit",
+      "nameEn": "SUIT",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/17576/SUIT",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20240807152609_SUIT-Regular.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "9종",
+      "year": "2021",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "Suit / SUIT",
+      "languages": "영어,한국어",
+      "maker": "SUNN",
+      "copyright": "SUNN",
+      "licenseText": "SUIT―수트는 Open Source입니다. SIL OFL에 따라 상업적인 목적을 포함하여 자유롭게 사용할 수 있습니다.\n또한 향후 License 변경으로 인한 분쟁의 가능성이 없습니다.\n한글 Typeface는 본고딕을 기반으로 합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://sun.fo/suit/",
+      "ofl": true
+    },
+    {
+      "id": 204,
+      "slug": "NanumGothicOTF",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "나눔고딕",
+      "nameEn": "NanumGothicOTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/204/NanumGothicOTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/NanumGothic.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "4종",
+      "year": "2008",
+      "category": "Sans,디스플레이,민부리,손글씨",
+      "format": "OTF / TTF",
+      "fileName": "나눔고딕 / NanumGothicOTF",
+      "languages": "영어,한국어,기타,한국 한자",
+      "maker": "Sandoll Inc.",
+      "copyright": "NAVER Corporation",
+      "spec": "한글 11,172자 / 라틴 94자 / 한국 한자 4,888자 / 부호 986자",
+      "licenseText": "네이버에서 제작한 나눔 글꼴과 마루 부리 글꼴, 클로바 나눔손글씨(이하 네이버 글꼴)의 지적 재산권은 네이버와 네이버 문화재단에 있습니다.\n네이버 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 글꼴 자체를 유료로 판매하는 것을 제외한 상업적인 사용이 가능합니다.\n네이버 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능하고 자유롭게 수정, 재배포하실 수 있습니다.\n네이버 글꼴 라이선스 전문을 포함하기 어려울 경우 출처 표기를 권장합니다. 예) 이 페이지에는 네이버에서 제공한 나눔 고딕 글꼴이 적용되어 있습니다.\n네이버 글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔 글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 네이버 나눔 글꼴 라이선스 전문을 참고하시기 바랍니다.\n네이버 마루 부리 글꼴과 클로바 나눔손글씨도 나눔 글꼴과 같은 오픈 라이선스 글꼴로 동일한 저작권 규정을 적용받습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://hangeul.naver.com/fonts/search?f=nanum",
+      "ofl": true
+    },
+    {
+      "id": 17678,
+      "slug": "NanumSquareNeo",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "나눔스퀘어 네오",
+      "nameEn": "NanumSquareNeo",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/17678/NanumSquareNeo",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/NanumSquareNeoTTF-cBd.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "6종",
+      "year": "2022",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "나눔스퀘어 네오 / NanumSquareNeo",
+      "languages": "영어,한국어",
+      "maker": "산돌",
+      "copyright": "(주) 네이버",
+      "licenseText": "네이버에서 제작한 나눔 글꼴과 마루 부리 글꼴, 클로바 나눔손글씨(이하 네이버 글꼴)의 지적 재산권은 네이버와 네이버 문화재단에 있습니다.\n네이버 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 글꼴 자체를 유료로 판매하는 것을 제외한 상업적인 사용이 가능합니다.\n네이버 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능하고 자유롭게 수정, 재배포하실 수 있습니다.\n네이버 글꼴 라이선스 전문을 포함하기 어려울 경우 출처 표기를 권장합니다. 예) 이 페이지에는 네이버에서 제공한 나눔 고딕 글꼴이 적용되어 있습니다.\n네이버 글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔 글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 네이버 나눔 글꼴 라이선스 전문을 참고하시기 바랍니다.\n네이버 마루 부리 글꼴과 클로바 나눔손글씨도 나눔 글꼴과 같은 오픈 라이선스 글꼴로 동일한 저작권 규정을 적용받습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://campaign.naver.com/nanumsquare_neo/#download",
+      "ofl": true
+    },
+    {
+      "id": 205,
+      "slug": "NanumMyeongjoOTF",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "나눔명조",
+      "nameEn": "NanumMyeongjoOTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/205/NanumMyeongjoOTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/NanumMyeongjoBold.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "3종",
+      "category": "Mincho,Serif,부리",
+      "format": "OTF / TTF",
+      "fileName": "나눔명조 / NanumMyeongjoOTF",
+      "languages": "영어,한국어,기타",
+      "copyright": "NAVER Corporation",
+      "spec": "한글 11,172자 / 라틴 94자 / 부호 986자",
+      "licenseText": "네이버에서 제작한 나눔 글꼴과 마루 부리 글꼴, 클로바 나눔손글씨(이하 네이버 글꼴)의 지적 재산권은 네이버와 네이버 문화재단에 있습니다.\n네이버 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 글꼴 자체를 유료로 판매하는 것을 제외한 상업적인 사용이 가능합니다.\n네이버 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능하고 자유롭게 수정, 재배포하실 수 있습니다.\n네이버 글꼴 라이선스 전문을 포함하기 어려울 경우 출처 표기를 권장합니다. 예) 이 페이지에는 네이버에서 제공한 나눔 고딕 글꼴이 적용되어 있습니다.\n네이버 글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔 글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 네이버 나눔 글꼴 라이선스 전문을 참고하시기 바랍니다.\n네이버 마루 부리 글꼴과 클로바 나눔손글씨도 나눔 글꼴과 같은 오픈 라이선스 글꼴로 동일한 저작권 규정을 적용받습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://hangeul.naver.com/fonts/search?f=nanum",
+      "ofl": true
+    },
+    {
+      "id": 220,
+      "slug": "Source-Han-Sans-K",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "본고딕",
+      "nameEn": "Source Han Sans K",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/220/Source-Han-Sans-K",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/SourceHanSansK-Regular.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "7종",
+      "year": "2014",
+      "category": "민부리",
+      "format": "OTF",
+      "fileName": "본고딕 / Source Han Sans K",
+      "languages": "영어,한국어",
+      "maker": "Sandoll Inc.",
+      "copyright": "Adobe/Google",
+      "spec": "한글 / 라틴",
+      "licenseText": "본 폰트 소프트웨어는 SIL 오픈 폰트 라이선스 버전 1.1에 따라 라이선스 취득을 하였습니다.\n본 라이선스는 하단에 복사되었고 http://scripts.sil.Yrg/YFL의 FAQ란 에서도 열람가능 합니다.\nSIL 오픈 폰트 라이선스\n버전 1.1 (2007년 2월 26일)\n본 폰트 소프트웨어를 사용하도록 허가 받은 개인/기업/단체 누구라도 다음 명시된 조건에 따라\n폰트 소프트웨어의 수정 혹은 수정되지 않은 복사본을 무료로 사용, 연구, 복사, 통합, 삽입, 수정,\n재배포할 수 있도록 허가합니다.\n본 폰트 소프트웨어의 원본 혹은 수정본은 상기 저작권 안내와 본 라이선스에 대한 내용을 포함하는\n경우에는 다른 소프트웨어와 함께 묶이거나 재배포 혹은 판매가 가능합니다. 이는 독립 텍스트 파일과\n가독성이 있는 헤더 혹은 유저가 용이하게 열람 가능한 이상 텍스트파일 혹은 이진파일 내 기계가 읽을\n수 있는 메타데이터 형태를 모두 의미 합니다.\n본 폰트 소프트웨어의 어떠한 수정본도 동일한 저작권자가 명시적 허가서를 부여하지 않는 한 저작권이\n있는 폰트명을 사용해서는 안 됩니다. 본 제한 사항은 유저들에게 제공된 기존 폰트명을 뜻합니다.\n본 폰트 소프트웨어의 저작권자 혹은 저자의 이름은 그들의 명시적 서면 허가가 있거나 또는 그들의 공헌을\n인정하기 위한 경우를 제외하고는 수정본에 대한 사용을 유도,추천 혹은 광고하기 위한 목적으로 사용할 수\n없습니다.\n본 폰트 소프트웨어는 전체나 부분, 혹은 수정 여부에 상관없이 본 라이선스 하에 배포가 되어야 하며 기타\n다른 라이선스 하에서는 배포를 할 수 없습니다. 폰트에 대한 요구조건은 이 라이선스 하에서만 유효하며\n이 라이선스 하에 있기 위한 폰트에 대한 요구사항은 본 폰트 소프트웨어를 사용해 제작한 어떠한 문서에도\n적용되지 않습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.google.com/noto/specimen/Noto+Sans+KR",
+      "ofl": true
+    },
+    {
+      "id": 219,
+      "slug": "BM-DoHyeon",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "배민 도현체",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/219/BM-DoHyeon",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/BMDoHyeon-OTF.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2015",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "배민 도현체 / BM DoHyeon",
+      "languages": "영어,한국어,기타",
+      "maker": "Sandoll Inc.",
+      "copyright": "WOOWA BROTHERS Corp.",
+      "spec": "한글 2,423자 / 라틴 95자 / 부호 990자 / 추가 글리프 565자",
+      "licenseText": "배달의민족 한나체, 한나체 Air, 한나체 Pro, 주아체, 도현체, 연성체, 기랑해랑체, 을지로체, 을지로10년후체, 을지로 오래오래체, 글림체, 꾸불림체 글꼴의 지식재산권은 ㈜우아한형제들이 보유합니다.\n배달의민족에서 무료로 배포하는 글꼴은(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro·을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체) 자유롭게 수정·변경하여 영리적·비영리적 목적으로 개인 및 기업 사용자가 모두 사용하실 수 있습니다.\n다만, 글꼴 폰트 파일(otf/ttf)자체를 유상으로 판매하는 것은 금지하고 있으니 유의 부탁드립니다.\n- 사용 가능 범위 : 간판, 현수막, 브로슈어, 포스터, 책, 잡지, 명함, 스티커, 패키지, 제품, 웹페이지, 광고 배너, E브로슈어, 영상 자막, 영화, TV광고, 웹툰, 게임 UI, 앱 UI, 뉴스레터, 웹진, 프리젠테이션, E-book, 메신저 스티커, 로고, 마크, 신문 광고, 잡지 광고, 지면 광고, 컵홀더, 부채, 쇼핑백, 컵홀더, 포장지, 핸드폰 케이스, 노트, 가방, 신발, 옷 등 상업적·비상업적 목적의 제작물 등\n- 사용 불가능 범위 : 폰트파일(otf/ttf)의 유료 판매\n글꼴(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro· 을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체)를 사용한 인쇄물, 광고물(온라인 포함)등의 이미지는 당사의 자료 수집 및 연구 목적으로 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사 고객센터(1600-0987 / CS@woowahan.com)로 요청 부탁드립니다.\n아래 “지식재산권 안내 및 라이선스” 전문을 표시하는 경우 다른 소프트웨어와 번들, 재배포 또는 판매하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "http://font.woowahan.com/dohyeon/",
+      "ofl": true
+    },
+    {
+      "id": 21098,
+      "slug": "RiaSans",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "리아체",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/21098/RiaSans",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20241015191750_Riasans_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2024",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "리아체 / RiaSans",
+      "languages": "영어,한국어",
+      "maker": "엉뚱상상",
+      "copyright": "롯데GRS",
+      "spec": "한글 2,780자 / 라틴 94자 / KS심볼 991자",
+      "licenseText": "저작권\n리아체(RiaSans)의 지적 재산권을 포함한 모든 권리는 롯데GRS(주)에 있습니다.\n사용 범위\n개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공합니다. (아래 사용 범위 참조)\n제한 사항\n폰트 파일(글자꼴 파일)을 유료로 판매, 임의 수정 및 개작하여 재배포하는 것을 금지하며,\n당사의 이미지를 훼손할 수 있는 불법 사이트나 허위과장 광고, 기타 공서양속에 반하는 인쇄/광고물에 사용을 금지합니다.\n기타\n리아체(RiaSans)를 사용한 인쇄물, 광고물(온/오프라인) 등의 이미지는 롯데GRS, 롯데리아 홍보/마케팅을 위해 활용될 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.lotteriafont.com/riasans",
+      "ofl": false
+    },
+    {
+      "id": 19492,
+      "slug": "Jalnan-2",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "여기어때 잘난체 2",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/19492/Jalnan-2",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20231024111115_Jalnan2_rep.png",
+      "tags": [
+        "임베딩 조건부",
+        "로고•CI 조건부"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2023",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "여기어때 잘난체 2 / Jalnan 2",
+      "languages": "영어,한국어,기타",
+      "maker": "Sandoll Inc.",
+      "copyright": "(주)여기어때컴퍼니",
+      "spec": "한글 11,172자 / 라틴 95자 / 부호 967자 / 딩뱃 127자",
+      "licenseText": "- ‘여기어때 잘난체’는 여기어때에서 배포하는 글꼴(잘난체·잘난체2·잘난체 고딕)이 모두 포함된 명칭으로,\n'여기어때 잘난체'의 지적재산권은 ㈜여기어때컴퍼니가 소유하고 있습니다.\n- ‘여기어때 잘난체’는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 사용할 수 있습니다.\n- '여기어때 잘난체' 글꼴 자체를 유료로 판매하거나 어떠한 형태로든 임의 수정/개작하여\n글꼴을 재배포 하는 것은 금지합니다.\n- ‘여기어때 잘난체’는 인쇄물, 광고물(온/오프라인), 상품, CI/BI 등 상업적 목적으로 사용할 수 있습니다.\n① 글꼴 그대로의 사용을 권장하며, 형태 변환이 필요할 경우 글꼴의 조형성을 해치지 않는 범위 내에서 간단한 변형이 가능합니다.\n② 상품에 사용 시 여기어때 잘난체 라이선스 혹은 출처 표기를 권장합니다.\n③ CI/BI에 사용 시 상표권 등록은 불가합니다.\n- ‘여기어때 잘난체’는 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어에 임베딩 또는 번들하여 판매하거나 재배포가 가능합니다.\n임베딩 된 폰트는 별도 판매 불가합니다.\n- '여기어*때 잘난체' 사용 시 라이선스 전문을 포함하기 어려울 경우 ‘여기어때 잘난체’의 출처 표기를 권장합니다.\n예) 이 상품에는 ㈜여기어때컴퍼니가 제공한 여기어때 잘난체·잘난체 고딕이 적용되어 있습니다.\n- ‘여기어때 잘난체’를 사용한 인쇄물, 광고물(온/오프라인), 상품, CI/BI 등의 이미지는 여기어때의\n마케팅을 위해 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "조건부 허용"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "조건부 허용"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://gccompany.co.kr/font",
+      "ofl": false
+    },
+    {
+      "id": 15810,
+      "slug": "KoPubWorldDotum",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "KoPub World 돋움체",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/15810/KoPubWorldDotum",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/KoPubWorld_Dotum_Light.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "3종",
+      "year": "2020",
+      "category": "Gothic,Sans,민부리",
+      "format": "TTF",
+      "fileName": "KoPub World 돋움체 / KoPubWorldDotum",
+      "languages": "영어,한국어",
+      "maker": "RixFont",
+      "copyright": "한국출판인회의",
+      "licenseText": "‘KoPub 서체’ 및 ‘KoPub World 서체’의 지적재산권은 문화체육관광부와 한국출판인회의에 있습니다. ‘KoPub 서체’ 및 ‘KoPub World 서체’의 사용을 허락하고 공개하는 것은 전자책 제작 및 전자출판 유통시장 활성화를 지원하고 출판업계와 전자출판 산업 발전을 도모하기 위함인 동시에, 서체가 공유되고 개선될 수 있는 개방된 환경을 만들기 위함입니다.\n‘KoPub 서체’ 및 ‘KoPub World 서체’는 출판업계(전자출판업계 포함) 및 기업, 개인을 포함한 모든 사용자가 별도의 허가절차 없이 홈페이지 정보 등록 후 무료로 사용하실 수 있습니다.\n다만, 사전승인 없이 폰트를 수정, 변형하는 것은 불가하며, 폰트 자체를 유료로 판매, 양도하는 모든 상업적 행위는 금지합니다.\n‘KoPub 서체’ 및 ‘KoPubWorld 서체’를 사용한 결과물(인쇄물, 광고물(온라인 포함), 전자책 일부의 이미지 등)은\n본 서체의 홍보를 위해 활용될 수 있습니다. 이를 원하지 않는 사용자는 언제든지 연락해 주시기 바랍니다.\n정확한 사용조건은 서체 라이선스 약관을 참고하시기 바랍니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.kopus.org/biz-electronic-font2/",
+      "ofl": false
+    },
+    {
+      "id": 16929,
+      "slug": "SB-AggroOTF",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "SB 어그로",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16929/SB-AggroOTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/SB_aggroOTF_M.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "3종",
+      "year": "2020",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "SB 어그로 / SB AggroOTF",
+      "languages": "영어,한국어",
+      "maker": "디자인210",
+      "copyright": "샌드박스",
+      "licenseText": "샌드박스 어그로체의 지식 재산권은 (주)샌드박스네트워크가 보유합니다.\n샌드박스에서 무료로 배포하는 어그로체는 개인, 기업 사용자 모두 자유롭게 수정 및 변경해\n영리, 비영리 목적으로 사용할 수 있습니다",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://sandbox.co.kr/fonts/aggro",
+      "ofl": false
+    },
+    {
+      "id": 19766,
+      "slug": "Hakgyoansim-Jiugae",
+      "sections": [
+        "steady"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "학교안심 지우개",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/19766/Hakgyoansim-Jiugae",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20240117204917_free_hakgyoansim_jiugae.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2023",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "학교안심 지우개 / Hakgyoansim Jiugae",
+      "languages": "영어,한국어",
+      "maker": "디자인210",
+      "copyright": "KERIS(한국교육학술정보원)",
+      "licenseText": "교육부, 17개 시도교육청, KERIS가 공동으로 국내 폰트기업 대상 공모를 통해 도입한 오픈폰트(OFL, Open Font License) 입니다.\n국제 SIL(Summer Institute of Linguistics)에서 만든 오픈폰트 라이선스로, OFL 폰트는 이용 대상 및 목적에 제한 없이 자유롭게 이용 가능합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://copyright.keris.or.kr/wft/fntDwnldView?fntGrpId=GFT202312110000000000019",
+      "ofl": true
+    },
+    {
+      "id": 206,
+      "slug": "NanumBarunGothicOTF",
+      "sections": [
+        "steady",
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "나눔바른고딕",
+      "nameEn": "NanumBarunGothicOTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/206/NanumBarunGothicOTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/NanumBarunGothicLight.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "4종",
+      "category": "Gothic,Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "나눔바른고딕 / NanumBarunGothicOTF",
+      "languages": "영어,한국어,기타,한국 한자",
+      "copyright": "NAVER Corporation",
+      "spec": "한글 11,172자 / 라틴 94자 / 한국 한자 4,888자 / 부호 986자",
+      "licenseText": "네이버에서 제작한 나눔 글꼴과 마루 부리 글꼴, 클로바 나눔손글씨(이하 네이버 글꼴)의 지적 재산권은 네이버와 네이버 문화재단에 있습니다.\n네이버 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 글꼴 자체를 유료로 판매하는 것을 제외한 상업적인 사용이 가능합니다.\n네이버 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능하고 자유롭게 수정, 재배포하실 수 있습니다.\n네이버 글꼴 라이선스 전문을 포함하기 어려울 경우 출처 표기를 권장합니다. 예) 이 페이지에는 네이버에서 제공한 나눔 고딕 글꼴이 적용되어 있습니다.\n네이버 글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔 글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 네이버 나눔 글꼴 라이선스 전문을 참고하시기 바랍니다.\n네이버 마루 부리 글꼴과 클로바 나눔손글씨도 나눔 글꼴과 같은 오픈 라이선스 글꼴로 동일한 저작권 규정을 적용받습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://hangeul.naver.com/fonts/search?f=nanum",
+      "ofl": true
+    },
+    {
+      "id": 23618,
+      "slug": "BeyondVillage",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": true,
+      "name": "비욘드빌리지체",
+      "nameEn": "BeyondVillage",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23618/BeyondVillage",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20261110121850_square_main.jpg",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2026",
+      "category": "디스플레이,부리",
+      "format": "OTF / TTF",
+      "fileName": "비욘드빌리지체 / BeyondVillage",
+      "languages": "영어,한국어",
+      "maker": "㈜혜안",
+      "copyright": "㈜혜안",
+      "spec": "한글 / 라틴",
+      "licenseText": "개인 작업과 회사 작업\n포스터, 간판, 상품과 포장, 책, 영상\n로고와 브랜드\n웹사이트와 앱에 넣기\n고쳐서 쓰고 다시 나누기\n글꼴 파일만 따로 파는 일\n고친 글꼴에 비욘드빌리지체, BeyondVillage 이름을 쓰는 일 (글로 허락받으면 됩니다)\n이 라이선스가 아닌 다른 조건으로 글꼴을 나누는 일\n고친 글꼴을 혜안 이름으로 홍보하는 일 (원작자 표시와 글로 받은 허락은 됩니다)\n간판이나 로고에 쓰면 그 파일을 공개해야 하나요? 아닙니다. 이 글꼴로 만든 간판, 인쇄물, 로고, 영상은 공개하지 않아도 됩니다.\n글자 모양을 고쳐서 간판에 써도 되나요? 됩니다. 고친 글꼴에는 다른 이름을 붙여 주세요. 남에게 줄 때는 같은 라이선스로 라이선스 파일과 함께 줍니다.\n간판 업체에 파일을 줘도 되나요? 됩니다. 내려받은 ZIP을 그대로 주면 라이선스 파일도 함께 갑니다.\n받은 파일을 나중에도 쓸 수 있나요? 네. 새 버전이 나와도 받은 파일은 같은 조건으로 계속 쓸 수 있습니다.\n출처를 적지 않아도 됩니다. 글꼴 파일을 다시 나누거나 앱에 넣어 배포할 때는 라이선스 파일을 함께 넣어 주세요.\n글꼴은 있는 그대로 제공합니다. 만든 곳은 쓰다 생긴 손해를 책임지지 않습니다. 조건을 어기면 이용 권리가 끝납니다.\n라이선스는 SIL Open Font License 1.1입니다. Noto와 나눔글꼴도 쓰는 공개 글꼴 라이선스입니다. 원문은 영어 이고 위 내용은 안내이며, 기준은 원문입니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://beyondvillage.kr/font/?ref=noonnu.cc",
+      "ofl": true
+    },
+    {
+      "id": 23621,
+      "slug": "GyunMyeongjo",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": true,
+      "name": "균명조",
+      "nameEn": "GyunMyeongjo",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23621/GyunMyeongjo",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20261110121911_square_main.jpg",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "2종",
+      "year": "2026",
+      "category": "부리",
+      "format": "OTF",
+      "fileName": "균명조 / GyunMyeongjo",
+      "languages": "영어,한국어",
+      "maker": "이윤재",
+      "copyright": "이윤재",
+      "spec": "한글 / 라틴",
+      "licenseText": "Copyright © 2026 이윤재. 균고딕(Gyun Gothic), 균명조(Gyun Myeongjo) 및 이 저장소의 글꼴 생성 소스에 적용됩니다.\n허용 — 판매를 제외한 모든 사용\n누구나 별도 허락이나 비용 없이 다음을 할 수 있습니다.\n개인적·상업적 용도로 사용: 인쇄물, 책, 영상, 방송, 웹사이트, 앱, 게임, 광고, 로고, 간판, 상품 디자인 등\n웹폰트로 임베딩하거나 문서·소프트웨어·앱·게임 안에 포함하여 배포\n수정, 변형, 다른 글꼴과의 합성, 파생 글꼴 제작\n원본 또는 수정본을 무료로 복제·재배포\n금지 — 판매\n글꼴 파일(원본이든 수정본이든)을 그 자체로 판매하거나 유료로 배포하는 것\n글꼴 파일이 주된 가치인 유료 상품(유료 폰트 팩, 유료 다운로드 등)에 포함하여 판매하는 것\n글꼴로 만든 결과물(책, 영상, 디자인, 앱 등)은 판매해도 됩니다.\n조건\n재배포할 때는 이 라이선스 전문과 저작권 표시를 함께 포함해야 합니다.\n파생 글꼴도 이 라이선스를 따라야 하며, 원본으로 오인되지 않도록 다른 이름을 사용해야 합니다.\n면책\n글꼴은 \"있는 그대로\" 제공되며, 저작권자는 사용으로 인해 발생하는 어떠한 손해에도 책임지지 않습니다.\nPermitted — every use except selling. Anyone may, free of charge and without asking: use the fonts for personal or commercial work (print, books, video, web, apps, games, ads, logos, products); embed them as web fonts or inside documents and software; modify them and create derivative fonts; copy and redistribute originals or modified versions for free.\nProhibited — selling. You may not sell the font files (original or modified) by themselves, or include them in a paid product whose main value is the fonts (e.g. paid font packs or downloads). Selling things made with the fonts is allowed.\nConditions. Redistributions must include this license and the copyright notice. Derivative fonts must carry this same license and use a different name.\nNo warranty. The fonts are provided \"as is\", without warranty of any kind. The copyright holder is not liable for any damages arising from their use.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://ssayuz.github.io/gyun-fonts/?ref=noonnu.cc#download",
+      "ofl": false
+    },
+    {
+      "id": 23623,
+      "slug": "GyunGothic",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": true,
+      "name": "균고딕",
+      "nameEn": "GyunGothic",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23623/GyunGothic",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20261110121917_square_main.jpg",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "2종",
+      "year": "2026",
+      "category": "민부리",
+      "format": "OTF",
+      "fileName": "균고딕 / GyunGothic",
+      "languages": "영어,한국어",
+      "maker": "이윤재",
+      "copyright": "이윤재",
+      "spec": "한글 / 라틴",
+      "licenseText": "Copyright © 2026 이윤재. 균고딕(Gyun Gothic), 균명조(Gyun Myeongjo) 및 이 저장소의 글꼴 생성 소스에 적용됩니다.\n허용 — 판매를 제외한 모든 사용\n누구나 별도 허락이나 비용 없이 다음을 할 수 있습니다.\n개인적·상업적 용도로 사용: 인쇄물, 책, 영상, 방송, 웹사이트, 앱, 게임, 광고, 로고, 간판, 상품 디자인 등\n웹폰트로 임베딩하거나 문서·소프트웨어·앱·게임 안에 포함하여 배포\n수정, 변형, 다른 글꼴과의 합성, 파생 글꼴 제작\n원본 또는 수정본을 무료로 복제·재배포\n금지 — 판매\n글꼴 파일(원본이든 수정본이든)을 그 자체로 판매하거나 유료로 배포하는 것\n글꼴 파일이 주된 가치인 유료 상품(유료 폰트 팩, 유료 다운로드 등)에 포함하여 판매하는 것\n글꼴로 만든 결과물(책, 영상, 디자인, 앱 등)은 판매해도 됩니다.\n조건\n재배포할 때는 이 라이선스 전문과 저작권 표시를 함께 포함해야 합니다.\n파생 글꼴도 이 라이선스를 따라야 하며, 원본으로 오인되지 않도록 다른 이름을 사용해야 합니다.\n면책\n글꼴은 \"있는 그대로\" 제공되며, 저작권자는 사용으로 인해 발생하는 어떠한 손해에도 책임지지 않습니다.\nPermitted — every use except selling. Anyone may, free of charge and without asking: use the fonts for personal or commercial work (print, books, video, web, apps, games, ads, logos, products); embed them as web fonts or inside documents and software; modify them and create derivative fonts; copy and redistribute originals or modified versions for free.\nProhibited — selling. You may not sell the font files (original or modified) by themselves, or include them in a paid product whose main value is the fonts (e.g. paid font packs or downloads). Selling things made with the fonts is allowed.\nConditions. Redistributions must include this license and the copyright notice. Derivative fonts must carry this same license and use a different name.\nNo warranty. The fonts are provided \"as is\", without warranty of any kind. The copyright holder is not liable for any damages arising from their use.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://ssayuz.github.io/gyun-fonts/?ref=noonnu.cc",
+      "ofl": false
+    },
+    {
+      "id": 23552,
+      "slug": "K110-Alien-Sans",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "K110 Alien Sans",
+      "nameEn": "K110 Alien Sans",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23552/K110-Alien-Sans",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/studiok110/main_img/20261117132927_square_main.jpg",
+      "tags": [],
+      "moods": [
+        "기계적"
+      ],
+      "weights": "9종",
+      "year": "2026",
+      "category": "Sans,민부리",
+      "format": "OTF",
+      "fileName": "K110 Alien Sans",
+      "languages": "영어,한국어,기타",
+      "spec": "한글 11,172자 / 라틴 478자 / 부호 2,228자 / 숫자 550자 / 추가 글리프 12,683자",
+      "licenseText": "Alien Sans는 Noto 계열 오픈소스 서체를 바탕으로 여러 문화권의 문자와 기호를 조합한 파생 서체입니다. 원본 글리프의 저작권은 Adobe, Google 및 각 Noto 프로젝트 저작권자에게 있습니다.",
+      "ofl": false
+    },
+    {
+      "id": 23487,
+      "slug": "Griun-DUJUNDUJUN",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "그리운 두준두준체",
+      "nameEn": "Griun DUJUNDUJUN",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23487/Griun-DUJUNDUJUN",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260907172117_square_main.jpg",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2026",
+      "category": "손글씨",
+      "format": "TTF",
+      "fileName": "그리운 두준두준체 / Griun DUJUNDUJUN",
+      "languages": "영어,한국어",
+      "maker": "윤두준 X 타이비(그리운)",
+      "copyright": "윤두준",
+      "spec": "한글 / 라틴",
+      "licenseText": "하이라이트 윤두준님의 손글씨로 제작된 폰트입니다.\n모든 사용 범위에서 자유롭게 사용이 가능합니다.\n다만, 폰트파일 개작⋅수정⋅판매는 금지됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.griun.co.kr/fonts/dujundujun",
+      "ofl": false
+    },
+    {
+      "id": 23434,
+      "slug": "TimesNewJames",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "제임스네일체",
+      "nameEn": "TimesNewJames",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23434/TimesNewJames",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260731113043_square_main.jpg",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2026",
+      "category": "손글씨",
+      "format": "TTF",
+      "fileName": "제임스네일체 / TimesNewJames",
+      "languages": "영어,한국어",
+      "maker": "그리운 GRIUN",
+      "copyright": "그리운 GRIUN",
+      "spec": "한글 / 라틴",
+      "licenseText": "다운로드 링크 https://bit.ly/4vTXvkC 이곳에서 다운로드 받아 일상에서 자유롭게 사용하세요! (상업적 이용은 불가합니다)",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://drive.google.com/file/d/1AL0ASgsOu2chRtDdSdvaPIx1EFpIRDsv/view",
+      "ofl": false
+    },
+    {
+      "id": 23484,
+      "slug": "Continuous-2",
+      "sections": [
+        "new"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "Continuous 2",
+      "nameEn": "Continuous 2",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23484/Continuous-2",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260827152953_square_main.jpg",
+      "tags": [
+        "임베딩 조건부",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "5종",
+      "year": "2026",
+      "category": "Script,손글씨",
+      "format": "OTF / TTF",
+      "fileName": "Continuous 2",
+      "languages": "영어",
+      "maker": "이범석(타입피디아)",
+      "copyright": "이범석",
+      "spec": "라틴",
+      "licenseText": "Continuous 2는 Continuous의 흐름을 그대로 이어받되, 더 단단하고 또렷한 인상으로 다시 그린 후속작입니다. stem을 곧게 세우고 마감을 둥글지 않게 직선으로 잘라 형태에 분명한 포인트를 줬으며, 획 대비를 강하게 가져가 글자 안의 굵기 변화가 한층 풍부하게 살아납니다. 기울기를 한층 더 키워 필기체 특유의 리듬감을 강조했고, 300부터 700까지 자유롭게 굵기를 조절할 수 있는 베리어블 폰트로 확장해 본문부터 헤드라인까지 한 폰트로 운용할 수 있습니다. 전작이 손글씨 감성을 담은 정제된 균형이었다면, Continuous 2는 그 위에 또렷한 골격과 짙은 표정을 더한 서체입니다.\nContinuous 2 builds on the character of Continuous, redrawn with a stronger, more defined presence. Straighter stems, strokes that end in clean, straight cuts, and greater contrast give the letterforms sharper definition and richer variation. A steeper slant enhances its cursive rhythm, while a variable weight range from 300 to 700 makes it equally suited to body text and headlines. While the original paired refinement with handwritten warmth, Continuous 2 adds a more defined structure and a bolder, more expressive voice.\nContinuous 2 라이선스 Continuous 2는 개인, 팀, 기업, 단체를 포함한 모든 사용자가 상업적·비상업적 목적으로 무료로 사용할 수 있습니다. Continuous 2를 사용한 웹사이트, 애플리케이션, 게임, 영상, 인쇄물, 이미지 및 기타 작업물의 제작과 배포는 자유롭게 허용됩니다. 웹폰트 사용 및 작업물에 필요한 일반적인 형태의 폰트 임베딩도 허용됩니다.\n다만 다음 행위는 허용되지 않습니다.\n1. Continuous 2 폰트 파일 자체를 수정, 판매 또는 재배포하는 행위 2. Continuous 2를 클라우드 폰트 서비스, 문서·프레젠테이션·디자인·이미지·영상 편집 서비스 등에서 사용자가 선택하여 사용할 수 있는 폰트로 제공하는 행위 3. Continuous 2를 독립적인 작업물의 구성 요소로 사용하는 것을 넘어, 제3자에게 폰트 자체의 이용을 제공하는 것을 주된 목적으로 서비스 또는 소프트웨어에 탑재하는 행위\n위 금지 범위에 해당하는 폰트 제공 또는 재배포가 필요한 경우 별도 문의가 필요합니다. 문의는 qjatjr5124@naver.com 또는 bssqjaehfl@gmail.com으로 연락해 주세요.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "조건부 허용"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://typedia.kr/font/continuous-2/",
+      "ofl": false
+    },
+    {
+      "id": 23428,
+      "slug": "Wonju",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "원주체",
+      "nameEn": "Wonju",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23428/Wonju",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260731160331_square_main.jpg",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "2종",
+      "year": "2026",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "원주체 / Wonju",
+      "languages": "영어,그리스어,한국어",
+      "maker": "(주)티랩",
+      "copyright": "원주시",
+      "spec": "한글 / 라틴 / 그리스 문자",
+      "licenseText": "이 폰트는 SIL 오픈 폰트 라이선스 1.1에 따라 배포되는 오픈소스 폰트입니다.\n개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공됩니다. 폰트 파일의 수정 및 재배포가 허용되며, 수정된 폰트는 동일한 OFL 라이선스로 배포해야 합니다.\n인쇄, 웹, 영상, 임베딩, 패키지 등 상업적 목적으로 자유롭게 사용 가능합니다.\n단, 폰트 파일 자체를 단독으로 판매하는 행위는 금지합니다.\n수정 배포 시 주의사항: 수정된 폰트는 원본 폰트명을 사용할 수 없으며, 동일한 OFL 1.1 라이선스로 배포되어야 합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.wonju.go.kr/www/contents.do?key=6554&",
+      "ofl": true
+    },
+    {
+      "id": 23306,
+      "slug": "GriunCherry1Spoon",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "그리운 체리한스푼",
+      "nameEn": "GriunCherry1Spoon",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23306/GriunCherry1Spoon",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260611151159_sandoll_font_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2026",
+      "category": "손글씨",
+      "format": "TTF",
+      "fileName": "그리운 체리한스푼 / GriunCherry1Spoon",
+      "languages": "영어,한국어",
+      "maker": "그리운",
+      "copyright": "그리운",
+      "spec": "Hangul 2,780 glyphs / Latin 52 glyphs",
+      "licenseText": "모든 사용 범위에서 자유롭게 사용이 가능합니다. 다만, 폰트파일 개작⋅수정⋅판매는 금지됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.griun.co.kr/fonts/cherry1spoon",
+      "ofl": false
+    },
+    {
+      "id": 23493,
+      "slug": "CHAI-Hwaljjak",
+      "sections": [
+        "new"
+      ],
+      "instant": false,
+      "isNew": false,
+      "name": "차이 활짝체",
+      "nameEn": "CHAI Hwaljjak",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23493/CHAI-Hwaljjak",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260909154506_square_main.jpg",
+      "tags": [
+        "임베딩"
+      ],
+      "moods": [],
+      "weights": "4종",
+      "year": "2026",
+      "category": "디스플레이,민부리",
+      "format": "TTF",
+      "fileName": "차이 활짝체 / CHAI Hwaljjak",
+      "languages": "영어,한국어",
+      "maker": "차이커뮤니케이션",
+      "copyright": "차이커뮤니케이션",
+      "spec": "한글 / 라틴",
+      "licenseText": "차이 폰트 라이선스 정책\n차이 서체의 지식 재산권은 차이커뮤니케이션이 보유합니다.\n차이에서 배포하는 서체는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 사용할 수 있습니다. 단, 어떠한 형태로든 임의 수정·개작하여 글꼴을 재배포할 수 없으며 형태 그대로 사용해야 합니다. - 상품에 사용 시 ‘ 차이 활짝체 ’의 라이선스 혹은 출처 표기를 권장합니다. 글꼴 파일의(TTF/OTF) 변형과 유료판매가 금지되며, 저작권 안내와 라이선스 전문을 포함한 경우 다른 소프트웨어와 번들하거나 재배포 또는 판매할 수 있습니다. 라이선스 전문을 포함하기 어려울 경우 ‘ 차이 활짝체 ‘의 출처 표기를 권장합니다. 예) 이 페이지에는 차이에서 제공한 차이 활짝체 가 적용되어 있습니다. 차이 서체를 사용한 인쇄물, 광고물(온/오프라인), 상품 등의 이미지는 당사의 자료 수집 및 연구 목적, 마케팅을 위해 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다. * 문의 대표 메일: insight_culture@artistchai.co.kr",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 불가"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://artistchai.co.kr/#/pride/identity_font",
+      "ofl": false
+    },
+    {
+      "id": 23309,
+      "slug": "Puzzle-Sans",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "퍼즐체",
+      "nameEn": "Puzzle Sans",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23309/Puzzle-Sans",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260618160946_sandoll_font_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2026",
+      "category": "디스플레이",
+      "format": "TTF",
+      "fileName": "퍼즐체 / Puzzle Sans",
+      "languages": "영어,한국어",
+      "maker": "카프리코",
+      "copyright": "카프리코",
+      "spec": "Hangul 11,172 glyphs / Latin",
+      "licenseText": "퍼즐체는 카프리코가 2026년 5월 2일부터 3일까지 이틀만에 만든 픽셀체 폰트입니다.\n많은 사람들이 쓸 수 있게 SIL 오픈 폰트 라이선스를 따르고 있습니다.\n본 폰트(퍼즐체)는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 수정 및 재배포하실 수 있습니다.\n상업적 목적의 영상물, 인쇄물, 웹사이트 등에서 자유롭게 사용이 가능합니다.\n단, 폰트 파일 자체를 유료로 판매하는 행위는 금지합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://sites.google.com/view/caprico",
+      "ofl": true
+    },
+    {
+      "id": 23205,
+      "slug": "Daegu_b",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "대구북성로",
+      "nameEn": "Daegu_b",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23205/Daegu_b",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260507144318_sandoll_font_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [
+        "제목용"
+      ],
+      "weights": "2종",
+      "year": "2026",
+      "category": "디스플레이",
+      "format": "OTF / TTF",
+      "fileName": "대구북성로 / Daegu_b",
+      "languages": "영어,한국어",
+      "maker": "대구광역시 중구청",
+      "copyright": "대구광역시 중구청",
+      "spec": "Hangul 2,780 glyphs / Latin 94 glyphs",
+      "licenseText": "대구중구 서체는 누구나 무료로 내려받아 자유롭게 사용가능 합니다.(출처표기 권장)\n영상, 인쇄, 웹, CI, BI, 간판, 판매용저작물 등 다양한 매체에 활용가능하며, 프로그램에 탑재하여 배포사용 가능합니다.\n대구 중구 서체를 유료로 양도, 판매하는 행위는 금지합니다.\n대구 중구청이 보유한 본 저작물은 \"공공누리\" 제1유형: 출처표시 조건에 따라 이용 할 수 있습니다. ※ 저작인격권의 존중\n공공저작물을 변경 이용하는 경우에도 저작인격권(동일성유지권)을 존중하는 범위 내에서 이용하여야 합니다.\n<저작인격권을 침해할 수 있는 변경 이용의 예시>\n1. 예술적 가치를 표현하기 위해 창작된 저작물을 외설적 광고에 이용하여 원저작자의 명예를 훼손하는 경우\n2. 연구보고서의 연구성과나 통계수치 등을 수정하여 제3자로 하여금 착오를 불러일으킬 수 있는 경우\n3. 일부를 잘라 이용한 사진저작물이 원저작자가 표현하고자 하는 내용과 현저한 차이를 가져오는 경우 등",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.jung.daegu.kr/new/pages/administration/page.html?mc=2457",
+      "ofl": false
+    },
+    {
+      "id": 23288,
+      "slug": "Round-And-Round",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "둥글둥글체 김규리",
+      "nameEn": "Round And Round",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23288/Round-And-Round",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260528155634_sandoll_font_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2026",
+      "category": "손글씨",
+      "format": "TTF",
+      "fileName": "둥글둥글체 김규리 / Round And Round",
+      "languages": "영어,한국어",
+      "maker": "김규리",
+      "copyright": "스스로넷",
+      "spec": "Hangul 2,350 glyphs / Latin 94 glyphs",
+      "licenseText": "폰트파일의 수정/복제/재배포, 유료판매를 금지 합니다\n스스로넷에 대하여 부정적인 영향을 미칠수 있거나 반 사회적 제작물(음란물 등)에는 사용할 수 없습니다\n스스로넷은 서체 무료 배포를 통해 청소년들의 미디어제작활동에 즐거움과 소통을 실천하고 있습니다\n해당 모든 서체의 지적재산권은 [청소년디자인제작전문그룹]소속 청소년들과 스스로넷에 있습니다",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.ssro.net/media/media_view.jsp?bcate=fontdown&no=523378",
+      "ofl": false
+    },
+    {
+      "id": 23057,
+      "slug": "OkDanDan",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Ok단단체",
+      "nameEn": "OkDanDan",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23057/OkDanDan",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260331100943_okdandan_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2025",
+      "category": "Display,디스플레이",
+      "format": "OTF / TTF",
+      "fileName": "Ok단단체 / OkDanDan",
+      "languages": "영어,한국어",
+      "maker": "오케이티콘",
+      "copyright": "오케이티콘",
+      "spec": "한글 / 라틴",
+      "licenseText": "본 폰트의 지적 재산권은 오케이티콘(OKTICON)에 있습니다.\n1. 사용 허가 범위\n본 폰트는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공\n영리적·비영리적 목적으로 제한 없이 사용 가능\n자유로운 수정이 가능 (글씨의 색상, 자간, 두께 등)\nCI/BI, 포장지, 인쇄물, 영상, 웹, 임베딩 등 모든 매체에 사용 가능\n폰트를 활용한 모든 2차 저작물 제작 및 판매 허용\n2. 사용 금지 사항\n폰트 파일(.otf/.ttf) 자체를 유상으로 판매 불가\n폰트 파일을 직접 업로드하여 재배포 금지 (공식 다운로드 링크 공유만 허용)\nAI 학습 및 모델 훈련에 무단 사용 금지\n유사 폰트 제작 및 스타일 도용 금지\n3. 저작권 보호\n본 폰트는 저작권법에 의해 보호되는 창작물입니다.\n위반 시 민형사상 법적 조치를 취할 수 있습니다.\n4. 마케팅 활용\n본 폰트를 활용한 이미지는 오케이티콘의 마케팅 콘텐츠로 활용될 수 있습니다.\n6. 라이센스 변경\n본 라이센스는 추후 변경될 수 있으며, 최신 라이센스는 오케이티콘 공식 채널에서 확인하실 수 있습니다.\nCopyright (c) 2026, OKTICON (오케이티콘) All rights reserved.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.okticon.com/freefont/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=169969648&t=board",
+      "ofl": true
+    },
+    {
+      "id": 23072,
+      "slug": "Ok-Mallang",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Ok Mallang",
+      "nameEn": "Ok Mallang",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23072/Ok-Mallang",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260331100939_4.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "2종",
+      "year": "2024",
+      "category": "손글씨",
+      "format": "OTF / TTF",
+      "fileName": "Ok Mallang",
+      "languages": "영어,한국어",
+      "maker": "오케이티콘",
+      "copyright": "오케이티콘",
+      "spec": "한글 / 라틴",
+      "licenseText": "본 폰트의 지적 재산권은 오케이티콘(OKTICON)에 있습니다.\n1. 사용 허가 범위\n본 폰트는 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공\n영리적·비영리적 목적으로 제한 없이 사용 가능\n자유로운 수정이 가능 (글씨의 색상, 자간, 두께 등)\nCI/BI, 포장지, 인쇄물, 영상, 웹, 임베딩 등 모든 매체에 사용 가능\n폰트를 활용한 모든 2차 저작물 제작 및 판매 허용\n2. 사용 금지 사항\n폰트 파일(.otf/.ttf) 자체를 유상으로 판매 불가\n폰트 파일을 직접 업로드하여 재배포 금지 (공식 다운로드 링크 공유만 허용)\nAI 학습 및 모델 훈련에 무단 사용 금지\n유사 폰트 제작 및 스타일 도용 금지\n3. 저작권 보호\n본 폰트는 저작권법에 의해 보호되는 창작물입니다.\n위반 시 민형사상 법적 조치를 취할 수 있습니다.\n4. 마케팅 활용\n본 폰트를 활용한 이미지는 오케이티콘의 마케팅 콘텐츠로 활용될 수 있습니다.\n6. 라이센스 변경\n본 라이센스는 추후 변경될 수 있으며, 최신 라이센스는 오케이티콘 공식 채널에서 확인하실 수 있습니다.\nCopyright (c) 2026, OKTICON (오케이티콘) All rights reserved.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.okticon.com/freefont/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=169969470&t=board",
+      "ofl": true
+    },
+    {
+      "id": 22999,
+      "slug": "Instrument-Serif",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Instrument Serif",
+      "nameEn": "Instrument Serif",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22999/Instrument-Serif",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260210165108_4.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "2종",
+      "year": "2022",
+      "category": "손글씨",
+      "format": "TTF",
+      "fileName": "Instrument Serif",
+      "languages": "영어",
+      "maker": "Google",
+      "copyright": "Rodrigo Fuenzalida, Jordan Egstad",
+      "licenseText": "Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)\nThis Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.google.com/specimen/Instrument+Serif",
+      "ofl": true
+    },
+    {
+      "id": 23427,
+      "slug": "Cafe24-PRO-Slim",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Cafe24 PRO Slim",
+      "nameEn": "Cafe24 PRO Slim",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23427/Cafe24-PRO-Slim",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260728155212_square_main.jpg",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "3종",
+      "year": "2026",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "Cafe24 PRO Slim",
+      "languages": "영어,한국어",
+      "maker": "Cafe24",
+      "copyright": "https://fonts.cafe24.com/",
+      "spec": "한글 / 라틴",
+      "licenseText": "Cafe24 PRO SLIM Air 의 지적 재산권은 카페24(주)에 있습니다.\n카페24(주)에서 제공하는 Cafe24 PRO SLIM Air 은 SIL OPEN FONT LICENSE(Version 1.1)에 따라 사용이 허가됩니다.\n단, 글꼴 자체를 유료로 판매하는 것은 금지하며 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능합니다. 라이선스 전문을 포함하기 어려울 경우, 출처 표기를 권장합니다.\n예) 이 페이지에는 카페24(주)이 제공한 Cafe24 PRO SLIM Air 이 적용되어 있습니다. Cafe24 PRO SLIM Air 가 사용된 인쇄물, 광고물(온라인 포함)의 이미지는 카페24의 프로모션을 위해 활용될 수 있습니다.\n- 카페24에서 제작한 모든 글꼴의 지적 재산권은 카페24(주)에 있습니다. - 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 상업적인 사용이 가능합니다. 단, 글꼴 자체를 유료로 판매하는 행위를 금지합니다. - 웹디자인, 출판, 웹폰트, CI/BI 제작, 영상 제작 및 자막, 소프트웨어의 번들, 특정 프로그램의 임베드 등 사용범위 제한없이 자유롭게 이용할 수 있습니다. - 수정, 재배포가 가능하며 수정한 폰트에도 OFL(OpenFont License)을 적용하여야 합니다. - 카페24 폰트를 사용한 결과물은 카페24의 프로모션을 위해 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사로 연락 주시기 바랍니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.cafe24.com/",
+      "ofl": true
+    },
+    {
+      "id": 22997,
+      "slug": "A2Z",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "에이투지체",
+      "nameEn": "A2Z",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22997/A2Z",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20260209121142_sandoll_font_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "9종",
+      "year": "2026",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "에이투지체 / A2Z",
+      "languages": "한국어",
+      "maker": "오토노머스에이투지",
+      "copyright": "오토노머스에이투지",
+      "licenseText": "SIL오픈폰트라이선스(OFL)",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://freesentation.blog/a2z",
+      "ofl": true
+    },
+    {
+      "id": 23615,
+      "slug": "SEBANG-GOTHIC-2.0",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "세방고딕2.0",
+      "nameEn": "SEBANG GOTHIC 2.0",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/23615/SEBANG-GOTHIC-2.0",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20261110121835_square_main.jpg",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "6종",
+      "year": "2026",
+      "category": "디스플레이,민부리",
+      "format": "OTF / TTF",
+      "fileName": "세방고딕2.0 / SEBANG GOTHIC 2.0",
+      "languages": "영어,한국어",
+      "maker": "세방그룹",
+      "copyright": "세방그룹",
+      "spec": "한글 / 라틴",
+      "licenseText": "세방고딕 2.0은 상업용 무료 라이선스인 OFL(Open Font License) 수준으로 무료 제공되며, 인쇄 · 웹 · 영상 · 광고 · 상업적 CI/BI 등 다양한 상업적 용도로 자유롭게 사용할 수 있습니다.\n단, 폰트 파일 자체의 무단 수정 · 재배포 · 재판매와 세방그룹의 상표 · 브랜드로 오인될 수 있는 행위는 제한됩니다.\n또한 아래와 같은 용도로의 사용 및 배포를 금지합니다.\n불법 도박, 성인용 콘텐츠, 음란물, 불법 금융 · 사기(보이스피싱 등) 관련 매체 및 제작물 등 사용\n사회적 공익·양식을 해치거나 특정 집단 · 개인에 대한 차별, 비방 또는 불법 행위를 조장하는 제작물 등 사용\n세방그룹의 브랜드 가치 및 명예를 훼손할 수 있는 용도 및 배포 행위 등 사용",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.sebanggroup.com/client/ko/company/font",
+      "ofl": true
+    },
+    {
+      "id": 22753,
+      "slug": "DesignMag-Sans",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "DesignMag Sans",
+      "nameEn": "DesignMag Sans",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22753/DesignMag-Sans",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20251205110518_DesignMag_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [
+        "제목용",
+        "UI/UX",
+        "현대적"
+      ],
+      "weights": "1종",
+      "year": "2025",
+      "category": "Sans",
+      "format": "OTF / TTF",
+      "fileName": "DesignMag Sans",
+      "languages": "영어",
+      "maker": "양장점",
+      "copyright": "디자인하우스",
+      "licenseText": "DesignMagSans는 SIL OFL(오픈 폰트 라이선스)를 따르며, 폰트 단독 판매나 라이선스 변경을 제외하고\n자유롭게 상업적 사용, 수정 및 재배포가 가능합니다. 수정한 폰트 역시 단독 유료 판매는 금지됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://design.co.kr/article/140892",
+      "ofl": true
+    },
+    {
+      "id": 22716,
+      "slug": "Google-Sans-Flex",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Google Sans Flex",
+      "nameEn": "Google Sans Flex",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22716/Google-Sans-Flex",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20251121143213_sandoll_font_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [
+        "UI/UX"
+      ],
+      "weights": "1종",
+      "year": "2025",
+      "category": "민부리",
+      "format": "TTF",
+      "fileName": "Google Sans Flex",
+      "languages": "영어",
+      "maker": "Google",
+      "copyright": "Google",
+      "licenseText": "This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.google.com/specimen/Google+Sans+Flex/license",
+      "ofl": true
+    },
+    {
+      "id": 22703,
+      "slug": "SD-UNICEF-Sunny",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "SD 유니세프 해맑음체",
+      "nameEn": "SD UNICEF Sunny",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22703/SD-UNICEF-Sunny",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20251120103603_UNICEF Sunny_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2025",
+      "category": "손글씨",
+      "format": "OTF / TTF",
+      "fileName": "SD 유니세프 해맑음체 / SD UNICEF Sunny",
+      "languages": "영어,한국어",
+      "maker": "Sandoll Inc.",
+      "copyright": "유니세프 한국위원회",
+      "licenseText": "Copyright (c) 2025 Korean Committee for UNICEF & Sandoll Inc. All rights reserved.\n- SD 유니세프 도담체의 지식재산권은 유니세프 한국위원회와 산돌에 함께 있습니다.\n- SD 유니세프 도담체는 개인과 단체, 기업 등 누구나 무료로 다운로드 하여 자유롭게 사용하실 수 있습니다.\n- SD 유니세프 도담체는 수정 및 변경(OTF/TTF 등 디지털 포맷 변경 포함), 개작 또는 이름 변경을 금지합니다. 또한 재배포, 재판매, 유료 양도 등 어떠한 형태의 유상 거래도 허용되지 않습니다.\n- SD 유니세프 도담체는 유니세프 한국위원회 또는 산돌의 이미지를 훼손할 수 있는 불법 사이트나 허위·과장 광고, 기타 공서양속에 반하는 제작물에 사용될 수 없습니다.\n- SD 유니세프 도담체를 사용한 인쇄물, 온/오프라인 광고물 등의 이미지는 자료 수집 및 연구 목적, 프로모션을 위해 활용될 수 있습니다. 이러한 활용을 원하지 않으시는 경우 언제든지 유니세프 또는 산돌에 알려주시면 됩니다.\n- SD 유니세프 해맑음체와 SD 유니세프 꾸러기체도 위와 동일한 규정이 적용됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.unicef.or.kr/what-we-do/news/230157",
+      "ofl": false
+    },
+    {
+      "id": 22702,
+      "slug": "SD-UNICEF-Hearty",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "SD 유니세프 도담체",
+      "nameEn": "SD UNICEF Hearty",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22702/SD-UNICEF-Hearty",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20251120103557_UNICEF Hearty_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2025",
+      "category": "손글씨",
+      "format": "OTF / TTF",
+      "fileName": "SD 유니세프 도담체 / SD UNICEF Hearty",
+      "languages": "영어,한국어",
+      "maker": "Sandoll Inc.",
+      "copyright": "유니세프 한국위원회",
+      "licenseText": "Copyright (c) 2025 Korean Committee for UNICEF & Sandoll Inc. All rights reserved.\n- SD 유니세프 도담체의 지식재산권은 유니세프 한국위원회와 산돌에 함께 있습니다.\n- SD 유니세프 도담체는 개인과 단체, 기업 등 누구나 무료로 다운로드 하여 자유롭게 사용하실 수 있습니다.\n- SD 유니세프 도담체는 수정 및 변경(OTF/TTF 등 디지털 포맷 변경 포함), 개작 또는 이름 변경을 금지합니다. 또한 재배포, 재판매, 유료 양도 등 어떠한 형태의 유상 거래도 허용되지 않습니다.\n- SD 유니세프 도담체는 유니세프 한국위원회 또는 산돌의 이미지를 훼손할 수 있는 불법 사이트나 허위·과장 광고, 기타 공서양속에 반하는 제작물에 사용될 수 없습니다.\n- SD 유니세프 도담체를 사용한 인쇄물, 온/오프라인 광고물 등의 이미지는 자료 수집 및 연구 목적, 프로모션을 위해 활용될 수 있습니다. 이러한 활용을 원하지 않으시는 경우 언제든지 유니세프 또는 산돌에 알려주시면 됩니다.\n- SD 유니세프 해맑음체와 SD 유니세프 꾸러기체도 위와 동일한 규정이 적용됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.unicef.or.kr/what-we-do/news/230157",
+      "ofl": false
+    },
+    {
+      "id": 22704,
+      "slug": "SD-UNICEF-Bubbly",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "SD 유니세프 꾸러기체",
+      "nameEn": "SD UNICEF Bubbly",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22704/SD-UNICEF-Bubbly",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20251120103609_UNICEF Bubbly_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2025",
+      "category": "손글씨",
+      "format": "OTF / TTF",
+      "fileName": "SD 유니세프 꾸러기체 / SD UNICEF Bubbly",
+      "languages": "영어,한국어",
+      "maker": "Sandoll Inc.",
+      "copyright": "유니세프 한국위원회",
+      "licenseText": "Copyright (c) 2025 Korean Committee for UNICEF & Sandoll Inc. All rights reserved.\n- SD 유니세프 도담체의 지식재산권은 유니세프 한국위원회와 산돌에 함께 있습니다.\n- SD 유니세프 도담체는 개인과 단체, 기업 등 누구나 무료로 다운로드 하여 자유롭게 사용하실 수 있습니다.\n- SD 유니세프 도담체는 수정 및 변경(OTF/TTF 등 디지털 포맷 변경 포함), 개작 또는 이름 변경을 금지합니다. 또한 재배포, 재판매, 유료 양도 등 어떠한 형태의 유상 거래도 허용되지 않습니다.\n- SD 유니세프 도담체는 유니세프 한국위원회 또는 산돌의 이미지를 훼손할 수 있는 불법 사이트나 허위·과장 광고, 기타 공서양속에 반하는 제작물에 사용될 수 없습니다.\n- SD 유니세프 도담체를 사용한 인쇄물, 온/오프라인 광고물 등의 이미지는 자료 수집 및 연구 목적, 프로모션을 위해 활용될 수 있습니다. 이러한 활용을 원하지 않으시는 경우 언제든지 유니세프 또는 산돌에 알려주시면 됩니다.\n- SD 유니세프 해맑음체와 SD 유니세프 꾸러기체도 위와 동일한 규정이 적용됩니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.unicef.or.kr/what-we-do/news/230157",
+      "ofl": false
+    },
+    {
+      "id": 22705,
+      "slug": "KnpsOdaesan",
+      "sections": [
+        "new"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "KNPS오대산체",
+      "nameEn": "KnpsOdaesan",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22705/KnpsOdaesan",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20251120141011_sandoll_font_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2025",
+      "category": "손글씨",
+      "format": "OTF",
+      "fileName": "KNPS오대산체 / KnpsOdaesan",
+      "languages": "영어,한국어",
+      "maker": "국립공원공단",
+      "copyright": "국립공원공단",
+      "licenseText": "이용자가 가지는 권리\n1. 온·오프라인 상에 공유 및 이용 : 온·오프라인을 통하여 공유 및 이용 가능\n2. 저작물 변경 : 2차적 저작물로 변경하여 이용 가능\n3. 이 저작물은 영리 목적으로 이용할 수 있습니다.\n저작물 사용 조건 - 출처 표시 : 저작물의 출처를 표시하셔야 합니다.\n※ 공공기관이 후원한다거나 공공기관과 특수한 관계에 있는 것처럼 제 3자가 오인하게 하는 표시를 해서는 안됩니다.\n알아야 할 사항\nI. 이용조건의 표시 및 변경\n1. 이용자가 공공누리 저작물 활용시 출처표시를 꼭 해주셔야 합니다.\n2. 공공누리 저작물의 이용조건은 변경될 수 있습니다. 다만 이용자가 이용조건 변경전 사용하셨다면 해당저작물 한해 용도변경 없이 계속 이용할 수 있습니다.\nII. 이용조건의 위반\n1. 이용자가 공공누리 이용조건을 위반할 경우 그 즉시 이용허락이 종료됩니다.\n2. 이용자가 이용조건 위반 후 지속적으로 공공저작물을 이용할 경우 저작권 침해가 성립되므로 형사상, 민사상 책임을 부담 하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://www.tlabfont.com/products/goodsView/id/3/no/140/language/kr/page/1",
+      "ofl": false
+    },
+    {
+      "id": 16934,
+      "slug": "Gowun-Dodum",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "고운돋움",
+      "nameEn": "Gowun Dodum",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16934/Gowun-Dodum",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/GowunDodum-Regular.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2021",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "고운돋움 / Gowun Dodum",
+      "languages": "영어,한국어",
+      "copyright": "류양희",
+      "licenseText": "SIL Open Font License",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://github.com/yangheeryu/Gowun-Dodum",
+      "ofl": true
+    },
+    {
+      "id": 18441,
+      "slug": "Bagel-Fat",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "베이글 팻",
+      "nameEn": "Bagel Fat",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/18441/Bagel-Fat",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20230706112103_Free_font_Bagel Fat_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2022",
+      "category": "Display,디스플레이",
+      "format": "TTF",
+      "fileName": "베이글 팻 / Bagel Fat",
+      "languages": "영어,한국어,기타",
+      "maker": "김경원, JAMO",
+      "copyright": "김경원, JAMO",
+      "spec": "한글 2,783자 / 라틴 136자 / 숫자 319자",
+      "licenseText": "베이글팻은 구글폰트(Google Fonts)에서 오픈소스 라이선스(OFL)로 다운로드하실 수 있습니다. 서체 관련 문의는 kimkeiyard@gmail.com으로 메일 보내주시기 바랍니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.google.com/specimen/Bagel+Fat+One?query=jamo&subset=korean&noto.script=Kore",
+      "ofl": true
+    },
+    {
+      "id": 16262,
+      "slug": "Cafe24-Ssurround-TTF",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "카페24 써라운드",
+      "nameEn": "Cafe24 Ssurround TTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16262/Cafe24-Ssurround-TTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/Cafe24_Ssurround.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2020",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "카페24 써라운드 / Cafe24 Ssurround TTF",
+      "languages": "영어,한국어",
+      "copyright": "카페24",
+      "licenseText": "- 카페24에서 제작한 모든 글꼴의 지적 재산권은 카페24(주)에 있습니다.\n- 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 상업적인 사용이 가능합니다. 단, 글꼴 자체를 유료로 판매하는 행위를 금지합니다.\n- 웹디자인, 출판, 웹폰트, CI/BI 제작, 영상 제작 및 자막, 소프트웨어의 번들, 특정 프로그램의 임베드 등 사용범위 제한없이 자유롭게 이용할 수 있습니다.\n- 수정, 재배포가 가능하며 수정한 폰트에도 OFL(OpenFont License)을 적용하여야 합니다.\n- 카페24 폰트를 사용한 결과물은 카페24의 프로모션을 위해 활용될 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.cafe24.com",
+      "ofl": true
+    },
+    {
+      "id": 210,
+      "slug": "BM-JUA",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "배민 주아체",
+      "nameEn": "BM JUA",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/210/BM-JUA",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/BMJUA_otf.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2015",
+      "category": "Display,Sans,디스플레이,민부리",
+      "format": "OTF / TTF",
+      "fileName": "배민 주아체 / BM JUA",
+      "languages": "영어,한국어,기타",
+      "copyright": "WOOWA BROTHERS Corp.",
+      "spec": "한글 2,350자 / 라틴 95자 / 부호 61자",
+      "licenseText": "배달의민족 한나체, 한나체 Air, 한나체 Pro, 주아체, 도현체, 연성체, 기랑해랑체, 을지로체, 을지로10년후체, 을지로 오래오래체, 글림체, 꾸불림체 글꼴의 지식재산권은 ㈜우아한형제들이 보유합니다.\n배달의민족에서 무료로 배포하는 글꼴은(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro·을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체) 자유롭게 수정·변경하여 영리적·비영리적 목적으로 개인 및 기업 사용자가 모두 사용하실 수 있습니다.\n다만, 글꼴 폰트 파일(otf/ttf)자체를 유상으로 판매하는 것은 금지하고 있으니 유의 부탁드립니다.\n- 사용 가능 범위 : 간판, 현수막, 브로슈어, 포스터, 책, 잡지, 명함, 스티커, 패키지, 제품, 웹페이지, 광고 배너, E브로슈어, 영상 자막, 영화, TV광고, 웹툰, 게임 UI, 앱 UI, 뉴스레터, 웹진, 프리젠테이션, E-book, 메신저 스티커, 로고, 마크, 신문 광고, 잡지 광고, 지면 광고, 컵홀더, 부채, 쇼핑백, 컵홀더, 포장지, 핸드폰 케이스, 노트, 가방, 신발, 옷 등 상업적·비상업적 목적의 제작물 등\n- 사용 불가능 범위 : 폰트파일(otf/ttf)의 유료 판매\n글꼴(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro· 을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체)를 사용한 인쇄물, 광고물(온라인 포함)등의 이미지는 당사의 자료 수집 및 연구 목적으로 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사 고객센터(1600-0987 / CS@woowahan.com)로 요청 부탁드립니다.\n아래 “지식재산권 안내 및 라이선스” 전문을 표시하는 경우 다른 소프트웨어와 번들, 재배포 또는 판매하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.woowahan.com/#/fonts",
+      "ofl": true
+    },
+    {
+      "id": 16935,
+      "slug": "Gowun-Batang",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "고운바탕",
+      "nameEn": "Gowun Batang",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16935/Gowun-Batang",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/GowunBatang-Regular.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "2종",
+      "year": "2021",
+      "category": "Serif,부리",
+      "format": "TTF",
+      "fileName": "고운바탕 / Gowun Batang",
+      "languages": "영어,한국어",
+      "copyright": "류양희",
+      "licenseText": "SIL Open Font License",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://github.com/yangheeryu/Gowun-Batang",
+      "ofl": true
+    },
+    {
+      "id": 22151,
+      "slug": "Pyeojin-Gothic",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "펴진고딕",
+      "nameEn": "Pyeojin Gothic",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/22151/Pyeojin-Gothic",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20250523131615_PyeojinGothic_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "5종",
+      "year": "2025",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "펴진고딕 / Pyeojin Gothic",
+      "languages": "영어,한국어",
+      "maker": "서지환",
+      "copyright": "서지환",
+      "licenseText": "SIL Open Font License\n상업적 사용 가능(유료 폰트 재판매만 불가)",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://notforall.tistory.com/m/7",
+      "ofl": true
+    },
+    {
+      "id": 16265,
+      "slug": "Cafe24-Ohsquare-TTF",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "카페24 아네모네",
+      "nameEn": "Cafe24 Ohsquare TTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16265/Cafe24-Ohsquare-TTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/Cafe24_Ohsquare.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2020",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "카페24 아네모네 / Cafe24 Ohsquare TTF",
+      "languages": "영어,한국어",
+      "maker": "카페24(주)",
+      "copyright": "카페24(주)",
+      "licenseText": "- 카페24에서 제작한 모든 글꼴의 지적 재산권은 카페24(주)에 있습니다.\n- 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 상업적인 사용이 가능합니다. 단, 글꼴 자체를 유료로 판매하는 행위를 금지합니다.\n- 웹디자인, 출판, 웹폰트, CI/BI 제작, 영상 제작 및 자막, 소프트웨어의 번들, 특정 프로그램의 임베드 등 사용범위 제한없이 자유롭게 이용할 수 있습니다.\n- 수정, 재배포가 가능하며 수정한 폰트에도 OFL(OpenFont License)을 적용하여야 합니다.\n- 카페24 폰트를 사용한 결과물은 카페24의 프로모션을 위해 활용될 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://fonts.cafe24.com/",
+      "ofl": true
+    },
+    {
+      "id": 16193,
+      "slug": "Maru-Buri",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "마루 부리",
+      "nameEn": "Maru Buri",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16193/Maru-Buri",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20240314184648_Maruburi_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "5종",
+      "year": "2023",
+      "category": "Serif,부리",
+      "format": "OTF / TTF",
+      "fileName": "마루 부리 / Maru Buri",
+      "languages": "영어,한국어",
+      "maker": "AG 타이포그라피연구소",
+      "copyright": "네이버, 네이버 문화재단",
+      "licenseText": "네이버 나눔글꼴의 지적 재산권은 네이버와 네이버문화재단에 있습니다.\n네이버 나눔글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 수정하고 재배포하실 수 있습니다.\n단, 글꼴 자체를 유료로 판매하는 것은 금지하며 네이버 나눔글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능합니다.\n네이버 나눔글꼴 라이선스 전문을 포함하기 어려울 경우, 나눔글꼴의 출처 표기를 권장합니다.\n예) 이 페이지에는 네이버에서 제공한 나눔글꼴이 적용되어 있습니다.\n네이버 나눔글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 아래 네이버 나눔글꼴 라이선스 전문을 참고하시기 바랍니다\n라이선스 전문보기 https://help.naver.com/support/contents/contents.nhn?serviceNo=1074&categoryNo=3497",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://hangeul.naver.com/font",
+      "ofl": true
+    },
+    {
+      "id": 16051,
+      "slug": "Black-Han-Sans-TTF",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "검은고딕",
+      "nameEn": "Black Han Sans TTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/16051/Black-Han-Sans-TTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/BlackHanSansR.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2015",
+      "category": "Sans,민부리",
+      "format": "TTF",
+      "fileName": "검은고딕 / Black Han Sans TTF",
+      "languages": "영어,한국어",
+      "maker": "ZESSTYPE",
+      "copyright": "ZESSTYPE",
+      "licenseText": "Copyright 2015 ZESSTYPE, with Reserved Font Name \"\"Black Han Sans(검은고딕)\"\".\n(https://github.com/zesstype/Black-Han-Sans)\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license is copied below, and is also available with a FAQ at:\nhttp://scripts.sil.org/OFL\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://github.com/zesstype/Black-Han-Sans",
+      "ofl": true
+    },
+    {
+      "id": 17665,
+      "slug": "Climate-Crisis-KR",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "기후위기-한글",
+      "nameEn": "Climate Crisis KR",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/17665/Climate-Crisis-KR",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/NohType/main_img/20221012144436_nohtype_font_ClimateCrisisKR_rep.png",
+      "tags": [
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [
+        "제목용",
+        "영상",
+        "개성적"
+      ],
+      "weights": "9종",
+      "year": "2022",
+      "category": "Display,디스플레이",
+      "format": "OTF / TTF",
+      "fileName": "기후위기-한글 / Climate Crisis KR",
+      "languages": "영어,한국어,기타",
+      "spec": "한글 2,780자 / 라틴 328자 / 숫자 40자 / 부호 105자",
+      "licenseText": "– 폰트는 OTF/TTF/WebFont 각 8개와 배리어블 폰트 1개로 이루어져있습니다.\n– 폰트명은 ‘기후위기-한글’입니다.\n– 개인적/상업적으로 범위 제한 없이 사용 가능합니다.\n– 문의는 nohtype@gmail.com 또는 instagram@nohtype으로 보내주세요.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "비해당"
+        }
+      ],
+      "makerUrl": "https://nohtype.com/climate-crisis-font-hangul",
+      "ofl": false
+    },
+    {
+      "id": 17349,
+      "slug": "Galmuri9",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "갈무리9",
+      "nameEn": "Galmuri9",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/17349/Galmuri9",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20250225163554_Galmuri9_rep.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2019",
+      "category": "부리",
+      "format": "TTF",
+      "fileName": "갈무리9 / Galmuri9",
+      "languages": "영어,한국어",
+      "maker": "이민서",
+      "copyright": "이민서",
+      "licenseText": "© 2019–2025 Lee Minseo (quiple@quiple.dev)\nGalmuri는 SIL 오픈 폰트 라이선스 1.1(https://openfontlicense.org/)에 따라 사용할 수 있으며, 폰트가 자체적으로 판매되지 않는 한 자유롭게 사용·연구·수정·재배포할 수 있습니다.\nOFL 1.1을 한국어로 번역한 내용은 이곳(https://github.com/quiple/galmuri/blob/main/ofl-ko.md)에서 확인할 수 있으며, 라이선스 원문은 이곳(https://github.com/quiple/galmuri/blob/main/ofl.md)에서 확인할 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://galmuri.quiple.dev",
+      "ofl": true
+    },
+    {
+      "id": 278,
+      "slug": "NanumSquareRoundOTF",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "나눔스퀘어라운드",
+      "nameEn": "NanumSquareRoundOTF",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/278/NanumSquareRoundOTF",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/NanumSquareRoundOTFR.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "4종",
+      "year": "2017",
+      "category": "Sans,민부리",
+      "format": "OTF / TTF",
+      "fileName": "나눔스퀘어라운드 / NanumSquareRoundOTF",
+      "languages": "영어,한국어,기타",
+      "maker": "Sandoll Inc.",
+      "copyright": "NAVER Corporation",
+      "spec": "한글 2,479자 / 라틴 94자 / 부호 985자",
+      "licenseText": "네이버에서 제작한 나눔 글꼴과 마루 부리 글꼴, 클로바 나눔손글씨(이하 네이버 글꼴)의 지적 재산권은 네이버와 네이버 문화재단에 있습니다.\n네이버 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 글꼴 자체를 유료로 판매하는 것을 제외한 상업적인 사용이 가능합니다.\n네이버 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능하고 자유롭게 수정, 재배포하실 수 있습니다.\n네이버 글꼴 라이선스 전문을 포함하기 어려울 경우 출처 표기를 권장합니다. 예) 이 페이지에는 네이버에서 제공한 나눔 고딕 글꼴이 적용되어 있습니다.\n네이버 글꼴을 사용한 인쇄물, 광고물(온라인 포함)의 이미지는 나눔 글꼴 프로모션을 위해 활용될 수 있습니다.\n이를 원치 않는 사용자는 언제든지 당사에 요청하실 수 있습니다.\n정확한 사용 조건은 네이버 나눔 글꼴 라이선스 전문을 참고하시기 바랍니다.\n네이버 마루 부리 글꼴과 클로바 나눔손글씨도 나눔 글꼴과 같은 오픈 라이선스 글꼴로 동일한 저작권 규정을 적용받습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=3497",
+      "ofl": true
+    },
+    {
+      "id": 855,
+      "slug": "BM-EULJIRO",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "배민 을지로체",
+      "nameEn": "BM EULJIRO",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/855/BM-EULJIRO",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/BMEULJIRO.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "1종",
+      "year": "2019",
+      "category": "손글씨",
+      "format": "OTF / TTF",
+      "fileName": "배민 을지로체 / BM EULJIRO",
+      "languages": "영어,한국어,기타",
+      "maker": "Sandoll Inc.",
+      "copyright": "WOOWA BROTHES Corp.",
+      "spec": "한글 2,350자 / 라틴 94자 / 부호 1,114자",
+      "licenseText": "배달의민족 한나체, 한나체 Air, 한나체 Pro, 주아체, 도현체, 연성체, 기랑해랑체, 을지로체, 을지로10년후체, 을지로 오래오래체, 글림체, 꾸불림체 글꼴의 지식재산권은 ㈜우아한형제들이 보유합니다.\n배달의민족에서 무료로 배포하는 글꼴은(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro·을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체) 자유롭게 수정·변경하여 영리적·비영리적 목적으로 개인 및 기업 사용자가 모두 사용하실 수 있습니다.\n다만, 글꼴 폰트 파일(otf/ttf)자체를 유상으로 판매하는 것은 금지하고 있으니 유의 부탁드립니다.\n- 사용 가능 범위 : 간판, 현수막, 브로슈어, 포스터, 책, 잡지, 명함, 스티커, 패키지, 제품, 웹페이지, 광고 배너, E브로슈어, 영상 자막, 영화, TV광고, 웹툰, 게임 UI, 앱 UI, 뉴스레터, 웹진, 프리젠테이션, E-book, 메신저 스티커, 로고, 마크, 신문 광고, 잡지 광고, 지면 광고, 컵홀더, 부채, 쇼핑백, 컵홀더, 포장지, 핸드폰 케이스, 노트, 가방, 신발, 옷 등 상업적·비상업적 목적의 제작물 등\n- 사용 불가능 범위 : 폰트파일(otf/ttf)의 유료 판매\n글꼴(한나체·주아체·도현체·연성체·기랑해랑체·한나체 Air·한나체 Pro· 을지로체·을지로10년후체·을지로 오래오래체·글림체·꾸불림체)를 사용한 인쇄물, 광고물(온라인 포함)등의 이미지는 당사의 자료 수집 및 연구 목적으로 활용될 수 있습니다. 이를 원치 않는 사용자는 언제든지 당사 고객센터(1600-0987 / CS@woowahan.com)로 요청 부탁드립니다.\n아래 “지식재산권 안내 및 라이선스” 전문을 표시하는 경우 다른 소프트웨어와 번들, 재배포 또는 판매하실 수 있습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.woowahan.com/#/fonts",
+      "ofl": true
+    },
+    {
+      "id": 19795,
+      "slug": "Wanted-Sans",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "Wanted Sans",
+      "nameEn": "Wanted Sans",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/19795/Wanted-Sans",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/FREE/main_img/20240117205154_free_wantedsans.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "8종",
+      "year": "2023",
+      "category": "민부리",
+      "format": "OTF / TTF",
+      "fileName": "Wanted Sans",
+      "languages": "영어,한국어",
+      "maker": "원티드랩; 길형진, 강한빈",
+      "copyright": "원티드랩",
+      "licenseText": "Wanted Sans는 SIL 오픈 폰트 라이선스로, 글꼴 단독 판매 및 글꼴 라이선스 변경을 제외한 모든 상업적 행위 및 수정, 재배포가 가능합니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://www.wanted.co.kr/brandcenter#section3-2",
+      "ofl": true
+    },
+    {
+      "id": 264,
+      "slug": "Source-Han-Serif-K",
+      "sections": [
+        "ofl"
+      ],
+      "instant": true,
+      "isNew": false,
+      "name": "본명조",
+      "nameEn": "Source Han Serif K",
+      "sandollUrl": "https://www.sandollcloud.com/free-font/264/Source-Han-Serif-K",
+      "previewImage": "https://media.sandollcloud.com/static/images/contents/psp/free/SourceHanSerifK-Medium.png",
+      "tags": [
+        "OFL",
+        "상업용",
+        "임베딩",
+        "로고•CI"
+      ],
+      "moods": [],
+      "weights": "7종",
+      "year": "2017",
+      "category": "부리",
+      "format": "OTF",
+      "fileName": "본명조 / Source Han Serif K",
+      "languages": "영어,한국어",
+      "maker": "Sandoll Inc.",
+      "copyright": "Adobe/Google",
+      "spec": "한글 / 라틴",
+      "licenseText": "본 폰트 소프트웨어는 SIL 오픈 폰트 라이선스 버전 1.1에 따라 라이선스 취득을 하였습니다.\n본 라이선스는 하단에 복사되었고 http://scripts.sil.Yrg/YFL의 FAQ란 에서도 열람가능 합니다.\nSIL 오픈 폰트 라이선스\n버전 1.1 (2007년 2월 26일)\n본 폰트 소프트웨어를 사용하도록 허가 받은 개인/기업/단체 누구라도 다음 명시된 조건에 따라\n폰트 소프트웨어의 수정 혹은 수정되지 않은 복사본을 무료로 사용, 연구, 복사, 통합, 삽입, 수정,\n재배포할 수 있도록 허가합니다.\n본 폰트 소프트웨어의 원본 혹은 수정본은 상기 저작권 안내와 본 라이선스에 대한 내용을 포함하는\n경우에는 다른 소프트웨어와 함께 묶이거나 재배포 혹은 판매가 가능합니다. 이는 독립 텍스트 파일과\n가독성이 있는 헤더 혹은 유저가 용이하게 열람 가능한 이상 텍스트파일 혹은 이진파일 내 기계가 읽을\n수 있는 메타데이터 형태를 모두 의미 합니다.\n본 폰트 소프트웨어의 어떠한 수정본도 동일한 저작권자가 명시적 허가서를 부여하지 않는 한 저작권이\n있는 폰트명을 사용해서는 안 됩니다. 본 제한 사항은 유저들에게 제공된 기존 폰트명을 뜻합니다.\n본 폰트 소프트웨어의 저작권자 혹은 저자의 이름은 그들의 명시적 서면 허가가 있거나 또는 그들의 공헌을\n인정하기 위한 경우를 제외하고는 수정본에 대한 사용을 유도,추천 혹은 광고하기 위한 목적으로 사용할 수\n없습니다.\n본 폰트 소프트웨어는 전체나 부분, 혹은 수정 여부에 상관없이 본 라이선스 하에 배포가 되어야 하며 기타\n다른 라이선스 하에서는 배포를 할 수 없습니다. 폰트에 대한 요구조건은 이 라이선스 하에서만 유효하며\n이 라이선스 하에 있기 위한 폰트에 대한 요구사항은 본 폰트 소프트웨어를 사용해 제작한 어떠한 문서에도\n적용되지 않습니다.",
+      "licenseSummary": [
+        {
+          "category": "인쇄출판",
+          "scope": "브로슈어, 포스터, 책, 잡지 및 출판용 인쇄물 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "웹사이트",
+          "scope": "웹페이지, 광고배너, 메일, E-브로슈어 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "포장지",
+          "scope": "판매용 상품의 패키지",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "영상",
+          "scope": "영상물 자막, 영화 오프닝/엔딩 크레딧, UCC 등",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "임베딩",
+          "scope": "웹사이트 및 프로그램 서버 내 폰트 탑재, E-book 제작",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "BI/CI",
+          "scope": "회사명, 브랜드명, 상품명, 로고, 마크, 슬로건, 캐치프레이즈",
+          "allowed": "사용 가능"
+        },
+        {
+          "category": "OFL",
+          "scope": "폰트 파일의 수정/복제/배포 가능.단, 폰트 파일의 유료 판매 금지",
+          "allowed": "해당"
+        }
+      ],
+      "makerUrl": "https://github.com/googlefonts/noto-cjk.git",
+      "ofl": true
+    }
+  ],
+  "updatedAt": "2026-11-18T13:00:07+09:00"
+}
