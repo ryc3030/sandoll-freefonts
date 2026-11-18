@@ -8,6 +8,23 @@
 - **다운로드**: 제작사 공식 배포처(없으면 산돌구름 상세 페이지)로 연결
 - **자동 갱신**: GitHub Actions가 매주 월요일 목록을 다시 수집하고, 바뀐 것이 있을 때만 커밋
 
+## Claude 스킬: 무료 한글 폰트 → PPT 자동 적용
+
+`skill/` 폴더는 Claude 스킬입니다. "이 피피티에 어울리는 무료 폰트 적용해 줘"라고 하면 Claude가
+목적에 맞는 폰트 짝을 고르고, OFL 폰트를 공개 배포처에서 받아, PPTX의 테마·마스터·슬라이드·표·차트 글꼴을 한 번에 바꾼 뒤
+렌더링으로 확인하고, 덱과 폰트 묶음(라이선스 포함)을 함께 넘깁니다.
+
+- `skill/SKILL.md` — 스킬 본문
+- `skill/scripts/fetch_fonts.py` — `data/fontfiles.json`의 OFL 폰트를 받아 PowerPoint 글꼴 이름을 알려 줌
+- `skill/scripts/apply_fonts.py` — PPTX 글꼴을 제목/본문 두 가지로 통일
+- `data/fontfiles.json` — 자동 다운로드 대상(OFL 23종)과 굵기별 파일 주소
+
+```bash
+python3 skill/scripts/fetch_fonts.py --list
+python3 skill/scripts/fetch_fonts.py 프리텐다드 --weights Regular,ExtraBold --out fonts
+python3 skill/scripts/apply_fonts.py in.pptx out.pptx --title "Pretendard ExtraBold" --body "Pretendard"
+```
+
 ## 폰트 파일을 담지 않는 이유
 
 무료폰트라도 상당수는 라이선스에서 **임의 재배포를 금지**합니다(OFL이 아닌 폰트, 일부 기업·지자체 전용 폰트 등). 그래서 이 저장소는 폰트 파일을 보관하지 않고, 목록·라이선스 정보·공식 배포처 링크만 다룹니다. 실시간 미리보기도 제작사·Google Fonts·네이버 한글한글아름답게·jsDelivr처럼 이미 공개된 웹폰트 배포처의 CSS를 그대로 불러옵니다.
@@ -18,6 +35,8 @@
 index.html, style.css, app.js     화면
 data/fonts.json                   수집 결과 (자동 생성)
 data/webfonts.json                실시간 미리보기용 웹폰트 연결표 (직접 관리)
+data/fontfiles.json               PPT 스킬용 OFL 폰트 파일 주소 (직접 관리)
+skill/                            Claude 스킬 (PPT 자동 적용)
 scripts/scrape.py                 수집기 (Python 3 + beautifulsoup4)
 .github/workflows/update.yml      매주 자동 갱신
 ```
@@ -26,8 +45,7 @@ scripts/scrape.py                 수집기 (Python 3 + beautifulsoup4)
 
 1. 이 폴더를 새 GitHub 저장소에 올립니다.
 2. 저장소 **Settings → Pages**에서 Source를 `Deploy from a branch`, 브랜치 `main` / 폴더 `/ (root)`로 지정합니다.
-3. **Settings → Actions → General → Workflow permissions**를 `Read and write permissions`로 바꿉니다(자동 갱신 커밋용).
-4. **Actions → 무료폰트 목록 갱신 → Run workflow**로 한 번 돌려 동작을 확인합니다.
+3. **Actions → 무료폰트 목록 갱신 → Run workflow**로 한 번 돌려 동작을 확인합니다.
 
 ## 직접 돌려 보기
 
