@@ -1,0 +1,4 @@
+{
+  "_note": "산돌구름 원본 정보가 틀렸거나 끊긴 경우의 보정표. 키는 산돌구름 폰트 ID. scrape.py가 수집한 뒤 덮어쓴다. checked는 직접 확인한 날짜.",
+  "16929": {"makerUrl": "https://sandbox.co.kr/company-ci", "_why": "샌드박스 홈페이지 개편으로 /fonts/aggro 404, CI 페이지에서 어그로체 배포", "checked": "2026-11-18"}
+}

@@ -54,8 +54,9 @@
         ? `<textarea aria-label="직접 입력해 보기" style="font-family:'${esc(w.family)}'">${esc(sampleText())}</textarea>`
         : `<div class="live" style="font-family:'${esc(w.family)}', var(--ui);font-size:${state.size}px">${esc(sampleText())}</div><span class="src on">실시간</span>`;
     }
-    if (f.previewImage) return `<img loading="lazy" src="${esc(f.previewImage)}" alt="${esc(f.name)} 견본 이미지">${big ? "" : '<span class="src">견본 이미지</span>'}`;
-    return `<div class="live" style="color:var(--ink-3);font-size:15px">미리보기 없음</div>`;
+    // 공개 웹폰트가 없는 폰트는 미리보기 대신 안내만 보여 준다(다른 사이트의 견본 이미지는 쓰지 않음)
+    const where = f.makerUrl ? "제작사 페이지" : "산돌구름";
+    return `<div class="nopv"><p class="nopv-name">${esc(f.name)}</p><p class="nopv-msg">공개 웹폰트가 없어 미리보기를 제공하지 않습니다.<br>모양은 ${where}에서 확인하세요.</p></div>`;
   }
 
   function match(f) {

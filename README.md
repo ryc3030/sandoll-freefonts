@@ -3,7 +3,7 @@
 [산돌구름 무료폰트](https://www.sandollcloud.com/freefonts)와 [Google Fonts 한국어 폰트](https://fonts.google.com/?subset=korean)를 매주 자동으로 모아 보여 주는 정적 웹앱입니다. GitHub Pages에서 그대로 돌아갑니다.
 
 - **검색·필터**: 이름·제작사·분류·분위기 검색, OFL / 상업용 / 임베딩 / 로고·CI / 신규 / 스테디 / 실시간 미리보기 / 찜
-- **미리보기**: 공개 웹폰트가 있는 폰트는 입력한 문구로 실시간 미리보기, 나머지는 견본 이미지
+- **미리보기**: 공개 웹폰트가 있는 폰트는 입력한 문구로 실시간 미리보기. 나머지는 다른 사이트의 견본 이미지를 쓰지 않고 제작사 페이지로 안내
 - **상세**: 폰트 정보, 산돌구름 라이선스 요약표, 라이선스 원문 안내, 웹폰트 연결 코드 복사
 - **다운로드**: 제작사 공식 배포처(없으면 산돌구름 상세 페이지)로 연결
 - **자동 갱신**: GitHub Actions가 매주 월요일 목록을 다시 수집하고, 바뀐 것이 있을 때만 커밋
@@ -59,6 +59,7 @@ python3 skill/scripts/apply_fonts.py in.pptx out.pptx --manifest fonts/manifest.
 index.html, style.css, app.js     화면
 data/fonts.json                   수집 결과 (자동 생성)
 data/webfonts.json                실시간 미리보기용 웹폰트 연결표 (직접 관리)
+data/overrides.json               산돌구름 원본 정보 보정표(끊긴 배포처 주소 등)
 data/fontfiles.json               PPT 스킬용 산돌 OFL 폰트 파일 주소·성격 태그 (직접 관리)
 data/google-fonts.json            Google Fonts 한국어 폰트 (자동 생성)
 scripts/google_fonts.py           Google Fonts 수집기

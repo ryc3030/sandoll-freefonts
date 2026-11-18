@@ -66,9 +66,6 @@ def parse_detail(html):
     h1 = soup.find("h1", id="fg_name")
     if h1:
         d["name"] = clean(h1.get_text())
-    og = soup.find("meta", property="og:image")
-    if og and og.get("content"):
-        d["previewImage"] = og["content"]
     # 상단 태그 (OFL, 상업용, 임베딩, 로고•CI ...)
     # 'nonechk' 클래스가 붙은 태그는 해당 없음(회색 표시)이다.
     order = ["OFL", "상업용", "임베딩", "로고•CI"]
@@ -144,6 +141,14 @@ def main():
         f["ofl"] = "OFL" in f.get("tags", [])
         print(f"{i:>2}/{len(fonts)} {f.get('name')} {f.get('tags')} {f.get('makerUrl', '-')}")
         time.sleep(DELAY)
+    # 보정표(data/overrides.json) 적용: 원본이 틀렸거나 끊긴 정보
+    ov_path = OUT.parent / "overrides.json"
+    if ov_path.exists():
+        ov = json.loads(ov_path.read_text("utf-8"))
+        for f in fonts:
+            for k, v in ov.get(str(f["id"]), {}).items():
+                if not k.startswith("_") and k != "checked":
+                    f[k] = v
     # 상세 페이지 구조가 바뀌어 정보가 비면 저장하지 않는다(망가진 데이터가 사이트에 올라가는 것 방지)
     n_lic = sum(bool(f.get("licenseSummary")) for f in fonts)
     n_ofl = sum(f.get("ofl", False) for f in fonts)

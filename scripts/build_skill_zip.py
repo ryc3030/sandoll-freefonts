@@ -38,7 +38,7 @@ OUT.parent.mkdir(exist_ok=True)
 def put(z, arc, data):
     """고정 시각으로 기록해 내용이 같으면 ZIP도 똑같이 나오게 한다(매주 불필요한 커밋 방지)."""
     zi = zipfile.ZipInfo(arc, (2020, 1, 1, 0, 0, 0))
-    zi.compress_type = zipfile.ZIP_DEFLATED
+    zi.compress_type = zipfile.ZIP_STORED  # 압축 라이브러리 판에 따라 바이트가 달라지지 않게 무압축
     zi.external_attr = 0o644 << 16
     z.writestr(zi, data)
 
