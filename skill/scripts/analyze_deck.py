@@ -141,6 +141,7 @@ def analyze(path):
     # 본문 줄만 본다(제목은 대개 명사구라 문체 단서가 아님). 서술어 어미가 없으면 명사형 개조식으로 친다.
     reg = Counter()
     for line in body_lines:
+        line = EMOJI.sub("", line).strip()
         if len(line) < 6 or not re.search(r"[가-힣]", line):
             continue
         for name, (rx, _) in REGISTER.items():
