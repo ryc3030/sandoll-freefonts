@@ -32,12 +32,21 @@ SYMBOLS = "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②
 BAD_LIC = re.compile(r"재배포\s*(?:를\s*)?금지|무단\s*배포|not\s+be\s+redistributed|may\s+not\s+redistribute", re.I)
 
 
+BUNDLED = Path(__file__).resolve().parent.parent / "data"  # 설치 ZIP에 함께 든 데이터
+
+
 def load(name, local_dir=None, text=False):
+    """--data 폴더 → 저장소 최신(main) → 스킬에 함께 든 데이터 순으로 읽는다(인터넷이 막힌 환경 대비)."""
     if local_dir and (Path(local_dir) / name).exists():
         t = (Path(local_dir) / name).read_text("utf-8")
     else:
-        with urllib.request.urlopen(urllib.request.Request(REPO_RAW + name, headers=UA), timeout=30) as r:
-            t = r.read().decode("utf-8")
+        try:
+            with urllib.request.urlopen(urllib.request.Request(REPO_RAW + name, headers=UA), timeout=15) as r:
+                t = r.read().decode("utf-8")
+        except Exception:
+            if not (BUNDLED / name).exists():
+                raise
+            t = (BUNDLED / name).read_text("utf-8")
     return t if text else json.loads(t)
 
 

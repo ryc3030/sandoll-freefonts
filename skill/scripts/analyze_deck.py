@@ -530,11 +530,20 @@ def _ksx(ch):
         return False
 
 
+BUNDLED = Path(__file__).resolve().parent.parent / "data"  # 설치 ZIP에 함께 든 데이터
+
+
 def load(name, data_dir):
+    """--data 폴더 → 저장소 최신(main) → 스킬에 함께 든 데이터 순으로 읽는다(인터넷이 막힌 환경 대비)."""
     if data_dir and (Path(data_dir) / name).exists():
         return json.loads((Path(data_dir) / name).read_text("utf-8"))
-    with urllib.request.urlopen(REPO_RAW + name, timeout=30) as r:
-        return json.loads(r.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(REPO_RAW + name, timeout=15) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception:
+        if (BUNDLED / name).exists():
+            return json.loads((BUNDLED / name).read_text("utf-8"))
+        raise
 
 
 def recommend(d, data_dir=None, k=3):

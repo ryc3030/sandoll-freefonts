@@ -8,7 +8,22 @@
 - **다운로드**: 제작사 공식 배포처(없으면 산돌구름 상세 페이지)로 연결
 - **자동 갱신**: GitHub Actions가 매주 월요일 목록을 다시 수집하고, 바뀐 것이 있을 때만 커밋
 
-## Claude 스킬: PPT 분석 → 무료 한글 폰트 자동 적용
+## 스킬 설치 (Claude · ChatGPT · Codex · Gemini)
+
+**설치 ZIP: [free-korean-fonts-ppt.zip](https://github.com/ryc3030/sandoll-freefonts/raw/main/dist/free-korean-fonts-ppt.zip)** (매주 데이터와 함께 다시 만들어짐)
+
+Agent Skills 표준(SKILL.md)으로 만들어 아래 도구에서 그대로 쓸 수 있습니다. ZIP에는 스크립트와 데이터가 함께 들어 있어, 인터넷이 막힌 환경에서도 분석·적용은 됩니다(폰트 내려받기만 인터넷 필요).
+
+| 도구 | 설치 | 확인 |
+|---|---|---|
+| Claude (claude.ai·데스크톱) | 설정 → 기능 → 스킬에서 ZIP 업로드 | 동작 확인 |
+| Claude Code | `~/.claude/skills/`에 압축 풀기 | — |
+| OpenAI Codex (CLI·앱) | 프로젝트 `.agents/skills/`에 압축 풀기 | 스킬 인식 확인(Codex CLI 0.170) |
+| Gemini CLI | `gemini skills install <압축 푼 폴더>` | 설치·인식 확인(Gemini CLI 0.68) |
+| ChatGPT (스킬 지원 요금제·데스크톱 앱) | 스킬 메뉴에서 가져오기 | 직접 시험 못 함 |
+| Gemini 앱(Gem)·스킬 없는 챗봇 | SKILL.md를 Gem·프로젝트 지침에 붙여 넣고 ZIP을 대화에 올림 | 직접 시험 못 함 |
+
+## 스킬: PPT 분석 → 무료 한글 폰트 자동 적용
 
 `skill/` 폴더는 Claude 스킬입니다. "이 피피티에 어울리는 무료 폰트 적용해 줘"라고 하면 Claude가
 덱을 분석해(분야·글의 문체·밀도·색감) 어울리는 서체 성격과 폰트 짝을 고르고, OFL 폰트(산돌 OFL 23종 + Google Fonts 38종)를 공개 배포처에서 받아, PPTX의 테마·마스터·슬라이드·표·차트 글꼴을 한 번에 바꾼 뒤
@@ -45,6 +60,7 @@ data/webfonts.json                실시간 미리보기용 웹폰트 연결표 
 data/fontfiles.json               PPT 스킬용 산돌 OFL 폰트 파일 주소·성격 태그 (직접 관리)
 data/google-fonts.json            Google Fonts 한국어 폰트 (자동 생성)
 scripts/google_fonts.py           Google Fonts 수집기
+scripts/build_skill_zip.py        설치용 스킬 ZIP 만들기 → dist/free-korean-fonts-ppt.zip
 skill/                            Claude 스킬 (PPT 자동 적용)
 scripts/scrape.py                 수집기 (Python 3 + beautifulsoup4)
 .github/workflows/update.yml      매주 자동 갱신
