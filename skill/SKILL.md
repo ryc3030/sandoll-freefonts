@@ -23,7 +23,7 @@ description: 피피티(.pptx)를 분석해 어울리는 무료 한글 폰트(산
 
 ```bash
 mkdir -p ~/ffskill && cd ~/ffskill
-V=skill-v2   # 검증된 판으로 고정. 최신을 쓰려면 V=main
+V=67d9f166e0d3e5ebbdec83d9696725dcb02d87a6   # 검증된 판(커밋)으로 고정. 최신을 쓰려면 V=main
 for f in analyze_deck.py fetch_fonts.py apply_fonts.py; do
   curl -fsSLO https://raw.githubusercontent.com/ryc3030/sandoll-freefonts/$V/skill/scripts/$f
 done
