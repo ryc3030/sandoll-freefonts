@@ -10,6 +10,7 @@
   python fetch_fonts.py 프리텐다드 --weights Regular,Bold,ExtraBold --out fonts --install
   python fetch_fonts.py 본명조 프리텐다드 --weights Regular,Bold --out fonts      # 제목·본문 가족을 한 번에
   python fetch_fonts.py "Gothic A1" 함렛 --out fonts                              # 같은 --out에 이어 받으면 manifest가 합쳐진다
+  python fetch_fonts.py --local 서울남산체B.ttf 서울남산체M.ttf --out fonts       # 사용자가 공식 배포처에서 받아 준 파일(기관 전용 서체 등)
 
 결과: <out>/폰트 파일, <out>/LICENSE-*.txt(저작권 표시 + OFL 1.1 원문), <out>/manifest.json
   manifest 항목 = {font, name, weight, file, family(PowerPoint 이름), bold, outline(TrueType/CFF), fsType, embeddable, missing(빠진 기호)}
@@ -114,7 +115,43 @@ def main():
     ap.add_argument("--install", action="store_true", help="~/.fonts에 설치하고 fc-cache 실행(LibreOffice 렌더링 확인용)")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--data", help="data 폴더 경로(오프라인일 때)")
+    ap.add_argument("--local", nargs="+", help="사용자가 직접 준 폰트 파일(.ttf/.otf). 라이선스 확인은 사용자 책임으로, 결과물 묶음에는 넣지 않는다")
     a = ap.parse_args()
+
+    if a.local:
+        out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
+        mp = out / "manifest.json"
+        old = json.loads(mp.read_text("utf-8")) if mp.exists() else []
+        new = []
+        for fp in a.local:
+            src = Path(fp)
+            if not src.exists():
+                print(f"! {fp}: 파일이 없습니다", file=sys.stderr); continue
+            dest = out / "local" / src.name
+            dest.parent.mkdir(exist_ok=True)
+            shutil.copy(src, dest)
+            info = inspect(dest)
+            w = info.get("subfamily") or "Regular"
+            # 굵기 이름 추정: 파일 이름이나 서브패밀리에서
+            for cand in ORDER[::-1]:
+                if cand.lower() in (src.stem + " " + info["family"] + " " + w).lower().replace(" ", ""):
+                    w = cand; break
+            else:
+                w = "Bold" if info["bold"] else "Regular"
+            fam = info.get("typoFamily") or info["family"]
+            new.append({"font": "L:" + fam, "name": fam, "weight": w, "file": str(dest), **info, "latinOnly": False,
+                        "licenseCheck": "사용자 제공 파일(재배포하지 말 것)", "local": True})
+            print(f"  ✓ {src.name} → '{fam}:{w}' (PowerPoint 이름 '{info['family']}'{', 굵게' if info['bold'] else ''})"
+                  + (f"  빠진 기호 {info['missing']}" if info["missing"] else ""))
+        merged = {(m["font"], m["weight"]): m for m in old + new}
+        mp.write_text(json.dumps(list(merged.values()), ensure_ascii=False, indent=2), "utf-8")
+        if a.install and new:
+            fd = Path.home() / ".fonts"; fd.mkdir(exist_ok=True)
+            for m in new:
+                shutil.copy(m["file"], fd)
+            subprocess.run(["fc-cache", "-f"], check=False, capture_output=True)
+        print(f"manifest: {mp} (이번 {len(new)}개, 누적 {len(merged)}개). apply_fonts.py에는 '이름:굵기'로 지정")
+        return
 
     files = load("fontfiles.json", a.data)["fonts"]
     try:

@@ -1,0 +1,160 @@
+{
+ "_note": "기관 전용 서체. 분석 스킬이 문서 속성·바닥글·본문에서 기관을 찾으면 후보로 제시한다. 라이선스가 기관마다 달라 자동으로 받지 않는다. 사용자가 공식 배포처에서 받아 주면 fetch_fonts.py --local로 적용한다.",
+ "agencies": [
+  {
+   "agency": "서울특별시",
+   "match": "서울특별시|서울시청|서울시장|서울시\\s?[가-힣]*(?:과|국|실|본부)\\b",
+   "fonts": [
+    "서울남산체(고딕)",
+    "서울한강체(명조)",
+    "서울알림체(공공 안내용 고딕)"
+   ],
+   "use": "서울시 문서·홍보물. 안내·정보 전달은 서울알림체, 상징적 제목은 서울남산체·서울한강체",
+   "url": "https://news.seoul.go.kr/culture/archives/529602",
+   "license": "무료 사용. 재배포 조건은 서울시 안내를 따름"
+  },
+  {
+   "agency": "경기도",
+   "match": "경기도(?:청|지사|의회)?(?![가-힣]*교육청)",
+   "fonts": [
+    "경기천년제목(고딕)",
+    "경기천년바탕(명조)"
+   ],
+   "use": "경기도 문서·홍보물",
+   "url": "https://www.sandollcloud.com/free-font/16053/GyeonggiTitle",
+   "license": "무료 사용, 프로그램 탑재 배포 가능, 폰트 판매 금지"
+  },
+  {
+   "agency": "부산광역시",
+   "match": "부산광역시|부산시청|부산시장",
+   "fonts": [
+    "부산단디고딕",
+    "부산단디명조",
+    "부산단디손글씨"
+   ],
+   "use": "부산시 문서·홍보물(2026.10. 새 전용서체)",
+   "url": "https://www.busan.go.kr/bhbusan/font",
+   "license": "무료 사용, 유료 판매·대가 받는 배포 금지"
+  },
+  {
+   "agency": "전라남도",
+   "match": "전라남도(?:청|지사)?(?![가-힣]*교육청)|전남도청",
+   "fonts": [
+    "푸른전남"
+   ],
+   "use": "전라남도 문서",
+   "url": "https://www.sandollcloud.com/font/16274.html",
+   "license": "OFL(한국저작권위원회)"
+  },
+  {
+   "agency": "전라남도교육청",
+   "match": "전라남도교육청|전남교육청|전남교육",
+   "fonts": [
+    "전남교육체(또박체 등)"
+   ],
+   "use": "전남 교육 문서",
+   "url": "https://www.sandollcloud.com/free-font/20749/JNE-Ttobak",
+   "license": "무료 사용, 프로그램 탑재 배포 가능, 판매 금지"
+  },
+  {
+   "agency": "교육부·시도교육청·학교",
+   "match": "교육부|[가-힣]{2,6}교육청|초등학교|중학교|고등학교|학부모",
+   "fonts": [
+    "학교안심체(시간표·지우개 등)"
+   ],
+   "use": "학교·교육청 문서(교육부·17개 시도교육청·KERIS 공동 도입 OFL)",
+   "url": "https://www.sandollcloud.com/free-font/22624/Hakgyoansim-Siganpyo",
+   "license": "OFL"
+  },
+  {
+   "agency": "세종특별자치시",
+   "match": "세종특별자치시|세종시청",
+   "fonts": [
+    "세종글꽃체(손글씨)"
+   ],
+   "use": "세종시 홍보물 제목",
+   "url": "https://www.sandollcloud.com/free-font/18305/SejongGeulggot",
+   "license": "산돌구름 표기 확인"
+  },
+  {
+   "agency": "국가보훈부·보훈청",
+   "match": "국가보훈부|보훈청|국가보훈처|보훈",
+   "fonts": [
+    "62570체(명조)"
+   ],
+   "use": "보훈 관련 문서·행사",
+   "url": "https://www.sandollcloud.com/free-font/15630/62570",
+   "license": "무료 사용, 저작권 안내·라이선스 전문 포함 시 재배포 가능"
+  },
+  {
+   "agency": "구미시",
+   "match": "구미시",
+   "fonts": [
+    "구미첨단산업체"
+   ],
+   "use": "구미시 문서",
+   "url": "https://www.sandollcloud.com/free-font/21093/Gumi-Industry",
+   "license": "무료 사용, 판매·변형 금지"
+  },
+  {
+   "agency": "평택시",
+   "match": "평택시",
+   "fonts": [
+    "평택 반도체"
+   ],
+   "use": "평택시 문서",
+   "url": "https://www.sandollcloud.com/free-font/21072",
+   "license": "무료 사용, 판매·변형 금지"
+  },
+  {
+   "agency": "진천군",
+   "match": "진천군",
+   "fonts": [
+    "생거진천체"
+   ],
+   "use": "진천군 문서",
+   "url": "https://www.sandollcloud.com/free-font/17692/Saenggeo-Jincheon",
+   "license": "무료 사용, 판매·변형 금지"
+  },
+  {
+   "agency": "울산 중구",
+   "match": "울산(?:광역시)?\\s?중구",
+   "fonts": [
+    "울산중구전용서체"
+   ],
+   "use": "울산 중구 문서",
+   "url": "https://www.sandollcloud.com/free-font/16949/UlsanJunggu",
+   "license": "무료 사용, 판매 금지, 배포 형태 그대로"
+  },
+  {
+   "agency": "원주시",
+   "match": "원주시",
+   "fonts": [
+    "원주체"
+   ],
+   "use": "원주시 문서",
+   "url": "https://www.sandollcloud.com/free-font/23428/Wonju",
+   "license": "산돌구름 표기 확인"
+  },
+  {
+   "agency": "구리시",
+   "match": "구리시",
+   "fonts": [
+    "와구리체"
+   ],
+   "use": "구리시 문서",
+   "url": "https://www.sandollcloud.com/free-font/19893/WAGURI",
+   "license": "산돌구름 표기 확인"
+  },
+  {
+   "agency": "대구 중구",
+   "match": "대구(?:광역시)?\\s?중구|북성로",
+   "fonts": [
+    "대구북성로"
+   ],
+   "use": "대구 중구 문서",
+   "url": "https://www.sandollcloud.com/free-font/23205/Daegu_b",
+   "license": "산돌구름 표기 확인"
+  }
+ ]
+}

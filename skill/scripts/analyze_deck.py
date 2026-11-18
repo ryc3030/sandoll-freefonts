@@ -72,6 +72,8 @@ GENRE_DEFAULT = {
     "아동·가족": ("배민 주아체", "Regular", "나눔스퀘어라운드", "Regular"),
     "게임·레트로": ("갈무리9", "Regular", "프리텐다드", "Regular"),
 }
+# 공공 발행 덱에서도 이 분야 성격이 뚜렷하면 프리텐다드 대신 그 분야 서체를 쓴다
+CONTENT_OVERRIDE = ["홍보·행사", "문화·예술·인문", "아동·가족", "게임·레트로", "학술·연구", "교육·강의"]
 # 점수가 같을 때 분야별로 먼저 고를 폰트
 PRIORITY = {g: [v[0], v[2]] for g, v in GENRE_DEFAULT.items()}
 PRIORITY["교육·강의"] += ["프리젠테이션", "나눔스퀘어라운드"]
@@ -81,8 +83,12 @@ PUBLIC_MARK = re.compile(r"^\s*([□■○◦❍ㅇ※◎▶◇◆]|[ⅠⅡⅢ�
 ORG = re.compile(r"(?<![가-힣\d])(?:[가-힣]{2,10}(?:부|처|청)|[가-힣]{1,10}(?:공사|공단|재단|진흥원|연구원|위원회|센터|시청|도청|군청|구청|교육청|"
                  r"행정복지센터|의회))(?![가-힣])|(?:주무관|사무관|서기관|담당관|위원장|본부장|시장님|구청장|군수|도지사)")
 ORG_STOP = {"지원", "신청", "요청", "출처", "대처", "일부", "전부", "내부", "외부", "세부", "본부", "민원", "간부", "정부"}
-PUB_PUBLISHER = re.compile(r"(?:특별시|광역시|특별자치|[가-힣]+[시군구도]청|[가-힣]+부$|[가-힣]+처$|[가-힣]+청$|공사|공단|진흥원|"
-                           r"연구원|위원회|의회|행정복지센터|정부|Government|Ministry|City of)")
+SIDO = r"(?:서울|부산|대구|인천|광주|대전|울산|세종|경기|강원|충북|충남|전북|전남|경북|경남|제주|충청북|충청남|전라북|전라남|경상북|경상남)"
+PUB_PUBLISHER = re.compile(
+    SIDO + r"(?:특별시|광역시|특별자치시|특별자치도|도)?(?:청|교육청|의회)?(?![가-힣])|"          # 서울특별시, 경기도, 전남교육청
+    r"[가-힣]{2,10}(?:부|처|청|공사|공단|재단|진흥원|연구원|위원회|의회|교육청|보훈청|센터)(?![가-힣])|"  # 행정안전부, OO교육청
+    r"[가-힣]{2,4}[시군구](?=\s?[가-힣]{0,8}(?:과|국|실|팀|청|본부|센터|의회)(?![가-힣]))|"       # 수원시 OO과
+    r"정부|Government|Ministry|City of|Metropolitan")
 CITE = re.compile(r"\([가-힣A-Z][^()]{0,40}?(?:외|et al\.?)?,?\s?(?:19|20)\d{2}[a-z]?\)|참고\s?문헌|References|"
                   r"\bp\s?[<>=]\s?0?\.\d+|\bR\^?2\b|β|\bN\s?=\s?\d+")
 MONEY = re.compile(r"\d[\d,.]*\s?(?:억|조|만|천)?\s?원|\$\s?\d|\d+(?:\.\d+)?\s?%|\d+\s?배")
@@ -494,6 +500,8 @@ def diagnose(F):
         "slides": F["slides"], "hidden": F["hidden"], "aspect": F["aspect"], "scripts": scripts,
         "publisher_public": publisher_public, "publisher_meta": meta.strip()[:80],
         "genres": genres[:4], "genre_confident": confident, "register": register,
+        "genre_raw": {g: round(v, 2) for g, v in raw.items()}, "genre_distinct": distinct,
+        "meta_text": meta, "body_text": main_text[:20000],
         "sentence_len": round(statistics.mean(lens)) if lens else None,
         "signals": {"공공기호": marks, "기관직함": orgs, "학술인용": cites, "금액비율": money, "청중호칭": aud,
                     "느낌표": excl, "물음표": ques, "이모지": emoji},
@@ -599,25 +607,37 @@ def recommend(d, data_dir=None, k=3):
                       "출처": t["src"] if t is b else f"{t['src']} + {b['src']}",
                       "점수": round(score(t, "title") + score(b, "body"), 2), "주의": note(t) if t is b else note(t, b)})
 
-    # 1) 공공 발행이면 목적과 상관없이 프리텐다드(사용자 규칙)
-    if d["publisher_public"] or (g0 == "공공·정책" and d["genres"][0][1] >= 0.3):
-        p = by["프리텐다드"]; add("공공 기본값", p, heavy(p), p, "Regular")
-    # 2) 분야 판단이 확실하면 분야 기본값
-    elif g0 and d["genre_confident"] and g0 in GENRE_DEFAULT:
-        tn, tw, bn, bw = GENRE_DEFAULT[g0]
-        if g0 == "학술·연구" and not dense and not small:
+    def genre_pair(g, kind):
+        tn, tw, bn, bw = GENRE_DEFAULT[g]
+        if g == "학술·연구" and not dense and not small:
             bn = "본명조"
         t, b = by[tn], by[bn]
         if report_type and t["style"] != "serif" and tw in ("Black", "ExtraBold"):
             tw = "Bold"
-        add(f"분야 기본값({g0})", t, tw, b, bw)
-    # 3) 불확실하면 어디에나 무난한 프리텐다드
+        add(kind, t, tw, b, bw)
+
+    raw, dist = d["genre_raw"], d["genre_distinct"]
+    # 공공 발행 덱에서도 내용 성격이 뚜렷하면(축제·전시·아동·학술 등) 그 서체를 쓴다.
+    # 기준: 그 분야 점수가 공공 점수의 절반 이상이고, 서로 다른 단서 단어가 3개 이상.
+    content = None
+    if d["publisher_public"] or g0 == "공공·정책":
+        cands = [(g, raw[g]) for g in CONTENT_OVERRIDE if raw.get(g, 0) >= max(3.0, 0.5 * raw.get("공공·정책", 0)) and dist.get(g, 0) >= 3]
+        if cands:
+            content = max(cands, key=lambda x: x[1])[0]
+    pub = by["프리텐다드"]
+    if content:
+        genre_pair(content, f"공공 발행 + 내용 우선({content})")
+        add("공공 기본값", pub, heavy(pub), pub, "Regular")
+    elif d["publisher_public"] or (g0 == "공공·정책" and d["genres"][0][1] >= 0.3):
+        add("공공 기본값", pub, heavy(pub), pub, "Regular")
+    elif g0 and d["genre_confident"] and g0 in GENRE_DEFAULT:
+        genre_pair(g0, f"분야 기본값({g0})")
     else:
-        p = by["프리텐다드"]; add("판단 불확실: 무난한 기본값", p, heavy(p), p, "Regular")
+        add("판단 불확실: 무난한 기본값", pub, heavy(pub), pub, "Regular")
 
     titles = sorted(pool, key=rank_key("title"))
     bodies = sorted(pool, key=rank_key("body"))
-    used = {pairs[0]["제목"].rsplit(" ", 1)[0]}
+    used = {p["제목"].rsplit(" ", 1)[0] for p in pairs}
     for f in bodies:
         if len(pairs) >= 3:
             break
@@ -635,7 +655,17 @@ def recommend(d, data_dir=None, k=3):
             continue
         tw = heavy(t) if len(t["weights"]) > 1 else t["weights"][0]
         add("제목 개성 + 본문 안정", t, tw, b, "Regular"); used.add(t["key"])
-    return {"pairs": pairs[:k + 1], "title_top": [(f["key"], score(f, "title")) for f in titles[:6]],
+    # 기관 전용 서체
+    agencies = []
+    try:
+        for ag in load("agency-fonts.json", data_dir)["agencies"]:
+            hits = 3 * len(re.findall(ag["match"], d["meta_text"])) + len(re.findall(ag["match"], d["body_text"]))
+            if hits >= 2:
+                agencies.append({**ag, "hits": hits})
+    except Exception:
+        pass
+    agencies.sort(key=lambda a: -a["hits"])
+    return {"pairs": pairs[:k + 1], "agency_fonts": agencies[:2], "content_override": content, "title_top": [(f["key"], score(f, "title")) for f in titles[:6]],
             "body_top": [(f["key"], score(f, "body")) for f in bodies[:6]]}
 
 
@@ -664,6 +694,9 @@ def report(d, rec, path):
          "\n## 폰트 짝 후보"]
     for i, p in enumerate(rec["pairs"], 1):
         L.append(f"{i}. [{p['방식']}] 제목 {p['제목']} / 본문 {p['본문']}  ({p['출처']}, 점수 {p['점수']})" + (f"  ⚠ {p['주의']}" if p["주의"] else ""))
+    for ag in rec.get("agency_fonts", []):
+        L.append(f"\n## 기관 전용 서체 후보: {ag['agency']} → {', '.join(ag['fonts'])}\n   {ag['use']} · 라이선스: {ag['license']} · 공식: {ag['url']}"
+                 "\n   (자동으로 받지 않음. 사용자가 받아 주면 fetch_fonts.py --local 파일로 적용)")
     L.append(f"\n제목 상위: {rec['title_top']}\n본문 상위: {rec['body_top']}")
     return "\n".join(L)
 
