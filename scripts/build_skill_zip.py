@@ -17,28 +17,39 @@ start = skill.index("## 0. 준비")
 end = skill.index("## 1. 덱 준비")
 skill = skill[:start] + """## 0. 준비
 
-이 스킬 폴더(이 SKILL.md가 있는 폴더, 아래 `$SKILL_DIR`)에 `scripts/`와 `data/`가 함께 들어 있다.
+이 스킬 폴더(이 SKILL.md가 있는 폴더, 아래 `$SKILL_DIR`)에 `scripts/`와 `data/`가 함께 들어 있다. **복사하지 말고 제자리에서 실행한다.**
 
 ```bash
 SKILL_DIR="<이 SKILL.md가 있는 폴더>"
-pip install --break-system-packages -q fonttools lxml 2>/dev/null || pip install -q fonttools lxml
-mkdir -p ~/ffskill && cp "$SKILL_DIR"/scripts/*.py ~/ffskill/ && cp -r "$SKILL_DIR"/data ~/data 2>/dev/null; true
+python3 -c "import fontTools, lxml" 2>/dev/null || pip install --break-system-packages -q fonttools lxml 2>/dev/null || pip install -q fonttools lxml
 ```
+- 아래 명령의 스크립트 경로는 모두 `"$SKILL_DIR"/scripts/` 기준이다.
 - 스크립트는 저장소의 최신 데이터(매주 갱신)를 먼저 읽고, 인터넷이 막혀 있으면 함께 든 `data/`를 쓴다.
-  `~/ffskill`로 복사해 쓸 때는 `--data "$SKILL_DIR/data"`를 붙이면 함께 든 데이터를 바로 쓴다.
-- 폰트 파일은 인터넷으로 받는다. 인터넷이 막힌 환경(일부 챗봇 샌드박스)에서는 사용자가 폰트 파일을 올려 주면
+- 폰트 파일은 인터넷으로 받는다. 인터넷이 막힌 환경(일부 챗봇 샌드박스, Codex 기본 샌드박스)에서는 사용자가 폰트 파일을 올려 주면
   `fetch_fonts.py --local 파일.ttf`로 적용한다. 분석(`analyze_deck.py`)과 적용(`apply_fonts.py`)은 인터넷 없이도 된다.
+  `--install`(홈 폴더에 폰트 설치)이 막히면 빼고 실행한다.
 - 최신 스크립트: https://github.com/ryc3030/sandoll-freefonts/tree/main/skill/scripts
 
 """ + skill[end:]
+skill = skill.replace("~/ffskill/", '"$SKILL_DIR"/scripts/')
 OUT.parent.mkdir(exist_ok=True)
+
+
+def put(z, arc, data):
+    """고정 시각으로 기록해 내용이 같으면 ZIP도 똑같이 나오게 한다(매주 불필요한 커밋 방지)."""
+    zi = zipfile.ZipInfo(arc, (2020, 1, 1, 0, 0, 0))
+    zi.compress_type = zipfile.ZIP_DEFLATED
+    zi.external_attr = 0o644 << 16
+    z.writestr(zi, data)
+
+
 with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
-    z.writestr(f"{NAME}/SKILL.md", skill)
+    put(z, f"{NAME}/SKILL.md", skill)
     for f in sorted((ROOT / "skill" / "scripts").glob("*.py")):
-        z.write(f, f"{NAME}/scripts/{f.name}")
+        put(z, f"{NAME}/scripts/{f.name}", f.read_bytes())
     for f in ["fontfiles.json", "google-fonts.json", "glyph-coverage.json", "agency-fonts.json", "fonts.json", "OFL-1.1.txt"]:
-        z.write(ROOT / "data" / f, f"{NAME}/data/{f}")
-    z.writestr(f"{NAME}/README.md", (
+        put(z, f"{NAME}/data/{f}", (ROOT / "data" / f).read_bytes())
+    put(z, f"{NAME}/README.md", (
         "# free-korean-fonts-ppt\n\n피피티를 분석해 어울리는 무료 한글 폰트를 고르고 적용하는 Agent Skill입니다.\n"
         "원본·최신판: https://github.com/ryc3030/sandoll-freefonts\n\n"
         "## 설치\n- Claude(claude.ai·데스크톱): 설정 → 기능(Capabilities) → 스킬에서 이 ZIP 업로드\n"

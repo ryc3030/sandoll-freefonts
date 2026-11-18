@@ -56,7 +56,8 @@ GENRES = {
                   r"전시|예술|문화|공연|작가|역사|전통|감성|이야기|작품|시인|음악|미술|유산|기억|삶|여행|"
                   r"풍경|계절|문학|철학|사유|빛|기록|아카이브|큐레이션|사진전|개인전"),
     "아동·가족": ("cute playful friendly",
-              r"어린이|아이(?!디어|템|콘|폰|패드|돌|디|스)|유아|놀이|동화|키즈|엄마|아빠|가족|우리\s?반|유치원|어린이집|색칠|그림책|간식|햇살반|친구들"),
+              r"어린이|아이(?!디어|템|콘|폰|패드|돌|디|스)|유아|놀이|동화|키즈|엄마|아빠|가족|우리\s?반|유치원|어린이집|색칠|그림책|간식|햇살반|친구들|"
+              r"초등|저학년|안전\s?약속|등하굣길|횡단보도|보호자"),
     "기념·의전": ("formal traditional elegant calm",
               r"추념|추모|기념식|경축식|현충|순국|호국|보훈|애국지사|독립유공자|국가유공자|영령|헌화|분향|묵념|넋|기리[는며고]|위령|"
               r"광복절|3[·.]?1절|삼일절|한글날|개천절|제헌절|국민의례|애국가|식순|개식|폐식|개회사|기념사|추념사|경과보고|"
@@ -95,6 +96,8 @@ PUB_PUBLISHER = re.compile(
     r"[가-힣]{2,10}(?:부|처|청|공사|공단|재단|진흥원|연구원|위원회|의회|교육청|보훈청|센터)(?![가-힣])|"  # 행정안전부, OO교육청
     r"[가-힣]{2,4}[시군구](?=\s?[가-힣]{0,8}(?:과|국|실|팀|청|본부|센터|의회)(?![가-힣]))|"       # 수원시 OO과
     r"정부|Government|Ministry|City of|Metropolitan")
+# 기업 조직명(○○사업부·영업본부·고객지원센터·리서치센터 등)은 공공으로 보지 않는다
+PUB_STOP = re.compile(r"(?:사업|영업|지원|고객|리서치|기술|연구개발|디자인|마케팅|서비스|물류|생산)(?:본부|부|센터)$|사업부$|본부$")
 CITE = re.compile(r"\([가-힣A-Z][^()]{0,40}?(?:외|et al\.?)?,?\s?(?:19|20)\d{2}[a-z]?\)|참고\s?문헌|References|"
                   r"\bp\s?[<>=]\s?0?\.\d+|\bR\^?2\b|β|\bN\s?=\s?\d+")
 MONEY = re.compile(r"\d[\d,.]*\s?(?:억|조|만|천)?\s?원|\$\s?\d|\d+(?:\.\d+)?\s?%|\d+\s?배")
@@ -381,6 +384,9 @@ def diagnose(F):
     excl, ques, emoji = main_text.count("!"), main_text.count("?"), len(EMOJI.findall(main_text))
     meta = " ".join([F["company"], F["author"], *F["footer"]])
 
+    def pub_hit(text):
+        return [m.group(0) for m in PUB_PUBLISHER.finditer(text) if not PUB_STOP.search(m.group(0))]
+
     # 분야 점수: 단어마다 1+log(반복수)로 세어 한 단어가 점수를 독식하지 않게 한다. 노트·차트·SmartArt 글은 0.5배.
     def lex(text, rx, flags=re.I):
         c = Counter(m.group(0).lower() for m in re.finditer(rx, text, flags))
@@ -388,10 +394,12 @@ def diagnose(F):
     raw, distinct = {}, {}
     for g, (_, rx) in GENRES.items():
         s1, d1 = lex(main_text, rx); s2, _ = lex(extra_text, rx)
+        d1 = len({m.group(0).lower() for m in re.finditer(rx, main_text + "\n" + extra_text, re.I)})  # 노트 단서도 셈
         if g in ACRONYM:
             s3, d3 = lex(main_text, ACRONYM[g], 0); s1 += s3; d1 += d3
         raw[g], distinct[g] = s1 + 0.5 * s2, d1
-    raw["공공·정책"] += 1.5 * min(marks, 8) + 2.0 * min(orgs, 5) + (3 if PUB_PUBLISHER.search(meta) else 0)
+    meta_pub = pub_hit(meta)
+    raw["공공·정책"] += 1.5 * min(marks, 8) + 2.0 * min(orgs, 5) + (3 if meta_pub else 0)
     raw["학술·연구"] += 3.0 * min(cites, 5) + (2.0 if hanja > 20 else 0)
     raw["기업·비즈니스"] += 0.7 * min(money, 8)
     raw["홍보·행사"] += 0.8 * min(excl, 6) + 1.0 * min(emoji, 5)
@@ -400,7 +408,8 @@ def diagnose(F):
     gsum = sum(raw.values()) or 1
     top_raw = max(raw, key=raw.get) if raw else None
     # 공공 발행: 문서 속성·바닥글의 기관명, 공공 보고서 기호, 또는 (기관명·직함 + 공공·홍보가 1위)
-    publisher_public = bool(PUB_PUBLISHER.search(meta)) or marks >= 3 or (orgs >= 2 and top_raw in ("공공·정책", "홍보·행사"))
+    # 메타 정보만으로 판정하지 않는다: 본문에도 공공 어휘가 있어야 함
+    publisher_public = (bool(meta_pub) and raw["공공·정책"] - 3 > 0) or marks >= 3 or (orgs >= 2 and top_raw in ("공공·정책", "홍보·행사"))
     genres = sorted(((g, round(v / gsum, 2)) for g, v in raw.items() if v > 0), key=lambda x: (-x[1], list(GENRES).index(x[0])))
     top = genres[0] if genres else (None, 0)
     margin = top[1] - (genres[1][1] if len(genres) > 1 else 0)
@@ -408,7 +417,7 @@ def diagnose(F):
         and top[1] >= 0.45 and margin >= 0.15
     if marks: why.append(f"공공 보고서 기호(□ ○ ※ Ⅰ. 등) {marks}줄")
     if orgs: why.append(f"기관명·직함 {orgs}회")
-    if PUB_PUBLISHER.search(meta): why.append(f"문서 속성·바닥글에 공공기관({PUB_PUBLISHER.search(meta).group(0)})")
+    if meta_pub: why.append(f"문서 속성·바닥글에 공공기관({meta_pub[0]})")
     if cites: why.append(f"학술 인용·통계 표기 {cites}회")
     if money: why.append(f"금액·비율 표기 {money}회")
     if hanja: why.append(f"한자 {hanja}자")
@@ -490,7 +499,9 @@ def diagnose(F):
         advice.append(f"가장 작은 글자 {size_stat['최소']}pt: 본문은 글자 폭 넉넉한 고딕, 명조·손글씨 본문 피함")
     advice.append("읽는 보고서형: 제목은 Bold~ExtraBold로 절제, 본문은 Regular" if deck_type == "읽는 보고서형"
                   else "발표형: 제목은 ExtraBold~Black으로 크게, 본문은 Regular~Medium")
-    if F["aspect"] < 1.5:
+    if F["aspect"] < 1.0:
+        advice.append("세로 문서형(A4 등): 읽는 문서처럼 본문 가독성 우선, 제목은 Bold")
+    elif F["aspect"] < 1.5:
         advice.append("4:3 화면: 폭이 좁은 고딕(SUIT·프리텐다드)이 줄바꿈에 유리")
     if bold_ratio > 0.15:
         advice.append(f"굵은 글자 비율 {int(bold_ratio * 100)}%: 본문 가족의 Bold도 반드시 받기")
@@ -524,13 +535,15 @@ def diagnose(F):
 
 
 def _ksx(ch):
+    """KS X 1001 완성형 2,350자 안에 있는가(파이썬 euc_kr은 밖의 글자를 8바이트 조합형으로 바꾸므로 길이로 판별)."""
     try:
-        ch.encode("euc_kr"); return True
+        return len(ch.encode("euc_kr")) == 2
     except UnicodeEncodeError:
         return False
 
 
-BUNDLED = Path(__file__).resolve().parent.parent / "data"  # 설치 ZIP에 함께 든 데이터
+import os as _os
+BUNDLED = Path(_os.environ.get("FFSKILL_DATA") or Path(__file__).resolve().parent.parent / "data")  # 설치 ZIP에 함께 든 데이터
 
 
 def load(name, data_dir):
@@ -624,7 +637,9 @@ def recommend(d, data_dir=None, k=3):
 
     def genre_pair(g, kind):
         tn, tw, bn, bw = GENRE_DEFAULT[g]
-        if g == "학술·연구" and not dense and not small:
+        if tn not in by: tn, tw = "프리텐다드", "ExtraBold"   # 데이터에서 폰트가 빠졌을 때
+        if bn not in by: bn, bw = "프리텐다드", "Regular"
+        if g == "학술·연구" and not dense and not small and "본명조" in by:
             bn = "본명조"
         if g == "기념·의전" and (dense or small):
             bn = "프리텐다드"
@@ -641,7 +656,7 @@ def recommend(d, data_dir=None, k=3):
         cands = [(g, raw[g]) for g in CONTENT_OVERRIDE if raw.get(g, 0) >= max(3.0, 0.5 * raw.get("공공·정책", 0)) and dist.get(g, 0) >= 3]
         if cands:
             content = max(cands, key=lambda x: x[1])[0]
-    pub = by["프리텐다드"]
+    pub = by.get("프리텐다드") or next(f for f in pool if f["style"] == "sans" and len(f["weights"]) >= 3)
     if content:
         genre_pair(content, f"공공 발행 + 내용 우선({content})")
         add("공공 기본값", pub, heavy(pub), pub, "Regular")

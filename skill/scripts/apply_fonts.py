@@ -84,6 +84,10 @@ def title_like(root):
     """자리표시자가 아닌 상자 중 슬라이드에서 가장 큰 글자(28pt 이상)를 가진 상자들."""
     best, found = 0, []
     for sp in root.iter(f"{{{P}}}sp"):
+        ph = sp.find("p:nvSpPr/p:nvPr/p:ph", NS)
+        if ph is not None and ph.get("type") in TITLE_PH and "".join(t.text or "" for t in sp.iter(q("t"))).strip():
+            return set()  # 자리표시자 제목이 있는 장은 그것이 제목
+    for sp in root.iter(f"{{{P}}}sp"):
         if sp.find("p:nvSpPr/p:nvPr/p:ph", NS) is not None or sp.find("p:txBody", NS) is None:
             continue
         m = max_size(sp)
@@ -186,10 +190,14 @@ def main():
         if not man or ":" not in spec:
             return None
         name, w = spec.rsplit(":", 1)
+        keys = lambda m: {norm(m["name"]), norm(m["family"]), norm(m.get("typoFamily")), norm(m["font"].split(":", 1)[-1])}
         for m in man:
-            if norm(name) in {norm(m["name"]), norm(m["family"]), norm(m.get("typoFamily")), norm(m["font"].replace("G:", ""))} \
-                    and m["weight"].lower() == w.lower():
+            if norm(name) in keys(m) and m["weight"].lower() == w.lower():
                 return m
+        # 짧은 이름(예: '주아' → '배민 주아체')은 한 가족에만 들어맞을 때 받아들인다
+        part = [m for m in man if m["weight"].lower() == w.lower() and any(norm(name) in k for k in keys(m))]
+        if len({m["font"] for m in part}) == 1:
+            return part[0]
         sys.exit(f"manifest에서 '{spec}'을(를) 찾지 못했습니다. 받은 것: " + ", ".join(f"{m['name']}:{m['weight']}" for m in man))
 
     te, be = entry(a.title), entry(a.body)
@@ -202,7 +210,8 @@ def main():
     title_nobold = bool(te and not te["bold"])
     body_bold_face = None
     if be:
-        bb = next((m for m in man if m["font"] == be["font"] and m["weight"] in ("Bold", "SemiBold", "ExtraBold")), None)
+        cands = [m for m in man if m["font"] == be["font"]]
+        bb = next((m for w in ("Bold", "SemiBold", "ExtraBold") for m in cands if m["weight"] == w), None)
         if bb and not bb["bold"]:
             body_bold_face = bb["family"]  # 굵은 글꼴 이름이 따로 있음 → b=1 대신 그 글꼴로
     cfg = {"fonts": fonts, "keep": {k.strip().lower() for k in a.keep.split(",") if k.strip()},
@@ -252,7 +261,7 @@ def main():
           + (f" / 한글 {fonts[('title', 'ea')]}" if fonts[('title', 'ea')] != fonts[('title', 'latin')] else ""))
     print(f"  본문: {fonts[('body', 'latin')]}" + (f" / 한글 {fonts[('body', 'ea')]}" if fonts[('body', 'ea')] != fonts[('body', 'latin')] else ""))
     if stats["bold_title"]:
-        print(f"  · 제목의 굵게 {stats['bold_title']}곳을 껐습니다('{fonts[('title', 'latin')]}' 에 굵게 스타일 파일이 따로 없어, 그대로 두면 가짜 굵게가 됨).")
+        print(f"  · 제목의 굵게 {stats['bold_title']}곳을 껐습니다('{fonts[('title', 'latin')]}'에는 굵게 스타일 파일이 따로 없어, 그대로 두면 가짜 굵게가 됨).")
     if stats["bold_body"]:
         print(f"  · 본문 굵은 글자 {stats['bold_body']}곳을 '{body_bold_face}' 글꼴로 바꿨습니다.")
     if stats["bold_body_fake"] and be and not any(m["font"] == be["font"] and m["bold"] for m in man):
@@ -263,17 +272,14 @@ def main():
             miss = [c for c in (e.get("missing") or "") if c in chars]
             if miss:
                 print(f"  ! '{e['family']}'에 덱에 쓰인 기호 {''.join(miss)} 가 없습니다 → 그 글자만 다른 글꼴로 보입니다. 기호를 바꾸거나 다른 폰트를 고려하세요.")
-            if e.get("hangul", 11172) < 11172:
-                rare = sorted({c for c in chars if '가' <= c <= '힣' and not _ksx(c)})
-                if rare:
-                    print(f"  ! '{e['family']}'는 한글 {e['hangul']}자만 있어 덱의 '{''.join(rare[:20])}' 등이 다른 글꼴로 보입니다.")
+            if e.get("hangul", 11172) < 11172 and os.path.exists(e.get("file", "")):
+                from fontTools.ttLib import TTFont
+                cmap = TTFont(e["file"], lazy=True).getBestCmap() or {}
+                gap = sorted({c for c in chars if 0xAC00 <= ord(c) <= 0xD7A3 and ord(c) not in cmap})
+                if gap:
+                    print(f"  ! '{e['family']}'는 한글 {e['hangul']}자만 있어 덱의 '{''.join(gap[:20])}'{' 등' if len(gap) > 20 else ''}이(가) 다른 글꼴로 보입니다.")
 
 
-def _ksx(ch):
-    try:
-        ch.encode("euc_kr"); return True
-    except UnicodeEncodeError:
-        return False
 
 
 if __name__ == "__main__":

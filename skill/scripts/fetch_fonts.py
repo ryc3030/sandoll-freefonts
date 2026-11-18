@@ -29,10 +29,18 @@ GW = {"Thin": 100, "ExtraLight": 200, "Light": 300, "Regular": 400, "Medium": 50
       "Bold": 700, "ExtraBold": 800, "Black": 900, "Heavy": 900}
 # 한국 보고서·발표에 자주 나오는 기호. 폰트에 없으면 다른 글꼴로 대체돼 한 줄 안에서 글꼴이 섞인다.
 SYMBOLS = "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓₩㎡℃±×÷≤≥βαΔ「」『』〈〉《》“”‘’…"
-BAD_LIC = re.compile(r"재배포\s*(?:를\s*)?금지|무단\s*배포|not\s+be\s+redistributed|may\s+not\s+redistribute", re.I)
+BAD_LIC = re.compile(r"재배포\s*(?:를\s*)?(?:금지|할\s*수\s*없|불가)|배포\s*(?:불가|금지)|무단\s*배포|"
+                     r"not\s+be\s+(?:re)?distributed|may\s+not\s+(?:re)?distribute|redistribution\s+(?:is\s+)?(?:not|prohibited)", re.I)
+# 짧은 이름·별칭 → 목록 이름
+ALIAS = {"주아": "배민 주아체", "도현": "배민 도현체", "을지로": "배민 을지로체", "본고딕": "Noto Sans KR", "노토산스": "Noto Sans KR",
+         "노토세리프": "본명조", "프리텐다드": "프리텐다드", "pretendard": "프리텐다드", "나눔네오": "나눔스퀘어 네오",
+         "나눔라운드": "나눔스퀘어라운드", "고운": "고운돋움", "검은": "검은고딕", "베이글": "베이글 팻", "갈무리": "갈무리9",
+         "마루부리": "마루 부리", "지마켓": "G마켓 산스", "g마켓": "G마켓 산스", "원티드": "Wanted Sans", "수트": "SUIT",
+         "페이퍼로지": "페이퍼로지", "프리젠테이션": "프리젠테이션", "함렛": "함렛", "동글": "동글"}
 
 
-BUNDLED = Path(__file__).resolve().parent.parent / "data"  # 설치 ZIP에 함께 든 데이터
+import os as _os
+BUNDLED = Path(_os.environ.get("FFSKILL_DATA") or Path(__file__).resolve().parent.parent / "data")  # 설치 ZIP에 함께 든 데이터
 
 
 def load(name, local_dir=None, text=False):
@@ -140,14 +148,16 @@ def main():
             dest.parent.mkdir(exist_ok=True)
             shutil.copy(src, dest)
             info = inspect(dest)
-            w = info.get("subfamily") or "Regular"
-            # 굵기 이름 추정: 파일 이름이나 서브패밀리에서
-            for cand in ORDER[::-1]:
-                if cand.lower() in (src.stem + " " + info["family"] + " " + w).lower().replace(" ", ""):
-                    w = cand; break
-            else:
-                w = "Bold" if info["bold"] else "Regular"
+            # 굵기는 OS/2 usWeightClass로 정한다(파일 이름 추정은 SemiBold→Bold 같은 오판이 생김)
+            from fontTools.ttLib import TTFont
+            wc = TTFont(dest, lazy=True)["OS/2"].usWeightClass
+            WN = {100: "Thin", 200: "ExtraLight", 300: "Light", 400: "Regular", 500: "Medium", 600: "SemiBold",
+                  700: "Bold", 800: "ExtraBold", 900: "Black"}
+            w = WN.get(min(900, max(100, round(wc / 100) * 100)), "Regular")
             fam = info.get("typoFamily") or info["family"]
+            if any(m["font"] == "L:" + fam and m["weight"] == w and m["file"] != str(dest) for m in old + new):
+                print(f"  ! '{fam}:{w}'가 이미 있어 '{fam}:{w}-{src.stem}'로 등록합니다.", file=sys.stderr)
+                w = f"{w}-{src.stem}"
             new.append({"font": "L:" + fam, "name": fam, "weight": w, "file": str(dest), **info, "latinOnly": False,
                         "licenseCheck": "사용자 제공 파일(재배포하지 말 것)", "local": True})
             print(f"  ✓ {src.name} → '{fam}:{w}' (PowerPoint 이름 '{info['family']}'{', 굵게' if info['bold'] else ''})"
@@ -192,6 +202,7 @@ def main():
         return (s or "").lower().replace(" ", "")
 
     def find(q):
+        q = ALIAS.get(norm(q), q)
         ql = norm(q)
         for k, f in files.items():
             if ql in (k, norm(f["name"]), norm(f["family"]), norm(f.get("google"))):
@@ -271,9 +282,11 @@ def main():
             if info["embeddable"] != "편집 가능": note.append(f"포함 시 {info['embeddable']}")
             if info["missing"]: note.append(f"빠진 기호 {info['missing']}")
             print(f"  ✓ {name} {w:<10} → PowerPoint 이름 '{info['family']}'" + (f"  ({'; '.join(note)})" if note else ""))
-        if copyrights:
+        if copyrights or new:
+            lic_name = (gfam or {}).get("license", "OFL") if k.startswith("G:") else "OFL"
+            body = ofl_text if lic_name == "OFL" else f"{lic_name} — 라이선스 원문: {origin}\n"
             (out / f"LICENSE-{fam_label.replace(' ', '')}.txt").write_text(
-                f"{name} ({fam_label})\n출처: {origin}\n\n" + "\n".join(copyrights) + "\n\n" + ofl_text, "utf-8")
+                f"{name} ({fam_label})\n출처: {origin}\n\n" + "\n".join(copyrights) + "\n\n" + body, "utf-8")
 
     merged = {(m["font"], m["weight"]): m for m in old + new}
     mp.write_text(json.dumps(list(merged.values()), ensure_ascii=False, indent=2), "utf-8")

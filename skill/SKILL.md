@@ -1,6 +1,6 @@
 ---
 name: free-korean-fonts-ppt
-description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 폰트(산돌구름 OFL·Google Fonts·기관 전용 서체)를 고르고, 내려받아 제목·본문에 적용할 때 사용.
+description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 폰트(산돌구름 OFL·Google Fonts·기관 전용 서체)를 고르고, 내려받아 제목·본문에 적용할 때 사용. Use to pick and apply free Korean fonts to a PowerPoint deck.
 ---
 
 # 무료 한글 폰트 → PPT 분석·자동 적용
@@ -31,7 +31,7 @@ description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 
 ```bash
 mkdir -p ~/ffskill && cd ~/ffskill
 V=0459c55fecc31981d458d27730ec9711ccfc8ff9   # 검증된 판(커밋)으로 고정. 최신을 쓰려면 V=main
-for f in analyze_deck.py fetch_fonts.py apply_fonts.py; do
+for f in analyze_deck.py fetch_fonts.py apply_fonts.py license_report.py; do
   curl -fsSLO https://raw.githubusercontent.com/ryc3030/sandoll-freefonts/$V/skill/scripts/$f
 done
 pip install --break-system-packages -q fonttools lxml 2>/dev/null || pip install -q fonttools lxml
@@ -107,7 +107,7 @@ python3 ~/ffskill/apply_fonts.py input.pptx output.pptx --manifest fonts/manifes
 
 - 기관 전용 서체 등 사용자가 준 파일: `fetch_fonts.py --local 파일1.ttf 파일2.ttf --out fonts --install` → 출력된 `이름:굵기`로 적용.
   이 파일은 재배포 조건이 기관마다 다르므로 6단계 fonts.zip에 넣지 않는다.
-- 이름은 한글 이름·영문 family·산돌구름 ID 모두 된다(`함렛`, `"Gothic A1"`, `16951`). `--list`로 전체 목록.
+- 이름은 한글 이름·영문 family·산돌구름 ID·짧은 이름 모두 된다(`함렛`, `"Gothic A1"`, `16951`, `주아`). `--list`로 전체 목록.
 - 같은 `--out`에 나눠 받아도 manifest가 합쳐진다. 받지 못한 것이 있으면 목록을 출력하고 종료 코드 1로 끝난다.
 - **`이름:굵기`는 반드시 `--manifest`와 함께** 쓴다. 실제 PowerPoint 글꼴 이름(예: 'Pretendard ExtraBold'), 굵게 처리,
   빠진 기호 경고를 manifest로 맞춘다.
@@ -123,8 +123,9 @@ python3 ~/ffskill/apply_fonts.py input.pptx output.pptx --manifest fonts/manifes
 이미 설치된 폰트가 섞여 거짓 통과가 나지 않도록 **빈 HOME에서** 렌더링한다.
 
 ```bash
-export HOME=$(mktemp -d) && mkdir -p $HOME/.fonts && cp fonts/*.ttf fonts/*.otf $HOME/.fonts/ 2>/dev/null; fc-cache -f
-soffice --headless --convert-to pdf output.pptx >/dev/null 2>&1
+( export HOME=$(mktemp -d) && mkdir -p $HOME/.fonts \
+  && cp fonts/*.ttf fonts/*.otf fonts/local/* $HOME/.fonts/ 2>/dev/null; fc-cache -f \
+  && soffice --headless --convert-to pdf output.pptx >/dev/null 2>&1 )   # 서브셸: HOME 변경이 남지 않게
 pdffonts output.pdf                    # 고른 글꼴이 쓰였는지. LiberationSans는 글머리표(•)뿐이면 정상
 pdftoppm -r 60 -png output.pdf after   # 모든 장을 Read로 직접 본다
 ```
@@ -151,6 +152,10 @@ pdftoppm -r 60 -png output.pdf after   # 모든 장을 Read로 직접 본다
   - 모두 TrueType이고 `편집 가능`: "PowerPoint에서 제대로 보이려면 fonts.zip의 폰트를 설치하세요. 다른 사람에게 보낼 때는 파일 → 옵션 → 저장 → '파일의 글꼴 포함'을 켜고 저장하면 됩니다."
   - `CFF`가 있으면: "이 폰트는 PowerPoint 파일에 포함되지 않습니다. 받는 사람도 fonts.zip의 폰트를 설치해야 합니다."
   - `보기·인쇄만`(SUIT·나눔스퀘어·G마켓 산스 등): "파일에 포함해 보내면 받는 사람은 보기·인쇄만 되고 편집하려면 폰트를 설치해야 합니다."
+- 공모전 제출·기관 납품용이면 폰트 사용 내역서도 만들어 함께 보낸다(폰트·굵기·라이선스·출처·파일 해시):
+  ```bash
+  python3 ~/ffskill/license_report.py fonts/manifest.json --out 폰트_라이선스_내역.md --deck output.pptx
+  ```
 - 받을 수 없었던 폰트와 기관 전용 서체는 공식 배포처 링크를 함께 적는다.
 
 ## 참고

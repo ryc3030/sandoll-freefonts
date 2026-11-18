@@ -436,7 +436,7 @@
       ],
       "tone": "픽셀 글꼴, 게임·레트로 콘셉트",
       "files": {
-        "Regular": "https://cdn.jsdelivr.net/npm/galmuri@latest/dist/Galmuri9.ttf"
+        "Regular": "https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/Galmuri9.ttf"
       },
       "tags": [
         "retro",

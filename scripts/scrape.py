@@ -9,7 +9,8 @@ from bs4 import BeautifulSoup
 
 BASE = "https://www.sandollcloud.com"
 LIST_URL = BASE + "/freefonts"
-UA = "Mozilla/5.0 (compatible; sandoll-freefonts-index/1.0; +https://github.com/)"
+UA = "Mozilla/5.0 (compatible; sandoll-freefonts-index/1.1; +https://github.com/ryc3030/sandoll-freefonts)"
+DELAY = 10  # robots.txt의 Crawl-delay: 10을 따른다(주 1회, 약 11분)
 OUT = Path(__file__).resolve().parent.parent / "data" / "fonts.json"
 SECTIONS = {"animation01": "steady", "animation02": "new", "animation03": "ofl"}
 
@@ -112,7 +113,7 @@ def parse_detail(html):
     # 제작사(공식 배포) 사이트
     for a in soup.find_all("a", href=re.compile(r"^https?://")):
         if "제작사 사이트" in a.get_text():
-            d["makerUrl"] = a["href"]
+            d["makerUrl"] = re.sub(r"\.git$", "", a["href"])  # 저장소 클론 주소는 웹 주소로
             break
     return d
 
@@ -142,7 +143,14 @@ def main():
                 fonts[i - 1] = f
         f["ofl"] = "OFL" in f.get("tags", [])
         print(f"{i:>2}/{len(fonts)} {f.get('name')} {f.get('tags')} {f.get('makerUrl', '-')}")
-        time.sleep(0.5)
+        time.sleep(DELAY)
+    # 상세 페이지 구조가 바뀌어 정보가 비면 저장하지 않는다(망가진 데이터가 사이트에 올라가는 것 방지)
+    n_lic = sum(bool(f.get("licenseSummary")) for f in fonts)
+    n_ofl = sum(f.get("ofl", False) for f in fonts)
+    p_ofl = sum(p.get("ofl", False) for p in prev.values())
+    if n_lic < 0.7 * len(fonts) or (p_ofl and n_ofl < 0.7 * p_ofl):
+        print(f"상세 페이지 구조 변경 의심(요약표 {n_lic}/{len(fonts)}, OFL {n_ofl}/이전 {p_ofl}): 저장하지 않습니다.", file=sys.stderr)
+        sys.exit(1)
     data = {"source": LIST_URL, "fonts": fonts}
     # 내용이 바뀌었을 때만 날짜 갱신
     old = json.loads(OUT.read_text("utf-8")) if OUT.exists() else {}

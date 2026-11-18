@@ -33,7 +33,9 @@ Agent Skills 표준(SKILL.md)으로 만들어 아래 도구에서 그대로 쓸 
 - `skill/scripts/analyze_deck.py` — PPTX 진단(발행 주체·분야·문체·구조·시각·기호 등 30여 개 변수)과 폰트 짝 추천. 공공 덱은 프리텐다드가 기본이되 내용 성격(축제·전시·아동·학술 등)이 뚜렷하면 그 서체, 기관 전용 서체(서울·경기·부산·교육청 등)는 후보로 제시
 - `scripts/glyph_coverage.py` → `data/glyph-coverage.json` — 폰트별 빠진 기호(□ ※ Ⅰ 등)와 한글 글자 수. 기호가 빠진 폰트는 추천에서 감점
 - `skill/scripts/fetch_fonts.py` — `data/fontfiles.json`의 OFL 폰트를 받아 PowerPoint 글꼴 이름을 알려 줌
-- `skill/scripts/apply_fonts.py` — PPTX 글꼴을 제목/본문 두 가지로 통일
+- `skill/scripts/apply_fonts.py` — PPTX 글꼴을 제목/본문 두 가지로 통일(빠진 기호·드문 한글 경고)
+- `skill/scripts/license_report.py` — 공모전·납품용 폰트 라이선스 내역서(폰트·굵기·라이선스·출처·파일 해시)
+- `tests/run_tests.py` — 스킬 회귀 시험(성격이 다른 덱 11종 + 검사 2종). 워크플로가 매번 돌림
 - `data/fontfiles.json` — 자동 다운로드 대상(OFL 23종)과 굵기별 파일 주소
 
 ```bash

@@ -3,7 +3,7 @@
   --card: #fffdf8;
   --ink: #171614;
   --ink-2: #4a4741;
-  --ink-3: #8a857b;
+  --ink-3: #6b665d;
   --rule: #ddd7ca;
   --accent: #c8361c;
   --accent-ink: #fff;
@@ -57,7 +57,7 @@ a { color: inherit; }
 .card-head .titles { flex: 1; min-width: 0; }
 .card h2 { margin: 0; font-size: 20px; font-weight: 750; letter-spacing: -0.02em; }
 .card .meta { margin: 2px 0 0; font-size: 13px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.fav { border: 0; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: var(--rule); padding: 2px; }
+.fav { border: 0; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: #8a857b; padding: 10px; margin: -10px -10px 0 0; min-width: 44px; min-height: 44px; }
 .fav[aria-pressed=true] { color: var(--accent); }
 .preview { margin: 14px 20px 0; min-height: 150px; border-radius: 10px; background: var(--paper); display: flex; align-items: center; overflow: hidden; position: relative; cursor: pointer; }
 .preview .live { padding: 18px; line-height: 1.25; overflow-wrap: anywhere; width: 100%; }
@@ -69,6 +69,11 @@ a { color: inherit; }
 .tag.ofl { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .tag.cond { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, var(--rule)); }
 .tag.src-g { color: #1a5fb4; border-color: color-mix(in srgb, #1a5fb4 40%, var(--rule)); }
+.tag.rep { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, var(--rule)); }
+.glyphs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.glyphs .g { display: inline-flex; width: 30px; height: 30px; align-items: center; justify-content: center; border-radius: 6px; font-size: 16px; }
+.glyphs .g.ok { background: color-mix(in srgb, var(--ok) 12%, var(--card)); color: var(--ink); }
+.glyphs .g.no { background: color-mix(in srgb, var(--accent) 14%, var(--card)); color: var(--accent); text-decoration: line-through; }
 .tag.new { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--rule)); }
 .actions { margin-top: auto; display: flex; gap: 8px; padding: 16px 20px 18px; }
 .btn { font: inherit; font-size: 14px; font-weight: 600; text-decoration: none; text-align: center; border-radius: 10px; padding: 9px 12px; border: 1px solid var(--ink); cursor: pointer; background: var(--card); color: var(--ink); }
