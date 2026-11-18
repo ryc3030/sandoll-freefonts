@@ -1,5 +1,5 @@
 {
-  "_note": "PPT 적용 스킬용 폰트 파일 연결표. 키는 산돌구름 폰트 ID. 산돌구름 표기상 OFL(재배포 허용)인 폰트만 넣고, 제작사·Google Fonts·네이버·jsDelivr 등 공개 배포처 주소만 쓴다. 굵기 이름은 Light/Regular/Medium/SemiBold/Bold/ExtraBold/Black/Heavy로 통일. tags는 분석 스킬의 추천에 쓰는 성격 태그(formal·neutral·friendly·playful·cute·handwritten·retro·elegant·traditional·academic·tech·impact·calm).",
+  "_note": "PPT 적용 스킬용 폰트 파일 연결표. 키는 산돌구름 폰트 ID. 산돌구름 표기상 OFL(재배포 허용)인 폰트만 넣는다. PowerPoint 글꼴 포함이 되도록 TrueType(.ttf)을 우선한다. 값이 \"google\"이면 'google' 항목의 Google Fonts 정적 TTF로 받는다. 굵기 이름은 Thin/ExtraLight/Light/Regular/Medium/SemiBold/Bold/ExtraBold/Black/Heavy. tags는 분석 스킬의 추천에 쓰는 성격 태그.",
   "fonts": {
     "16951": {
       "name": "프리텐다드",
@@ -11,13 +11,13 @@
       ],
       "tone": "중립·정돈된 현대 고딕, 보고서·IR·발표 전반",
       "files": {
-        "Light": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Light.otf",
-        "Regular": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Regular.otf",
-        "Medium": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Medium.otf",
-        "SemiBold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-SemiBold.otf",
-        "Bold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Bold.otf",
-        "ExtraBold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-ExtraBold.otf",
-        "Black": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Black.otf"
+        "Light": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-Light.ttf",
+        "Regular": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-Regular.ttf",
+        "Medium": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-Medium.ttf",
+        "SemiBold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-SemiBold.ttf",
+        "Bold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-Bold.ttf",
+        "ExtraBold": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-ExtraBold.ttf",
+        "Black": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-Black.ttf"
       },
       "tags": [
         "neutral",
@@ -35,13 +35,13 @@
       ],
       "tone": "좁고 단단한 고딕, 수치 많은 자료·대시보드",
       "files": {
-        "Light": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Light.otf",
-        "Regular": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Regular.otf",
-        "Medium": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Medium.otf",
-        "SemiBold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-SemiBold.otf",
-        "Bold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Bold.otf",
-        "ExtraBold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-ExtraBold.otf",
-        "Heavy": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/otf/SUIT-Heavy.otf"
+        "Light": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-Light.ttf",
+        "Regular": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-Regular.ttf",
+        "Medium": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-Medium.ttf",
+        "SemiBold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-SemiBold.ttf",
+        "Bold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-Bold.ttf",
+        "ExtraBold": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-ExtraBold.ttf",
+        "Heavy": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-Heavy.ttf"
       },
       "tags": [
         "neutral",
@@ -59,12 +59,12 @@
       ],
       "tone": "기하학적·IT 브랜드 느낌, 스타트업·제품 소개",
       "files": {
-        "Regular": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-Regular.otf",
-        "Medium": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-Medium.otf",
-        "SemiBold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-SemiBold.otf",
-        "Bold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-Bold.otf",
-        "ExtraBold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-ExtraBold.otf",
-        "Black": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/otf/WantedSans-Black.otf"
+        "Regular": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-Regular.ttf",
+        "Medium": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-Medium.ttf",
+        "SemiBold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-SemiBold.ttf",
+        "Bold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-Bold.ttf",
+        "ExtraBold": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-ExtraBold.ttf",
+        "Black": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-Black.ttf"
       },
       "tags": [
         "tech",
@@ -110,7 +110,7 @@
         "SemiBold": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-6SemiBold.ttf",
         "ExtraBold": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-8ExtraBold.ttf",
         "Black": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-9Black.ttf",
-        "Bold": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-7Bold.otf"
+        "Bold": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-7Bold.ttf"
       },
       "tags": [
         "neutral",
@@ -145,17 +145,22 @@
       ],
       "tone": "가장 무난한 본문 고딕, 다국어 혼용",
       "files": {
-        "Light": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Light.otf",
-        "Regular": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Regular.otf",
-        "Medium": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Medium.otf",
-        "Bold": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Bold.otf",
-        "Black": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/KR/NotoSansKR-Black.otf"
+        "Thin": "google",
+        "ExtraLight": "google",
+        "Light": "google",
+        "Regular": "google",
+        "Medium": "google",
+        "SemiBold": "google",
+        "Bold": "google",
+        "ExtraBold": "google",
+        "Black": "google"
       },
       "tags": [
         "neutral",
         "formal",
         "academic"
-      ]
+      ],
+      "google": "Noto Sans KR"
     },
     "264": {
       "name": "본명조",
@@ -167,19 +172,22 @@
       ],
       "tone": "정통 명조, 학술·논문 발표·인문",
       "files": {
-        "Light": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Light.otf",
-        "Regular": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Regular.otf",
-        "Medium": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Medium.otf",
-        "SemiBold": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-SemiBold.otf",
-        "Bold": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Bold.otf",
-        "Black": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/SubsetOTF/KR/NotoSerifKR-Black.otf"
+        "ExtraLight": "google",
+        "Light": "google",
+        "Regular": "google",
+        "Medium": "google",
+        "SemiBold": "google",
+        "Bold": "google",
+        "ExtraBold": "google",
+        "Black": "google"
       },
       "tags": [
         "formal",
         "academic",
         "traditional",
         "elegant"
-      ]
+      ],
+      "google": "Noto Serif KR"
     },
     "229": {
       "name": "나눔스퀘어",

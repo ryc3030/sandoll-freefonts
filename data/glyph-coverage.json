@@ -1,0 +1,413 @@
+{
+ "symbols": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓₩㎡℃±×÷≤≥βαΔ「」『』〈〉《》“”‘’…",
+ "fonts": {
+  "16951": {
+   "name": "프리텐다드",
+   "url": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/alternative/Pretendard-Regular.ttf",
+   "missing": "◎",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "17576": {
+   "name": "SUIT",
+   "url": "https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/ttf/SUIT-Regular.ttf",
+   "missing": "◦ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ–—≤≥βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "보기·인쇄만"
+  },
+  "19795": {
+   "name": "Wanted Sans",
+   "url": "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/ttf/WantedSans-Regular.ttf",
+   "missing": "◎◆◇▶▷ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ⑩㎡≤≥βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "21071": {
+   "name": "페이퍼로지",
+   "url": "https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-4Regular.ttf",
+   "missing": "◦◎℃βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "20485": {
+   "name": "프리젠테이션",
+   "url": "https://cdn.jsdelivr.net/gh/fonts-archive/Freesentation/Freesentation-4Regular.ttf",
+   "missing": "βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "15744": {
+   "name": "G마켓 산스",
+   "url": "https://cdn.jsdelivr.net/gh/fonts-archive/GmarketSans/GmarketSansMedium.ttf",
+   "missing": "◦",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "보기·인쇄만"
+  },
+  "15882": {
+   "name": "Noto Sans KR",
+   "url": "https://fonts.gstatic.com/s/notosanskr/v40/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLQ.ttf",
+   "missing": "",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "264": {
+   "name": "본명조",
+   "url": "https://fonts.gstatic.com/s/notoserifkr/v32/3JnoSDn90Gmq2mr3blnHaTZXbOtLJDvui3JOncjmeM52.ttf",
+   "missing": "",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "229": {
+   "name": "나눔스퀘어",
+   "url": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf",
+   "missing": "◦",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "보기·인쇄만"
+  },
+  "17678": {
+   "name": "나눔스퀘어 네오",
+   "url": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf",
+   "missing": "βαΔ〈〉",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "278": {
+   "name": "나눔스퀘어라운드",
+   "url": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.ttf",
+   "missing": "◦",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "206": {
+   "name": "나눔바른고딕",
+   "url": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.ttf",
+   "missing": "",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "16193": {
+   "name": "마루 부리",
+   "url": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf",
+   "missing": "βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "204": {
+   "name": "나눔고딕",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumgothic/NanumGothic-Regular.ttf",
+   "missing": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩㎡℃βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "205": {
+   "name": "나눔명조",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/NanumMyeongjo-Regular.ttf",
+   "missing": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩㎡℃βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "16934": {
+   "name": "고운돋움",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/gowundodum/GowunDodum-Regular.ttf",
+   "missing": "βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "16935": {
+   "name": "고운바탕",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/gowunbatang/GowunBatang-Regular.ttf",
+   "missing": "βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "16051": {
+   "name": "검은고딕",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackhansans/BlackHanSans-Regular.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓㎡℃±≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 2581,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "219": {
+   "name": "배민 도현체",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/dohyeon/DoHyeon-Regular.ttf",
+   "missing": "◦※·–—㎡βαΔ「」『』〈〉《》…",
+   "hangul": 2437,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "210": {
+   "name": "배민 주아체",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/jua/Jua-Regular.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓₩㎡℃±×÷≤≥βαΔ「」『』〈〉《》‘’…",
+   "hangul": 2367,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "18441": {
+   "name": "베이글 팻",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/bagelfatone/BagelFatOne-Regular.ttf",
+   "missing": "□■○●◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩㎡℃≤≥βαΔ",
+   "hangul": 2783,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "17349": {
+   "name": "갈무리9",
+   "url": "https://cdn.jsdelivr.net/npm/galmuri@latest/dist/Galmuri9.ttf",
+   "missing": "",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "22999": {
+   "name": "Instrument Serif",
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/InstrumentSerif-Regular.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩→←↑↓₩㎡℃±≤≥βαΔ「」『』〈〉《》",
+   "hangul": 0,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Nanum Gothic Coding": {
+   "name": "나눔고딕코딩",
+   "url": "https://fonts.gstatic.com/s/nanumgothiccoding/v27/8QIVdjzHisX_8vv59_xMxtPFW4IXROwsy6Q.ttf",
+   "missing": "",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Gothic A1": {
+   "name": "고딕 A1",
+   "url": "https://fonts.gstatic.com/s/gothica1/v18/CSR94z5ZnPydRjlCCwl6bA.ttf",
+   "missing": "",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Nanum Pen Script": {
+   "name": "나눔손글씨 펜",
+   "url": "https://fonts.gstatic.com/s/nanumpenscript/v25/daaDSSYiLGqEal3MvdA_FOL_3FkN2z4.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:IBM Plex Sans KR": {
+   "name": "IBM Plex Sans KR",
+   "url": "https://fonts.gstatic.com/s/ibmplexsanskr/v11/vEFK2-VJISZe3O_rc3ZVYh4aTwNO8tI.ttf",
+   "missing": "βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Dongle": {
+   "name": "동글",
+   "url": "https://fonts.gstatic.com/s/dongle/v16/sJoF3Ltdjt6VPkqmvQ.ttf",
+   "missing": "βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Hahmlet": {
+   "name": "함렛",
+   "url": "https://fonts.gstatic.com/s/hahmlet/v21/BngXUXpCQ3nKpIo0TfPyfCdXfaeU4RhKONjo.ttf",
+   "missing": "●◦◎※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩㎡℃βαΔ「」『』",
+   "hangul": 2788,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Nanum Brush Script": {
+   "name": "나눔손글씨 붓",
+   "url": "https://fonts.gstatic.com/s/nanumbrushscript/v26/wXK2E2wfpokopxzthSqPbcR5_gVaxazyjg.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ·–—→←↑↓≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Gaegu": {
+   "name": "개구",
+   "url": "https://fonts.gstatic.com/s/gaegu/v23/TuGfUVB6Up9NU6ZL.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓㎡℃±×÷≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 2350,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Hi Melody": {
+   "name": "하이멜로디",
+   "url": "https://fonts.gstatic.com/s/himelody/v19/46ktlbP8Vnz0pJcqCTbEfw.ttf",
+   "missing": "◦–—βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Sunflower": {
+   "name": "해바라기",
+   "url": "https://fonts.gstatic.com/s/sunflower/v19/RWmPoKeF8fUjqIj7Vc-0sMbiqQ.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓㎡℃±≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 2350,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Asta Sans": {
+   "name": "아스타 산스",
+   "url": "https://fonts.gstatic.com/s/astasans/v3/XoH32Y74XaWovvhMb0c3tN_dRqdT9zveo_T_mVk.ttf",
+   "missing": "βαΔ〈〉",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Song Myung": {
+   "name": "송명",
+   "url": "https://fonts.gstatic.com/s/songmyung/v23/1cX2aUDWAJH5-EIC7DIhr1E.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·→←↑↓㎡℃±≤≥βαΔ「」『』〈〉《》",
+   "hangul": 2350,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Single Day": {
+   "name": "싱글데이",
+   "url": "https://fonts.gstatic.com/s/singleday/v20/LYjHdGDjlEgoAcF95EI5jVo.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓㎡℃±×÷≤≥βαΔ「」『』〈〉《》",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Gamja Flower": {
+   "name": "감자꽃",
+   "url": "https://fonts.gstatic.com/s/gamjaflower/v26/6NUR8FiKJg-Pa0rM6uN40Z4kyQ.ttf",
+   "missing": "◦–—㎡βαΔ",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Gasoek One": {
+   "name": "가석",
+   "url": "https://fonts.gstatic.com/s/gasoekone/v4/EJRTQgQ_UMUKvDgnlX80zro.ttf",
+   "missing": "□■○●◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩→←↑↓㎡℃βαΔ",
+   "hangul": 2780,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Dokdo": {
+   "name": "독도",
+   "url": "https://fonts.gstatic.com/s/dokdo/v23/esDf315XNuCBLxLo.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩–—→←↑↓㎡℃±×÷≤≥βαΔ「」『』〈〉《》",
+   "hangul": 2350,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:East Sea Dokdo": {
+   "name": "동해독도",
+   "url": "https://fonts.gstatic.com/s/eastseadokdo/v26/xfuo0Wn2V2_KanASqXSZp22m05_a.ttf",
+   "missing": "◦ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩㎡βαΔ",
+   "hangul": 2484,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Gugi": {
+   "name": "구기",
+   "url": "https://fonts.gstatic.com/s/gugi/v21/A2BVn5dXywshVA4.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓₩㎡℃±×÷≤≥βαΔ「」『』〈〉《》“”‘’…",
+   "hangul": 2350,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Stylish": {
+   "name": "스타일리시",
+   "url": "https://fonts.gstatic.com/s/stylish/v26/m8JSjfhPYriQkk7-fo0.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓㎡℃±≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Poor Story": {
+   "name": "서툰이야기",
+   "url": "https://fonts.gstatic.com/s/poorstory/v24/jizfREFUsnUct9P6cDfd4Ok.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※–—→←↑↓㎡℃≤≥βαΔ「」『』〈〉《》",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Yeon Sung": {
+   "name": "연성",
+   "url": "https://fonts.gstatic.com/s/yeonsung/v22/QldMNTpbohAGtsJvUn6xSQ.ttf",
+   "missing": "◦㎡βαΔ",
+   "hangul": 2436,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Cute Font": {
+   "name": "귀여운폰트",
+   "url": "https://fonts.gstatic.com/s/cutefont/v28/Noaw6Uny2oWPbSHMrY6vmA.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩–—→←↑↓㎡℃≤≥βαΔ",
+   "hangul": 2350,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Orbit": {
+   "name": "오르빗",
+   "url": "https://fonts.gstatic.com/s/orbit/v3/_LOCmz7I-uHd2mjE.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩→←↑↓㎡℃βαΔ",
+   "hangul": 2780,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Diphylleia": {
+   "name": "산하엽",
+   "url": "https://fonts.gstatic.com/s/diphylleia/v2/DtVmJxCtRKMixK4_HXsIulw.ttf",
+   "missing": "□■○●◦◎◆◇▶▷ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩㎡℃αΔ",
+   "hangul": 2781,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Kirang Haerang": {
+   "name": "기랑해랑",
+   "url": "https://fonts.gstatic.com/s/kiranghaerang/v22/E21-_dn_gvvIjhYON1lpIU4-bcqv.ttf",
+   "missing": "◦㎡βαΔ",
+   "hangul": 2479,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Black And White Picture": {
+   "name": "흑백사진",
+   "url": "https://fonts.gstatic.com/s/blackandwhitepicture/v30/TwMe-JAERlQd3ooUHBUXGmrmioKjjnRSFO-NqI5H.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩·–—→←↑↓㎡℃±≤≥βαΔ「」『』〈〉《》…",
+   "hangul": 11172,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Grandiflora One": {
+   "name": "그랜디플로라",
+   "url": "https://fonts.gstatic.com/s/grandifloraone/v4/0ybmGD0g27bCk_5MGWZcKWhxwnUU_Q.ttf",
+   "missing": "□■○●◦◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ①②③④⑤⑥⑦⑧⑨⑩→←↑↓㎡℃≤≥βαΔ",
+   "hangul": 2787,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  },
+  "G:Moirai One": {
+   "name": "모이라이",
+   "url": "https://fonts.gstatic.com/s/moiraione/v3/2sDbZGFUgJLJmby6xgNGT0U.ttf",
+   "missing": "□■○●◎◆◇▶▷※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ㎡℃βαΔ「」『』〈〉《》",
+   "hangul": 2780,
+   "outline": "TrueType",
+   "embeddable": "편집 가능"
+  }
+ }
+}
