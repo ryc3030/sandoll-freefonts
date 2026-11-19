@@ -8,6 +8,8 @@
 - **다운로드**: 제작사 공식 배포처(없으면 산돌구름 상세 페이지)로 연결
 - **자동 갱신**: GitHub Actions가 매주 월요일 목록을 다시 수집하고, 바뀐 것이 있을 때만 커밋
 
+**사용방법과 전후 예시: https://ryc3030.github.io/sandoll-freefonts/guide.html**
+
 ## 스킬 설치 (Claude · ChatGPT · Codex · Gemini)
 
 **설치 ZIP: [free-korean-fonts-ppt.zip](https://github.com/ryc3030/sandoll-freefonts/raw/main/dist/free-korean-fonts-ppt.zip)** (매주 데이터와 함께 다시 만들어짐)
@@ -63,6 +65,8 @@ data/overrides.json               산돌구름 원본 정보 보정표(끊긴 �
 data/fontfiles.json               PPT 스킬용 산돌 OFL 폰트 파일 주소·성격 태그 (직접 관리)
 data/google-fonts.json            Google Fonts 한국어 폰트 (자동 생성)
 scripts/google_fonts.py           Google Fonts 수집기
+guide.html, guide.js               사용방법 페이지(웹 사용법·스킬 설치·요청 예시·전후 비교)
+docs/examples/make_examples.py    전후 비교 예시 다시 만들기(스킬을 실제로 돌려 렌더링)
 scripts/build_skill_zip.py        설치용 스킬 ZIP 만들기 → dist/free-korean-fonts-ppt.zip
 skill/                            Claude 스킬 (PPT 자동 적용)
 scripts/scrape.py                 수집기 (Python 3 + beautifulsoup4)

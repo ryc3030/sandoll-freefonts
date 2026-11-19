@@ -1,0 +1,96 @@
+[
+  {
+    "key": "public",
+    "title": "공공 정책 보고",
+    "author": "행정안전부 지방재정정책관",
+    "pages": 2,
+    "genre": "공공·정책",
+    "way": "공공 기본값",
+    "titleFont": "프리텐다드 ExtraBold",
+    "bodyFont": "프리텐다드 Regular",
+    "agency": [],
+    "tags": [],
+    "register": [
+      [
+        "명사형(판단 보류)",
+        0.86
+      ],
+      [
+        "개조식",
+        0.14
+      ]
+    ],
+    "alt": [
+      "고딕 A1 ExtraBold / 고딕 A1 Regular",
+      "IBM Plex Sans KR Bold / IBM Plex Sans KR Regular"
+    ]
+  },
+  {
+    "key": "memorial",
+    "title": "현충일 추념식",
+    "author": "서울지방보훈청",
+    "pages": 2,
+    "genre": "기념·의전",
+    "way": "공공 발행 + 내용 우선(기념·의전)",
+    "titleFont": "본명조 Bold",
+    "bodyFont": "본명조 Regular",
+    "agency": [
+      {
+        "agency": "국가보훈부·보훈청",
+        "fonts": [
+          "62570체(명조)"
+        ],
+        "url": "https://www.sandollcloud.com/free-font/15630/62570"
+      }
+    ],
+    "tags": [],
+    "register": [
+      [
+        "명사형(판단 보류)",
+        0.67
+      ],
+      [
+        "합니다체",
+        0.33
+      ]
+    ],
+    "alt": [
+      "프리텐다드 ExtraBold / 프리텐다드 Regular",
+      "SUIT ExtraBold / SUIT Regular"
+    ]
+  },
+  {
+    "key": "kids",
+    "title": "어린이 교통안전 교육",
+    "author": "서울특별시교육청 학생안전과",
+    "pages": 2,
+    "genre": "아동·가족",
+    "way": "공공 발행 + 내용 우선(아동·가족)",
+    "titleFont": "배민 주아체 Regular",
+    "bodyFont": "나눔스퀘어라운드 Regular",
+    "agency": [
+      {
+        "agency": "교육부·시도교육청·학교",
+        "fonts": [
+          "학교안심체(시간표·지우개 등)"
+        ],
+        "url": "https://www.sandollcloud.com/free-font/22624/Hakgyoansim-Siganpyo"
+      }
+    ],
+    "tags": [],
+    "register": [
+      [
+        "명사형(판단 보류)",
+        0.67
+      ],
+      [
+        "해요체",
+        0.33
+      ]
+    ],
+    "alt": [
+      "프리텐다드 ExtraBold / 프리텐다드 Regular",
+      "Wanted Sans ExtraBold / Wanted Sans Regular"
+    ]
+  }
+]

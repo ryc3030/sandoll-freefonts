@@ -57,6 +57,14 @@ with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
         "- OpenAI Codex: 프로젝트의 `.agents/skills/`(또는 `.codex/skills/`)에 압축을 풀기\n"
         "- Gemini CLI: `gemini skills install <압축 푼 폴더>` 또는 `~/.gemini/skills/`에 압축을 풀기\n"
         "- ChatGPT(스킬 지원 요금제·데스크톱 앱): 스킬 메뉴에서 폴더/SKILL.md를 가져오기\n"
-        "- Gemini 앱(Gem)·스킬이 없는 챗봇: SKILL.md 내용을 Gem·프로젝트 지침에 붙여 넣고, 이 ZIP을 대화에 올려 쓰기\n"
+        "- Gemini 앱(Gem)·스킬이 없는 챗봇: SKILL.md 내용을 Gem·프로젝트 지침에 붙여 넣고, 이 ZIP을 대화에 올려 쓰기\n\n"
+        "## 쓰는 법\n피피티(.pptx)를 대화에 올리고 이렇게 말하면 됩니다.\n"
+        "- 이 피피티에 어울리는 무료 폰트로 바꿔 줘\n"
+        "- 폰트는 바꾸지 말고 어떤 폰트가 어울릴지 분석만 해 줘\n"
+        "- 제목은 G마켓 산스 Bold, 본문은 프리텐다드로 적용해 줘\n"
+        "- 공모전 제출용이야. 폰트 라이선스 내역서도 같이 만들어 줘\n"
+        "- 받는 사람 컴퓨터에 폰트가 없어도 똑같이 보이게 해 줘\n\n"
+        "결과: 바뀐 피피티 + fonts.zip(폰트와 라이선스) + 진단 요약.\n"
+        "사용방법과 전후 예시: https://ryc3030.github.io/sandoll-freefonts/guide.html\n"
     ))
 print(OUT, OUT.stat().st_size)
