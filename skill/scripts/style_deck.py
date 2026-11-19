@@ -144,11 +144,20 @@ def load_tokens(data_dir):
 
 
 def auto_preset(path, tokens, data_dir):
+    """폰트 추천과 같은 판단을 따른다: 추천 1순위의 방식에 적힌 분야로 프리셋을 고른다."""
     import analyze_deck as ad
     d = ad.diagnose(ad.extract(path))
-    top = d["genres"][0][0] if d["genres"] else None
-    if d["publisher_public"] and (top is None or top not in ad.CONTENT_OVERRIDE):
+    try:
+        way = ad.recommend(d, data_dir)["pairs"][0]["방식"]
+    except Exception:
+        way = ""
+    m = re.search(r"\(([^)]+)\)", way)
+    genre = m.group(1) if m else None
+    if genre in tokens["genre"]:
+        return tokens["genre"][genre], genre
+    if "공공" in way:
         return "public", "공공 발행"
+    top = d["genres"][0][0] if d["genres"] else None
     if top in tokens["genre"]:
         return tokens["genre"][top], top
     return ("public", "공공 발행") if d["publisher_public"] else ("corporate", "분야 불확실 → 기업 보고")

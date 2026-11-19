@@ -33,7 +33,7 @@ GENRES = {
               r"행정복지센터|주민센터|누리집|공모|보조금|복지"),
     "기업·비즈니스": ("formal neutral",
                 r"매출|시장|고객|전략|투자|성장|경쟁|수익|영업|브랜드|파트너|분기|실적|비용|원가|점유율|"
-                r"영업이익|밸류|주주|런웨이|손익|세일즈|거래처|계약|매입|마진|"
+                r"영업이익|밸류|주주|런웨이|손익|세일즈|거래처|계약|매입|마진|주식회사|\(주\)|제휴|투자금|운영\s?자금|사업\s?모델|"
                 r"\brevenue\b|\bgrowth\b|\bcustomers?\b|\bmarket\b|\binvest\w*|\bmargin\b|\bsales\b|\bpipeline\b|\bquarter\b|\bprofit\b"),
     "학술·연구": ("academic formal",
               r"연구|분석|가설|변수|모형|선행\s?연구|표본|유의|회귀|이론|방법론|논문|실증|통계|검정|문헌|함의|한계|결론|"
@@ -43,15 +43,18 @@ GENRES = {
     "교육·강의": ("friendly neutral",
               r"학습|수업|강의|학생|퀴즈|교육|과정|차시|학습\s?목표|복습|예제|실습|정리해\s?봅시다|알아봅시다|"
               r"생각해\s?봅시다|문제\s?풀이|오늘의|단원|교과|수강생|워크숍|토론|과제\s?제출|다음\s?시간|"
-              r"학년|독서|추천\s?도서|교실|담임|방과\s?후|기록장|모둠|발표\s?활동"),
+              r"학년|독서|추천\s?도서|교실|담임|방과\s?후|기록장|모둠|발표\s?활동|"
+              r"\d+\s?주차|학기|학과|배울\s?것|중간고사|기말고사|출석|수강|강의\s?계획|교수|조교|원론|개론"),
     "IT·스타트업": ("tech neutral",
                 r"플랫폼|인공지능|데이터|앱|사용자|클라우드|솔루션|스타트업|개발|출시|베타|기능|"
                 r"아키텍처|서버|모델|알고리즘|자동화|대시보드|로드맵|스프린트|리텐션|트래픽|오픈소스|"
+                r"시리즈\s?[A-D](?![a-z])|시드\s?투자|투자\s?유치|투자\s?제안|트랙션|비즈니스\s?모델|구독|창업|이용\s?건수|월간\s?이용|"
                 r"\blatency\b|\binference\b|\bbenchmarks?\b|\bmodels?\b|\bruntime\b|\bkernels?\b|\bGPU\b|"
                 r"\bthroughput\b|\bscal(?:e|ing)\b|\bdeploy\w*|\bopen source\b|\bagents?\b|\bplatform\b"),
     "홍보·행사": ("impact playful",
               r"이벤트|행사|할인|혜택|축제|캠페인|홍보|오픈|모집|선착순|경품|초대|특가|런칭|기념|"
-              r"지금\s?바로|놓치지|무료|선물|당첨|사전\s?예약|한정|공연\s?일정"),
+              r"지금\s?바로|놓치지|무료|선물|당첨|사전\s?예약|한정|공연\s?일정|"
+              r"페스티벌|불꽃|먹거리|장터|야시장|체험|방문객|관광객|즐겨요|즐기세요|개막|부스|볼거리|포토존|퍼레이드|썰매|스케이트"),
     "문화·예술·인문": ("elegant calm traditional",
                   r"전시|예술|문화|공연|작가|역사|전통|감성|이야기|작품|시인|음악|미술|유산|기억|삶|여행|"
                   r"풍경|계절|문학|철학|사유|빛|기록|아카이브|큐레이션|사진전|개인전"),
@@ -377,7 +380,8 @@ def diagnose(F):
     scripts = {"한글(글자)": round(han / max(1, han + dig + hanja), 2), "영문(어절)": round(en_words / max(1, len(words)), 2),
                "숫자(글자)": round(dig / max(1, han + dig + hanja + en_words * 5), 2), "한자": hanja}
 
-    marks = sum(1 for l in F["lines_body"] + F["lines_title"] if PUBLIC_MARK.search(l))
+    # ※(참고 표시)는 회사 자료에도 흔해 개조식 기호(□ ○ Ⅰ. 가.)의 3분의 1로만 센다
+    marks = sum(1 if not re.match(r"^\s*※", l) else 1 / 3 for l in F["lines_body"] + F["lines_title"] if PUBLIC_MARK.search(l))
     orgs = sum(1 for m in ORG.finditer(main_text) if m.group(0) not in ORG_STOP)
     cites = len(CITE.findall(main_text)); money = len(MONEY.findall(main_text))
     aud = len(AUDIENCE.findall(main_text))

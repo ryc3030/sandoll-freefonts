@@ -42,7 +42,7 @@ Agent Skills 표준(SKILL.md)으로 만들어 아래 도구에서 그대로 쓸 
 - `skill/scripts/export_pdf.py` — 바뀐 피피티를 PDF로 내보냄. 받은 폰트만 보이는 빈 환경에서 변환해 폰트가 실제로 들어갔는지 확인하고, LibreOffice가 한글과 숫자 사이를 벌리는 설정을 끔(접근성 태그 포함)
 - `skill/scripts/license_report.py` — 공모전·납품용 폰트 라이선스 내역서(폰트·굵기·라이선스·출처·파일 해시)
 - `tests/run_tests.py` — 스킬 회귀 시험(성격이 다른 덱 11종, 분석 검사 2종, 적용 검사 2종, 그래프·디자인 보정 검사 1종, 디자인 다듬기 검사 1종). 워크플로가 매번 돌림
-- `tests/messy_deck.py` — 그래프·디자인 실수를 일부러 넣은 시험용 덱(보정 시험과 사용 예시 4에 씀)
+- `tests/messy_deck.py` — 그래프·디자인 실수를 일부러 넣은 시험용 덱(보정 시험과 사용 예시 9에 씀)
 - `data/fontfiles.json` — 자동 다운로드 대상(OFL 23종)과 굵기별 파일 주소
 
 ```bash
