@@ -30,7 +30,7 @@ description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 
 
 ```bash
 mkdir -p ~/ffskill && cd ~/ffskill
-V=27c98e84f66b02669a19ed87a27aff1c92c5dc15   # 검증된 판(커밋)으로 고정. 최신을 쓰려면 V=main
+V=7c7260e2a7bb20597399d445f0efcacf5f674160   # 검증된 판(커밋)으로 고정. 최신을 쓰려면 V=main
 for f in analyze_deck.py fetch_fonts.py apply_fonts.py export_pdf.py license_report.py; do
   curl -fsSLO https://raw.githubusercontent.com/ryc3030/sandoll-freefonts/$V/skill/scripts/$f
 done
