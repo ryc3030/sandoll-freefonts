@@ -1,13 +1,13 @@
 ---
 name: free-korean-fonts-ppt
-description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 폰트(산돌구름 OFL·Google Fonts·기관 전용 서체)를 고르고 제목·본문에 적용하며, 그래프·디자인(3D 그래프, 잘린 축, 작은 글자, 늘어난 사진, 어긋난 정렬, 낮은 대비)을 보정해 바뀐 피피티와 PDF를 함께 넘길 때 사용. Use to apply free Korean fonts, fix charts and layout in a PowerPoint deck, and deliver it with a PDF.
+description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 폰트(산돌구름 OFL·Google Fonts·기관 전용 서체)를 적용하고, 그래프·디자인 실수(3D 그래프, 잘린 축, 늘어난 사진, 어긋난 정렬, 낮은 대비)를 바로잡은 뒤 분야별 디자인 프리셋(KRDS·Urban Institute·Open Color)으로 색·제목·표·그래프를 다듬어 바뀐 피피티와 PDF를 함께 넘길 때 사용. Use to apply free Korean fonts, fix charts and layout in a PowerPoint deck, and deliver it with a PDF.
 ---
 
 # 무료 한글 폰트 → PPT 분석·자동 적용
 
 무료폰트 색인(https://ryc3030.github.io/sandoll-freefonts/)의 데이터로 ① 덱을 분석하고 ② 폰트 짝을 정한다.
-③ 재배포가 허용된 폰트를 내려받아 ④ PPTX 전체에 적용하고 ⑤ 그래프와 디자인을 보정한 뒤 ⑥ PDF로 내보내 확인하고
-⑦ **바뀐 피피티, PDF, 폰트 묶음(라이선스 포함)**을 함께 넘긴다.
+③ 재배포가 허용된 폰트를 내려받아 ④ PPTX 전체에 적용하고 ⑤ 그래프·디자인 실수를 바로잡은 뒤 ⑥ 분야별 디자인 프리셋으로 다듬고
+⑦ PDF로 내보내 확인한 다음 ⑧ **바뀐 피피티, PDF, 폰트 묶음(라이선스 포함)**을 함께 넘긴다.
 
 ## 지켜야 할 것
 
@@ -31,7 +31,7 @@ description: 피피티(.pptx)를 분석해 내용에 어울리는 무료 한글 
 ```bash
 mkdir -p ~/ffskill && cd ~/ffskill
 V=17e76ae9efebe3a74fd95267ff9289b5ca364fec   # 검증된 판(커밋)으로 고정. 최신을 쓰려면 V=main
-for f in analyze_deck.py fetch_fonts.py apply_fonts.py polish_deck.py export_pdf.py license_report.py; do
+for f in analyze_deck.py fetch_fonts.py apply_fonts.py polish_deck.py style_deck.py export_pdf.py license_report.py; do
   curl -fsSLO https://raw.githubusercontent.com/ryc3030/sandoll-freefonts/$V/skill/scripts/$f
 done
 pip install --break-system-packages -q fonttools lxml pillow 2>/dev/null || pip install -q fonttools lxml pillow
@@ -107,7 +107,7 @@ python3 ~/ffskill/apply_fonts.py input.pptx output.pptx --manifest fonts/manifes
 ```
 
 - 기관 전용 서체 등 사용자가 준 파일은 `fetch_fonts.py --local 파일1.ttf 파일2.ttf --out fonts`로 등록하고, 출력된 `이름:굵기`로 적용한다.
-  재배포 조건이 기관마다 다르므로 이 파일은 7단계 fonts.zip에 넣지 않는다.
+  재배포 조건이 기관마다 다르므로 이 파일은 8단계 fonts.zip에 넣지 않는다.
 - 이름은 한글 이름·영문 family·산돌구름 ID·짧은 이름 모두 된다(`함렛`, `"Gothic A1"`, `16951`, `주아`). 전체 목록은 `--list`로 본다.
 - 같은 `--out`에 나눠 받아도 manifest가 합쳐진다. 받지 못한 것이 있으면 목록을 출력하고 종료 코드 1로 끝난다.
 - **`이름:굵기`는 반드시 `--manifest`와 함께** 쓴다. 실제 PowerPoint 글꼴 이름(예: 'Pretendard ExtraBold'), 굵게 처리,
@@ -124,7 +124,7 @@ python3 ~/ffskill/apply_fonts.py input.pptx output.pptx --manifest fonts/manifes
 - Google Slides로 옮기거나 테마를 무시하는 프로그램용이면 `--mode force`로 모든 글자에 글꼴 이름을 직접 쓴다.
 - 출력의 `!` 줄(빠진 기호, 드문 한글, Bold 미수신)은 반드시 읽고 처리한다.
 
-## 5. 그래프·디자인 보정
+## 5. 그래프·디자인 실수 바로잡기
 
 ```bash
 python3 ~/ffskill/polish_deck.py output.pptx --manifest fonts/manifest.json                          # 진단
@@ -137,14 +137,40 @@ python3 ~/ffskill/polish_deck.py output.pptx --fix polished.pptx --manifest font
   - 디자인: 비율이 틀어진 사진 → 원래 비율로(원래 틀 안에 맞춰 넣음), 슬라이드마다 조금씩 어긋난 제목 위치 → 가장 많이 쓴(없으면 레이아웃의) 위치,
     한 슬라이드에서 0.1인치 안으로 어긋난 왼쪽 끝 → 맞춤
 - 옵션은 진단 결과를 보고 켠다.
-  - `--contrast`: '배경과 대비가 낮은 글자'가 나왔고 6단계 그림에서도 읽기 어려울 때. 그 글자를 검정이나 흰색 중 대비가 큰 쪽으로 바꾼다.
+  - `--contrast`: '배경과 대비가 낮은 글자'가 나왔고 7단계 그림에서도 읽기 어려울 때. 그 글자를 검정이나 흰색 중 대비가 큰 쪽으로 바꾼다.
   - `--fit`: '넘치는 것으로 추정'이 나왔고 그림에서도 넘칠 때. 본문 12pt, 제목 20pt 아래로는 줄이지 않으며, 그래도 넘치면 상자를 키우거나 글을 줄이자고 제안한다.
   - `--chart-colors`: 그래프 색이 덱과 따로 놀거나 사용자가 색 통일을 원할 때. 계열 색을 테마 강조색으로 맞춘다.
   - 위치를 건드리면 안 되는 덱(인쇄 판형이 정해진 자료 등)은 `--no-align`, 사진은 `--no-images`로 뺀다.
 - 원그래프 조각 7개 이상, 슬라이드 밖으로 나간 개체, 12pt보다 작은 본문 글자, 글자 색 가짓수는 진단만 한다. 답에서 한 줄씩 알리고 고칠 방법을 제안한다.
 - 사용자가 "폰트만 바꿔 줘"처럼 범위를 정했으면 `--fix` 없이 진단만 하고, 고칠지 묻는다.
 
-## 6. PDF 내보내기와 확인
+## 6. 디자인 다듬기
+
+```bash
+python3 ~/ffskill/style_deck.py output.pptx --out styled.pptx && mv styled.pptx output.pptx      # 분야 자동, 표준 강도
+python3 ~/ffskill/polish_deck.py output.pptx --manifest fonts/manifest.json                       # 다듬은 뒤 다시 진단만
+```
+
+- 덱의 분야를 분석해 프리셋을 고른다(`--preset`으로 지정, `--list`로 목록). 프리셋 값은 공개 디자인 자원에서 가져왔다.
+  | 프리셋 | 쓰는 곳 | 출처 |
+  |---|---|---|
+  | public, memorial | 공공 업무, 추모·의전 | KRDS 범정부 UI/UX 디자인 시스템 토큰(행정안전부, 공공누리 제1유형) |
+  | corporate | 기업 보고·IR | Urban Institute 그래프 스타일(vega-themes, BSD-3-Clause) |
+  | tech, culture, kids, promo, edu, game | IT, 문화·예술, 아동, 홍보, 교육, 게임 | Open Color(MIT) |
+  | academic | 학술 발표 | ColorBrewer Dark2(Apache-2.0) |
+  | `--chart-palette colorblind` | 그래프만 색각 이상 친화 | Okabe-Ito |
+- 강도(`--level`)
+  - `light`: 그래프(테두리·값 축선·눈금 표시 없이 옅은 눈금선, 막대 간격 좁게, 계열 하나·항목 12개 이하면 값을 직접 표시하고 값 축 삭제, 원그래프는 이름·비율 표시)와
+    표(제목 줄 진한 바탕, 옅은 줄무늬, 가로 선만, 숫자 열 오른쪽 정렬), 본문 행간 1.2·문단 앞 6pt.
+  - `standard`(기본): light + 테마 색 체계(기본 Office 테마일 때만), 내용 슬라이드 제목 크기·제목 색·왼쪽 정렬·자간 -2%, 글머리표 강조색,
+    꾸밈 없는 기본 서식 덱이면 장식(표지 왼쪽 띠, 내용 슬라이드 위쪽 가는 띠, 쪽 번호).
+  - `bold`: standard + 브랜드 템플릿이어도 색 체계 교체·장식, 도형에 직접 지정한 색을 가장 가까운 프리셋 색으로.
+- 고르는 법: 기본은 `standard`. 회사·기관 템플릿을 지켜야 하면 `light`, "확 바꿔 줘"·"예쁘게 다시"면 `bold`.
+  사용자가 "폰트만"이라고 했으면 이 단계를 건너뛴다. 정렬을 건드리면 안 되면 `--keep-align`.
+- 어두운 배경 덱은 글자·바탕 색을 건드리지 않고 강조색만 바꾼다.
+- 다듬은 뒤 `polish_deck.py`로 다시 진단해 새로 생긴 대비 문제가 없는지 본다.
+
+## 7. PDF 내보내기와 확인
 
 ```bash
 python3 ~/ffskill/export_pdf.py output.pptx --fonts fonts --manifest fonts/manifest.json --png after
@@ -167,12 +193,12 @@ python3 ~/ffskill/export_pdf.py output.pptx --fonts fonts --manifest fonts/manif
   ```
 - LibreOffice가 없어 PDF를 만들 수 없으면 바뀐 피피티만 넘기고, PowerPoint에서 '파일 → 다른 이름으로 저장 → PDF'로 만들도록 안내한다.
 
-## 7. 넘기기
+## 8. 넘기기
 
 기본으로 **세 파일**을 함께 보낸다.
 
 1. `output.pptx` — 폰트를 바꾼 피피티
-2. `output.pdf` — 6단계에서 만든 PDF. 폰트가 들어 있어 폰트를 설치하지 않은 컴퓨터에서도 같은 모양으로 열린다.
+2. `output.pdf` — 7단계에서 만든 PDF. 폰트가 들어 있어 폰트를 설치하지 않은 컴퓨터에서도 같은 모양으로 열린다.
 3. `fonts.zip` — **실제로 쓴 굵기만** 담은 폰트와 `LICENSE-*.txt`. LICENSE에 저작권 표시와 OFL 1.1 원문이 들어 있어 재배포 조건을 지킨다.
    ```bash
    cd fonts && zip -q ../fonts.zip Pretendard-Regular.ttf Pretendard-Bold.ttf Pretendard-ExtraBold.ttf LICENSE-*.txt && cd ..
@@ -187,7 +213,7 @@ python3 ~/ffskill/export_pdf.py output.pptx --fonts fonts --manifest fonts/manif
   python3 ~/ffskill/license_report.py fonts/manifest.json --out 폰트_라이선스_내역.md --deck output.pptx
   ```
 
-답에는 진단 두세 줄, 고른 폰트와 대안, 그래프·디자인 보정 내역(고친 것과 진단만 한 것)을 쓰고, manifest의 `outline`·`embeddable`에 따라 다음 중 맞는 안내를 붙인다.
+답에는 진단 두세 줄, 고른 폰트와 대안, 그래프·디자인 보정 내역(고친 것과 진단만 한 것), 디자인 프리셋과 강도를 쓰고, manifest의 `outline`·`embeddable`에 따라 다음 중 맞는 안내를 붙인다.
 - 모두 TrueType이고 `편집 가능`: "PowerPoint에서 편집하려면 fonts.zip의 폰트를 설치하세요. 다른 사람에게 피피티를 보낼 때는 파일 → 옵션 → 저장 → '파일의 글꼴 포함'을 켜고 저장하면 됩니다. 보기만 할 사람에게는 PDF를 보내면 됩니다."
 - `CFF`가 있으면: "이 폰트는 PowerPoint 파일에 포함되지 않습니다. 받는 사람도 fonts.zip의 폰트를 설치해야 하며, 보기만 할 사람에게는 PDF를 보내세요."
 - `보기·인쇄만`(SUIT·나눔스퀘어·G마켓 산스 등): "파일에 포함해 보내면 받는 사람은 보기·인쇄만 되고, 편집하려면 폰트를 설치해야 합니다."
@@ -203,3 +229,4 @@ PDF는 LibreOffice로 그린 것이라 줄바꿈이 PowerPoint와 조금 다를 
 - 새 OFL 폰트를 자동 받기 대상에 넣으려면 `fontfiles.json`에 공개 배포처의 TTF 주소와 `tags`를 추가하고 `scripts/glyph_coverage.py`를 돌린다.
 - 굵기 보존, cs 글꼴 정리, 글꼴 테마 파일은 achimnol/pptx-tool(MIT)의 처리 방식을 참고했다.
 - 그래프 보정 기준(3D 지양, 막대 축은 0부터, 보조선 최소화)은 데이터 시각화의 일반 원칙을 따랐고, 대비 기준은 WCAG 2.1(본문 4.5:1, 큰 글자 3:1)이다.
+- 디자인 프리셋은 `data/design-tokens.json`(만드는 스크립트: `scripts/build_design_tokens.py`, 제목·본문 색이 흰 바탕과 4.5:1 이상인지 검사)에 있다.

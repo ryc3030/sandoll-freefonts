@@ -42,7 +42,10 @@ def fix_text(t):
     try:
         e = t.getText().createEnumeration()
     except Exception:
-        return
+        try:
+            e = t.createEnumeration()   # 표 칸은 그 자체가 글 상자
+        except Exception:
+            return
     while e.hasMoreElements():
         para = e.nextElement()
         try:
@@ -53,7 +56,7 @@ def walk(sh):
     if sh.supportsService("com.sun.star.drawing.GroupShape"):
         for i in range(sh.getCount()):
             walk(sh.getByIndex(i))
-    elif sh.supportsService("com.sun.star.drawing.TableShape"):
+    elif sh.getShapeType() == "com.sun.star.drawing.TableShape" or sh.supportsService("com.sun.star.drawing.TableShape"):
         m = sh.Model
         for r in range(m.Rows.Count):
             for c in range(m.Columns.Count):

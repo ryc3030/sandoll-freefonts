@@ -49,7 +49,7 @@ with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
     put(z, f"{NAME}/SKILL.md", skill)
     for f in sorted((ROOT / "skill" / "scripts").glob("*.py")):
         put(z, f"{NAME}/scripts/{f.name}", f.read_bytes())
-    for f in ["fontfiles.json", "google-fonts.json", "glyph-coverage.json", "agency-fonts.json", "fonts.json", "OFL-1.1.txt"]:
+    for f in ["fontfiles.json", "google-fonts.json", "glyph-coverage.json", "agency-fonts.json", "design-tokens.json", "fonts.json", "OFL-1.1.txt"]:
         put(z, f"{NAME}/data/{f}", (ROOT / "data" / f).read_bytes())
     put(z, f"{NAME}/USER-GUIDE-ko.pdf", (ROOT / "docs" / "USER-GUIDE-ko.pdf").read_bytes())
     put(z, f"{NAME}/README.md", (

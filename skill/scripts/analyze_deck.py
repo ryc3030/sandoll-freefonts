@@ -543,7 +543,9 @@ def _ksx(ch):
 
 
 import os as _os
-BUNDLED = Path(_os.environ.get("FFSKILL_DATA") or Path(__file__).resolve().parent.parent / "data")  # 설치 ZIP에 함께 든 데이터
+_here = Path(__file__).resolve().parent
+# 설치 ZIP에 함께 든 데이터(스킬 폴더/data), 저장소에서 바로 돌릴 때는 저장소/data
+BUNDLED = Path(_os.environ.get("FFSKILL_DATA") or next((d for d in (_here.parent / "data", _here.parent.parent / "data") if d.is_dir()), _here.parent / "data"))
 
 
 def load(name, data_dir):

@@ -10,6 +10,7 @@ on:
       - "skill/**"
       - "data/fontfiles.json"
       - "data/agency-fonts.json"
+      - "data/design-tokens.json"
       - "scripts/build_skill_zip.py"
       - "docs/USER-GUIDE-ko.pdf"
       - "scripts/glyph_coverage.py"

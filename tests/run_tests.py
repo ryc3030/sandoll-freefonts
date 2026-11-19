@@ -83,6 +83,7 @@ def main():
             print(f"{'✓' if ok else '✗'} {name:<18} — {desc}")
         fails += apply_checks(Path(td))
         fails += polish_checks(Path(td))
+        fails += style_checks(Path(td))
     print(f"\n실패 {fails}건")
     sys.exit(1 if fails else 0)
 
@@ -152,6 +153,47 @@ def polish_checks(td):
     ]
     bad = [n for n, ok in checks if not ok]
     print(f"{'✓' if not bad else '✗'} {'그래프·디자인 보정':<18} — 3D·축·눈금선·범례·글자 크기·사진 비율·제목 위치·대비"
+          + (f"   (실패: {', '.join(bad)})" if bad else ""))
+    return 1 if bad else 0
+
+
+def style_checks(td):
+    """style_deck.py: 기본 서식 공공 덱에 KRDS 프리셋이 들어가는지, 두 번 돌려도 장식이 겹치지 않는지."""
+    import subprocess, zipfile
+    from pptx.chart.data import CategoryChartData
+    from pptx.enum.chart import XL_CHART_TYPE
+    p = Presentation(); p.slide_width, p.slide_height = Inches(13.333), Inches(7.5)
+    p.core_properties.author = "행정안전부 지방재정과"
+    s = p.slides.add_slide(p.slide_layouts[0]); s.shapes.title.text = "2027년 지방재정 운용 방향"; s.placeholders[1].text = "지방재정과"
+    s = p.slides.add_slide(p.slide_layouts[1]); s.shapes.title.text = "Ⅰ. 추진 배경"
+    tf = s.placeholders[1].text_frame; tf.text = "□ 세출 구조조정"; tf.add_paragraph().text = "○ 의무지출 68%"
+    s = p.slides.add_slide(p.slide_layouts[5]); s.shapes.title.text = "Ⅱ. 재원 현황"
+    t = s.shapes.add_table(3, 3, Inches(1), Inches(2), Inches(8), Inches(1.5)).table
+    for r, row in enumerate([["구분", "2026년", "2027년"], ["지방세", "112.4", "115.1"], ["교부세", "66.8", "68.0"]]):
+        for c, v in enumerate(row):
+            t.cell(r, c).text = v
+    s = p.slides.add_slide(p.slide_layouts[5]); s.shapes.title.text = "Ⅲ. 지방세 수입"
+    cd = CategoryChartData(); cd.categories = ["2024", "2025", "2026"]; cd.add_series("지방세", (109.0, 112.4, 115.1))
+    s.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED, Inches(1), Inches(1.6), Inches(10), Inches(5), cd)
+    src, out1, out2 = td / "plain.pptx", td / "styled.pptx", td / "styled2.pptx"
+    p.save(src)
+    run = lambda a, b: subprocess.run([sys.executable, ROOT / "skill/scripts/style_deck.py", a, "--out", b, "--data", DATA],
+                                      capture_output=True, text=True)
+    r1 = run(src, out1); run(out1, out2)
+    z = zipfile.ZipFile(out1); z2 = zipfile.ZipFile(out2)
+    theme = z.read("ppt/theme/theme1.xml").decode()
+    s2, s3 = z.read("ppt/slides/slide2.xml").decode(), z.read("ppt/slides/slide3.xml").decode()
+    chart = "".join(z.read(n).decode() for n in z.namelist() if n.startswith("ppt/charts/chart"))
+    deco = lambda zz: sum(zz.read(n).decode().count('name="ffs-deco') for n in zz.namelist() if n.startswith("ppt/slides/slide"))
+    checks = [
+        ("KRDS 프리셋", "public" in r1.stdout and '<a:accent1><a:srgbClr val="256EF4"/>' in theme),
+        ("제목 정렬·자간", 'algn="l"' in s2 and 'spc="-64"' in s2),
+        ("표 제목 줄", '063A74' in s3 and 'algn="r"' in s3),
+        ("그래프 값 표시", 'showVal val="1"' in chart and 'autoTitleDeleted val="1"' in chart),
+        ("장식 한 번만", deco(z) > 0 and deco(z) == deco(z2)),
+    ]
+    bad = [n for n, ok in checks if not ok]
+    print(f"{'✓' if not bad else '✗'} {'디자인 다듬기':<18} — KRDS 색·제목·표·그래프·장식(두 번 돌려도 겹치지 않음)"
           + (f"   (실패: {', '.join(bad)})" if bad else ""))
     return 1 if bad else 0
 

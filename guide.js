@@ -42,17 +42,19 @@
         </div>
         <div class="ex-diag">
           <p class="ex-label">요청</p>
-          <p class="ex-ask">${(e.polish || []).length > 3 ? "어울리는 무료 폰트로 바꾸고, 그래프랑 디자인도 같이 손봐 줘" : "이 피피티에 어울리는 무료 폰트로 바꿔 줘"}</p>
+          <p class="ex-ask">${esc(e.ask || "이 피피티에 어울리는 무료 폰트로 바꿔 줘")}</p>
           <p class="ex-label">스킬의 답</p>
           <dl class="kv">
             <dt>진단</dt><dd>${esc(e.genre)}${regName(e.register) ? ` · 문체 ${esc(regName(e.register))}` : ""}</dd>
             <dt>제목</dt><dd><b>${esc(e.titleFont)}</b></dd>
             <dt>본문</dt><dd><b>${esc(e.bodyFont)}</b></dd>
             <dt>대안</dt><dd>${(e.alt || []).map(esc).join("<br>")}</dd>
+            ${(e.style || []).length ? `<dt>디자인</dt><dd>${esc(e.style[0].replace("프리셋: ", ""))}</dd>` : ""}
           </dl>
           <p class="ex-why">${why(e)}</p>
           ${ag ? `<p class="ex-label">기관 전용 서체 제안</p><ul class="ex-ag">${ag}</ul>` : ""}
-          ${(e.polish || []).length ? `<p class="ex-label">그래프·디자인 보정</p><ul class="ex-ag">${e.polish.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` : ""}
+          ${(e.style || []).length > 1 ? `<p class="ex-label">디자인 다듬기</p><ul class="ex-ag">${e.style.slice(1).map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` : ""}
+          ${(e.polish || []).length ? `<p class="ex-label">그래프·디자인 실수 바로잡기</p><ul class="ex-ag">${e.polish.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` : ""}
         </div>
       </div>
     </article>`;
