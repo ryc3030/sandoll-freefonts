@@ -4,6 +4,7 @@
   python3 docs/examples/make_examples.py      # LibreOffice·poppler·인터넷 필요
 예시 덱 3개를 만들고 → 스킬 스크립트로 분석·폰트 받기·적용 → 원본과 결과를 같은 조건(빈 HOME)에서 렌더링한다.
 결과: docs/examples/<이름>-before-N.jpg, -after-N.jpg, examples.json(진단 요약)
+렌더링은 스킬의 export_pdf.py를 그대로 쓴다(사용자가 받는 PDF와 같은 방식).
 """
 import json, os, shutil, subprocess, sys, tempfile
 from pathlib import Path
@@ -90,15 +91,12 @@ def build(d, path):
 
 
 def render(pptx, prefix, fonts_dir=None):
-    with tempfile.TemporaryDirectory() as home:
-        fd = Path(home) / ".fonts"; fd.mkdir()
-        if fonts_dir:
-            for f in Path(fonts_dir).glob("*.[ot]tf"): shutil.copy(f, fd)
-        env = dict(os.environ, HOME=home)
-        subprocess.run(["fc-cache", "-f"], env=env, check=True)
-        subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(Path(pptx).parent), str(pptx)],
-                       env=env, check=True, capture_output=True)
+    """스킬의 export_pdf.py로 PDF를 만들고(빈 HOME, 한글-숫자 간격 보정) 쪽마다 JPG로 뽑는다."""
     pdf = Path(pptx).with_suffix(".pdf")
+    cmd = [sys.executable, S / "export_pdf.py", pptx, "--out", pdf]
+    if fonts_dir:
+        cmd += ["--fonts", fonts_dir]
+    subprocess.run(cmd, check=True, capture_output=True)
     subprocess.run(["pdftoppm", "-r", "72", "-jpeg", "-jpegopt", "quality=82", str(pdf), str(OUT / prefix)], check=True)
     for f in OUT.glob(prefix + "-*.jpg"):  # pdftoppm이 붙이는 0 채움(-1/-01) 정리
         f.rename(OUT / f"{prefix}-{int(f.stem.rsplit('-', 1)[1])}.jpg")

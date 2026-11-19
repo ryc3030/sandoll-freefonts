@@ -15,6 +15,15 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "fonts.json"
 SECTIONS = {"animation01": "steady", "animation02": "new", "animation03": "ofl"}
 
 
+def clean_url(u):
+    """저장소 클론 주소(.git)는 웹 주소로, 다른 사이트를 거쳐 왔다는 추적 꼬리표(?ref=, utm_)는 뺀다."""
+    from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
+    u = re.sub(r"\.git$", "", u.strip())
+    sp = urlsplit(u)
+    qs = [(k, v) for k, v in parse_qsl(sp.query, keep_blank_values=True) if k != "ref" and not k.startswith("utm_")]
+    return urlunsplit((sp.scheme, sp.netloc, sp.path, urlencode(qs), sp.fragment))
+
+
 def get(url, tries=3):
     for i in range(tries):
         try:
@@ -110,7 +119,7 @@ def parse_detail(html):
     # 제작사(공식 배포) 사이트
     for a in soup.find_all("a", href=re.compile(r"^https?://")):
         if "제작사 사이트" in a.get_text():
-            d["makerUrl"] = re.sub(r"\.git$", "", a["href"])  # 저장소 클론 주소는 웹 주소로
+            d["makerUrl"] = clean_url(a["href"])
             break
     return d
 

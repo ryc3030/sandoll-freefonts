@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>사용방법 — 무료폰트 색인</title>
-<meta name="description" content="무료폰트 색인에서 폰트를 찾는 법과, 피피티에 어울리는 무료 한글 폰트를 자동으로 골라 적용하는 스킬의 설치·사용법과 전후 예시.">
+<meta name="description" content="무료폰트 색인에서 폰트를 찾는 법, 피피티에 어울리는 무료 한글 폰트를 골라 적용하고 PDF까지 만들어 주는 스킬의 설치·사용법과 전후 예시.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
     <nav class="topnav" aria-label="사이트"><a href="./">← 무료폰트 색인</a></nav>
     <p class="kicker">HOW TO USE</p>
     <h1>사용방법</h1>
-    <p class="lede">이 사이트는 두 가지로 씁니다. <b>웹에서</b> 무료 한글 폰트를 찾아 라이선스를 확인하고 공식 배포처로 가거나, <b>AI 스킬로</b> 피피티를 올려 어울리는 무료 폰트를 자동으로 골라 적용합니다.</p>
+    <p class="lede">이 사이트는 두 가지로 씁니다. <b>웹에서</b> 무료 한글 폰트를 찾아 라이선스를 확인하고 공식 배포처로 갈 수 있고, <b>AI 스킬</b>에 피피티를 올리면 내용에 어울리는 무료 폰트를 골라 적용한 피피티와 PDF를 받을 수 있습니다.</p>
     <nav class="toc" aria-label="목차">
       <a href="#web">1. 웹에서 폰트 찾기</a>
       <a href="#install">2. 스킬 설치</a>
@@ -33,7 +33,7 @@
   <h2><span>1</span>웹에서 폰트 찾기</h2>
   <ol class="steps">
     <li><b>검색</b> — 맨 위 검색창에 이름·제작사·분류를 입력합니다. 예: <code>고딕</code>, <code>손글씨</code>, <code>배달의민족</code>.</li>
-    <li><b>미리보기 문구·크기</b> — 오른쪽 입력칸에 실제로 쓸 문장을 넣고 막대로 크기를 바꾸면, 공개 웹폰트가 있는 폰트는 카드에서 바로 그 문장으로 보입니다(카드 오른쪽 아래 <span class="pill on">실시간</span> 표시).</li>
+    <li><b>미리보기 문구·크기</b> — 오른쪽 입력칸에 실제로 쓸 문장을 넣고 막대로 크기를 바꿉니다. 공개 웹폰트가 있는 폰트는 카드에 그 문장이 바로 나타납니다(카드 오른쪽 아래 <span class="pill on">실시간</span> 표시).</li>
     <li><b>필터</b> — 칩을 눌러 조건에 맞는 폰트만 봅니다. 다시 누르면 꺼집니다.</li>
     <li><b>자세히</b> — 카드를 누르면 라이선스 요약표, 원문 라이선스, 보고서 기호 지원표, 웹에서 쓸 CSS 코드가 나옵니다. 상세 창 주소를 복사하면 그 폰트를 바로 여는 링크가 됩니다.</li>
     <li><b>내려받기</b> — <span class="pill">공식 배포처</span> 버튼은 제작사나 산돌구름 페이지로 연결됩니다. 이 사이트는 폰트 파일을 직접 주지 않습니다.</li>
@@ -66,7 +66,7 @@
 
 <section id="install" class="g-sec">
   <h2><span>2</span>스킬 설치</h2>
-  <p>스킬은 AI에게 "피피티 폰트를 고르고 바꾸는 방법"을 알려 주는 설치 묶음입니다. 한 번 설치하면 대화에서 피피티를 올리고 부탁만 하면 됩니다.</p>
+  <p>스킬은 AI에게 피피티 폰트를 고르고 바꾸는 절차를 알려 주는 설치 묶음입니다. 한 번 설치하면 대화에 피피티를 올리고 부탁하기만 하면 됩니다.</p>
   <p><a class="btn primary dl" href="https://github.com/ryc3030/sandoll-freefonts/raw/main/dist/free-korean-fonts-ppt.zip">설치 ZIP 내려받기</a> <a class="btn ghost dl" href="docs/USER-GUIDE-ko.pdf">사용설명서 PDF</a> <span class="note">ZIP은 매주 최신 폰트 목록과 함께 다시 만들어지며, 안에 사용설명서 PDF(USER-GUIDE-ko.pdf)가 들어 있습니다.</span></p>
   <table class="lic g-table">
     <thead><tr><th>쓰는 도구</th><th>설치 방법</th></tr></thead>
@@ -79,7 +79,7 @@
       <tr><td><b>Gemini 앱·그 밖의 챗봇</b></td><td>스킬 기능이 없으므로, ZIP 안의 <code>SKILL.md</code> 내용을 Gem·프로젝트 지침에 붙여 넣고 ZIP을 대화에 함께 올림</td></tr>
     </tbody>
   </table>
-  <p class="note">스킬이 코드를 실행할 수 있는 환경(파일 업로드·코드 실행이 켜진 대화)이어야 폰트를 실제로 바꿀 수 있습니다. 폰트를 내려받을 때만 인터넷이 필요합니다.</p>
+  <p class="note">폰트를 실제로 바꾸려면 코드를 실행할 수 있는 대화(파일 업로드·코드 실행이 켜진 대화)여야 합니다. 인터넷은 폰트를 내려받을 때만 필요합니다.</p>
 </section>
 
 <section id="ask" class="g-sec">
@@ -91,45 +91,48 @@
     <button class="prompt" type="button"><span class="p-tag">지정</span>제목은 G마켓 산스 Bold, 본문은 프리텐다드로 적용해 줘</button>
     <button class="prompt" type="button"><span class="p-tag">공모전</span>공모전 제출용이야. 폰트 바꾸고 폰트 라이선스 내역서도 같이 만들어 줘</button>
     <button class="prompt" type="button"><span class="p-tag">기관 서체</span>서울시 행사 자료야. 서울남산체 파일을 첨부할게, 이걸로 적용해 줘</button>
-    <button class="prompt" type="button"><span class="p-tag">보내기</span>받는 사람 컴퓨터에 폰트가 없어도 똑같이 보이게 해 줘</button>
+    <button class="prompt" type="button"><span class="p-tag">보내기</span>다른 사람이 이 피피티를 고쳐야 해. 폰트까지 챙겨서 보낼 수 있게 해 줘</button>
+    <button class="prompt" type="button"><span class="p-tag">새 슬라이드</span>앞으로 새 슬라이드를 만들 때도 이 글꼴이 나오게 글꼴 테마 파일도 만들어 줘</button>
     <button class="prompt" type="button"><span class="p-tag">새로 만들기</span>이 보고서 내용으로 10장짜리 발표 자료를 만들고, 내용에 맞는 무료 폰트로 맞춰 줘</button>
   </div>
   <p id="copied" class="note" aria-live="polite"></p>
 
   <h3>스킬이 하는 일</h3>
   <ol class="flow">
-    <li><b>분석</b><span>누가 만들었는지(기관명·문서 속성), 무슨 내용인지(정책·추모·아동·학술 등), 글의 문체, 슬라이드당 글자 양, 배경색, 쓰인 기호까지 30여 가지를 봅니다.</span></li>
-    <li><b>고르기</b><span>제목 1개 + 본문 1개, 두 가족 이내로 짝을 정합니다. 공공기관 자료는 기본 프리텐다드지만, 추모식·축제·아동 교육처럼 내용 성격이 뚜렷하면 그에 맞는 서체를 씁니다. □ ※ Ⅰ 같은 기호가 빠진 폰트는 피합니다.</span></li>
-    <li><b>내려받기</b><span>재배포가 허용된 폰트(산돌구름 OFL·Google Fonts)만 공식 배포처에서 받습니다. 기관 전용 서체는 링크만 알려 주고, 파일을 주시면 그걸로 적용합니다.</span></li>
-    <li><b>적용</b><span>테마·마스터·슬라이드·표·차트·노트의 글꼴을 한 번에 바꿉니다. 텍스트 상자로 만든 제목도 찾아 제목 글꼴을 입힙니다.</span></li>
-    <li><b>확인</b><span>바뀐 피피티를 이미지로 만들어 넘치거나 잘린 글자가 없는지 직접 봅니다.</span></li>
-    <li><b>넘기기</b><span>바뀐 피피티 + 폰트 묶음(fonts.zip, 라이선스 포함) + 진단 요약. 공모전·납품용이면 라이선스 내역서도 함께 줍니다.</span></li>
+    <li><b>분석</b><span>만든 곳(기관명·문서 속성), 내용(정책·추모·아동·학술 등), 글의 문체, 슬라이드당 글자 양, 배경색, 쓰인 기호까지 30여 가지를 봅니다.</span></li>
+    <li><b>고르기</b><span>제목 1개와 본문 1개, 두 가족 이내로 짝을 정합니다. 공공기관 자료는 프리텐다드가 기본이고, 추모식·축제·아동 교육처럼 내용 성격이 뚜렷하면 그에 맞는 서체를 씁니다. □ ※ Ⅰ 같은 기호가 빠진 폰트는 피합니다.</span></li>
+    <li><b>내려받기</b><span>재배포가 허용된 폰트(산돌구름 OFL·Google Fonts)만 공식 배포처에서 받습니다. 기관 전용 서체는 링크를 알려 주고, 파일을 첨부하면 그 파일로 적용합니다.</span></li>
+    <li><b>적용</b><span>테마·마스터·슬라이드·표·차트·노트의 글꼴을 한 번에 바꿉니다. 텍스트 상자로 만든 제목에도 제목 글꼴을 입히고, 원래 굵기 차이도 살립니다.</span></li>
+    <li><b>PDF·확인</b><span>받은 폰트만 있는 빈 환경에서 PDF로 내보내고, 폰트가 실제로 들어갔는지와 넘치거나 잘린 글자가 없는지 봅니다.</span></li>
+    <li><b>넘기기</b><span>바뀐 피피티, PDF, 폰트 묶음(fonts.zip, 라이선스 포함)과 진단 요약을 줍니다. 요청하면 글꼴 테마 파일과 라이선스 내역서도 만듭니다.</span></li>
   </ol>
 </section>
 
 <section id="examples" class="g-sec">
   <h2><span>4</span>사용 예시</h2>
-  <p>같은 '맑은 고딕' 피피티 세 개를 스킬에 넣은 실제 결과입니다. 모두 공공기관이 만든 자료지만 내용에 따라 다른 폰트가 골라졌습니다. 그림 위 단추로 원본과 적용 후를 번갈아 볼 수 있습니다.</p>
+  <p>'맑은 고딕'으로 만든 피피티 세 개를 스킬에 넣은 실제 결과입니다. 셋 다 공공기관 자료지만 내용에 따라 고른 폰트가 다릅니다. 그림 위 단추로 원본과 적용 후를 번갈아 볼 수 있습니다.</p>
   <div id="ex-list" class="ex-list"><p class="note">예시를 불러오는 중…</p></div>
-  <p class="note">그림은 <code>docs/examples/make_examples.py</code>로 스킬을 실제로 돌려 LibreOffice로 렌더링한 것입니다. 숫자와 한글 사이가 조금 벌어져 보이는 것은 LibreOffice 렌더링의 특성으로, PowerPoint에서는 생기지 않습니다.</p>
+  <p class="note">그림은 <code>docs/examples/make_examples.py</code>로 스킬을 실제로 돌려 만든 PDF를 쪽마다 옮긴 것으로, 스킬이 넘겨주는 PDF와 같은 방식입니다. 원본 그림의 '2027 년'처럼 벌어진 간격은 원본 글꼴(맑은 고딕)이 없는 환경에서 대체 글꼴이 섞인 탓입니다.</p>
 </section>
 
 <section id="faq" class="g-sec">
   <h2><span>5</span>자주 묻는 질문</h2>
   <details><summary>왜 사이트에서 폰트 파일을 바로 주지 않나요?</summary>
-    <p>무료 폰트라도 상당수는 '사용'만 무료이고 '재배포'는 막혀 있습니다. 그래서 이 사이트는 목록과 라이선스 정보, 공식 배포처 링크만 보여 줍니다. 스킬도 재배포가 허용된 OFL 폰트와 Google Fonts만 자동으로 받습니다.</p></details>
+    <p>무료 폰트라도 상당수는 사용만 무료이고 재배포는 막혀 있습니다. 그래서 이 사이트는 목록과 라이선스 정보, 공식 배포처 링크만 보여 주고, 스킬도 재배포가 허용된 OFL 폰트와 Google Fonts만 자동으로 받습니다.</p></details>
   <details><summary>공공기관 자료는 무조건 프리텐다드인가요?</summary>
-    <p>아닙니다. 보고·정책·사업 보고처럼 '공공 업무' 성격이면 프리텐다드가 기본이지만, 추모·기념식은 명조, 축제 홍보는 G마켓 산스, 어린이 교육은 둥근 서체처럼 내용에 맞춥니다. 위 예시의 현충일 추념식과 어린이 교통안전 교육이 그 경우입니다.</p></details>
+    <p>보고·정책·사업 보고처럼 공공 업무가 내용이면 프리텐다드가 기본입니다. 추모·기념식은 명조, 축제 홍보는 G마켓 산스, 어린이 교육은 둥근 서체처럼 내용 성격이 뚜렷하면 그에 맞춥니다. 위 예시의 현충일 추념식과 어린이 교통안전 교육이 그 경우입니다.</p></details>
   <details><summary>서울남산체·학교안심체 같은 기관 전용 서체는요?</summary>
-    <p>스킬이 자료를 만든 기관을 알아보면 그 기관의 전용 서체와 공식 배포처를 먼저 알려 줍니다. 라이선스가 기관마다 달라 자동으로 받지는 않습니다. 직접 받아 대화에 첨부하면 그 파일로 적용합니다.</p></details>
+    <p>스킬이 자료를 만든 기관을 알아보면 그 기관의 전용 서체와 공식 배포처를 먼저 알려 줍니다. 라이선스가 기관마다 달라 자동으로 받지 않으니, 직접 받아 대화에 첨부하면 그 파일로 적용합니다.</p></details>
   <details><summary>받는 사람 컴퓨터에 폰트가 없으면 어떻게 보이나요?</summary>
-    <p>다른 글꼴로 바뀌어 보입니다. 함께 넘겨주는 fonts.zip의 폰트를 설치하거나, PowerPoint에서 <b>파일 → 옵션 → 저장 → '파일의 글꼴 포함'</b>을 켜고 저장해 보내세요. 일부 폰트(SUIT·나눔스퀘어·G마켓 산스 등)는 포함해 보내도 받는 사람은 보기·인쇄만 되고, 편집하려면 폰트를 설치해야 합니다. 스킬이 폰트마다 이 차이를 알려 줍니다.</p></details>
-  <details><summary>눈누(noonnu.cc)의 폰트도 받아 주나요?</summary>
-    <p>아니요. 눈누는 이용약관에서 자동 수집을 금지합니다. 눈누에서 찾은 폰트는 직접 받은 뒤 파일을 첨부하면 그 파일로 적용합니다.</p></details>
+    <p>피피티는 다른 글꼴로 바뀌어 보입니다. 보기만 할 사람에게는 함께 받은 PDF를 보내세요. PDF에는 폰트가 들어 있어 어느 컴퓨터에서나 같은 모양으로 열립니다. 피피티를 고칠 사람에게는 fonts.zip의 폰트를 설치하게 하거나, PowerPoint에서 <b>파일 → 옵션 → 저장 → '파일의 글꼴 포함'</b>을 켜고 저장해 보내세요. 일부 폰트(SUIT·나눔스퀘어·G마켓 산스 등)는 포함해 보내도 받는 사람이 보기·인쇄만 할 수 있어, 편집하려면 폰트를 설치해야 합니다. 스킬이 폰트마다 이 차이를 알려 줍니다.</p></details>
+  <details><summary>PDF는 PowerPoint에서 저장한 것과 같나요?</summary>
+    <p>거의 같지만 LibreOffice로 만든 PDF라 줄바꿈이 조금 다를 수 있습니다. 제출용 PDF가 PowerPoint 화면과 똑같아야 하면 fonts.zip의 폰트를 설치한 뒤 PowerPoint에서 <b>파일 → 다른 이름으로 저장 → PDF</b>로 다시 만드세요.</p></details>
+  <details><summary>목록에 없는 폰트를 쓰고 싶어요.</summary>
+    <p>공식 배포처에서 직접 받은 폰트 파일을 대화에 첨부하면 그 파일로 적용합니다. 재배포 조건을 알 수 없는 파일이라 스킬이 넘겨주는 fonts.zip에는 넣지 않습니다.</p></details>
   <details><summary>Google Slides나 Keynote에서도 되나요?</summary>
-    <p>스킬은 .pptx 파일을 바꿉니다. 바꾼 파일을 Google Slides로 올리려면 "Google Slides로 옮길 거야"라고 말해 주세요. 테마 대신 글자마다 글꼴을 직접 지정하는 방식으로 적용합니다. Keynote는 .pptx를 열 때 폰트가 설치돼 있으면 그대로 보입니다.</p></details>
+    <p>스킬은 .pptx 파일을 바꿉니다. Google Slides로 옮길 파일이면 "Google Slides로 옮길 거야"라고 말해 주세요. 테마 대신 글자마다 글꼴 이름을 직접 써 넣습니다. Keynote는 폰트가 설치돼 있으면 .pptx를 열 때 그대로 보입니다.</p></details>
   <details><summary>목록은 얼마나 자주 갱신되나요?</summary>
-    <p>매주 월요일 아침에 산돌구름과 Google Fonts에서 자동으로 다시 모읍니다. 맨 위의 '마지막 갱신' 날짜에서 확인할 수 있습니다.</p></details>
+    <p>매주 월요일 아침에 산돌구름과 Google Fonts에서 자동으로 다시 모읍니다. 갱신 날짜는 첫 화면 맨 위 '마지막 갱신'에 나옵니다.</p></details>
 </section>
 
 </main>

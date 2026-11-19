@@ -18,14 +18,14 @@
   const regName = (r) => { const n = Array.isArray(r) && r.length ? r[0][0] : ""; return /보류/.test(n) ? "" : n; };
   const why = (e) => {
     if (/내용 우선/.test(e.way)) return `만든 곳은 공공기관이지만 내용이 '${esc(e.genre)}' 성격이 뚜렷해 그에 맞는 서체를 골랐습니다.`;
-    if (/공공/.test(e.way)) return "공공기관의 정책 보고 자료라 공공 기본값(프리텐다드)을 골랐습니다. □ ○ ※ Ⅰ 기호를 모두 갖춘 폰트입니다.";
+    if (/공공/.test(e.way)) return "공공기관의 정책 보고 자료라 공공 기본값인 프리텐다드를 골랐습니다. □ ○ ※ Ⅰ 기호를 모두 갖춘 폰트입니다.";
     return "";
   };
 
   function card(e) {
     const pages = Array.from({ length: e.pages }, (_, i) => i + 1);
     const ag = (e.agency || []).map((a) =>
-      `<li>${esc(a.agency)}: <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fonts.join(", "))}</a> — 파일을 주시면 이걸로 적용</li>`).join("");
+      `<li>${esc(a.agency)}: <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fonts.join(", "))}</a> — 파일을 첨부하면 그 파일로 적용</li>`).join("");
     return `<article class="ex" data-key="${esc(e.key)}">
       <header class="ex-head">
         <h3>${esc(e.title)}</h3>

@@ -17,6 +17,11 @@
      본문의 b=1 글자는 manifest에 본문 가족의 Bold가 있고 그 이름이 따로 있으면(예: 'Paperlogy 7 Bold') 그 글꼴로 바꾼다.
   5) 기호·아이콘·코드 글꼴(Wingdings, Font Awesome, Consolas 등)과 --keep 글꼴은 건드리지 않는다.
   6) 덱에 쓰인 글자 중 고른 글꼴에 없는 기호가 있으면 경고한다.
+  7) 'Noto Sans KR Black'처럼 굵기가 이름에 든 글꼴은 굵기를 살려, 새 가족에서 가장 가까운 굵기로 바꾼다(manifest에 있을 때).
+  8) 테마와 글자의 cs(복합 문자) 글꼴도 함께 맞춘다. 한글 입력 중 PowerPoint가 글꼴을 잘못 고르는 일을 막는다.
+  --theme-xml 을 주면 PowerPoint '디자인 → 글꼴'에 등록할 수 있는 글꼴 테마 파일도 만든다(새 슬라이드에도 같은 글꼴).
+
+참고: 7)·8)과 글꼴 테마 파일은 achimnol/pptx-tool(MIT)의 처리 방식을 참고했다.
 
 --mode force 는 테마 참조 대신 모든 글자에 글꼴 이름을 직접 써 넣는다(Google Slides 등 테마를 무시하는 프로그램용).
 """
@@ -31,6 +36,20 @@ KEEP_DEFAULT = re.compile(r"^(wingdings.*|symbol|webdings|marlett|segoe (ui (sym
                           r"cascadia.*|jetbrains mono|source code pro|menlo|monaco)$", re.I)
 RPR_TAGS = {f"{{{A}}}{t}" for t in ("rPr", "defRPr", "endParaRPr")}
 TITLE_PH = {"title", "ctrTitle"}
+WORDER = ["Thin", "ExtraLight", "Light", "Regular", "Medium", "SemiBold", "Bold", "ExtraBold", "Black"]
+WALIAS = {"ultralight": "ExtraLight", "semilight": "Light", "demilight": "Light", "book": "Regular", "normal": "Regular",
+          "demibold": "SemiBold", "ultrabold": "ExtraBold", "heavy": "Black"}
+WSUFFIX = re.compile(r"\s+(thin|extralight|ultralight|semilight|demilight|light|book|normal|regular|medium|semibold|demibold|"
+                     r"bold|extrabold|ultrabold|black|heavy)$", re.I)
+
+
+def weight_of(face):
+    """'Noto Sans KR Black' → 'Black'. 굵기 접미사가 없으면 None."""
+    m = WSUFFIX.search(face or "")
+    if not m:
+        return None
+    w = m.group(1).lower()
+    return WALIAS.get(w) or next(x for x in WORDER if x.lower() == w)
 ORDER = ["ln", "noFill", "solidFill", "gradFill", "blipFill", "pattFill", "grpFill", "effectLst", "effectDag",
          "highlight", "uLnTx", "uLn", "uFillTx", "uFill", "latin", "ea", "cs", "sym", "hlinkClick", "hlinkMouseOver", "rtl", "extLst"]
 
@@ -59,12 +78,15 @@ def set_theme(root, fonts):
     n = 0
     for tag, role in (("majorFont", "title"), ("minorFont", "body")):
         for fs in root.iter(q(tag)):
-            for child in ("latin", "ea"):
+            for i, child in enumerate(("latin", "ea", "cs")):
                 el = fs.find(f"a:{child}", NS)
                 if el is None:
                     el = etree.Element(q(child))
-                    # 순서: latin, ea, cs, font*
-                    fs.insert(0 if child == "latin" else 1, el)
+                    fs.insert(i, el)  # 순서: latin, ea, cs, font*
+                if child == "cs":
+                    if not el.get("typeface"):  # 비어 있을 때만 한글 글꼴로(아랍·태국 글꼴이 지정돼 있으면 둔다)
+                        el.set("typeface", fonts[(role, "ea")]); n += 1
+                    continue
                 el.set("typeface", fonts[(role, child)]); n += 1
             hang = [f for f in fs.findall("a:font", NS) if f.get("script") == "Hang"]
             if hang:
@@ -132,20 +154,59 @@ def fix_runs(root, cfg, mode, stats, title_shapes=frozenset()):
                 bold_face = cfg["body_bold_face"]; rpr.set("b", "0"); stats["bold_body"] += 1
             else:
                 stats["bold_body_fake"] += 1
-        for child in ("latin", "ea"):
+        # 굵기가 이름에 든 원래 글꼴('Noto Sans KR Black')은 새 가족의 가장 가까운 굵기로
+        weighted = None
+        if not bold_face and cfg["weights"].get(role):
+            for child in ("ea", "latin"):
+                el = rpr.find(f"a:{child}", NS)
+                cur = el.get("typeface") if el is not None else None
+                if cur and not cur.startswith("+") and not KEEP_DEFAULT.match(cur) and cur.lower() not in cfg["keep"]:
+                    w = weight_of(cur)
+                    if w:
+                        weighted = pick_weight(cfg["weights"][role], w, cfg["base"][role])
+                    break
+        if weighted is not None:
+            face, bold = weighted
+            if face is not None:
+                for child in ("latin", "ea", "cs"):
+                    set_face(rpr, child, face)
+                if bold:
+                    rpr.set("b", "1")
+                elif rpr.get("b") == "1":
+                    rpr.set("b", "0")
+                stats["weight_kept"] += 1
+                continue
+        for child in ("latin", "ea", "cs"):
             el = rpr.find(f"a:{child}", NS)
             cur = el.get("typeface") if el is not None else None
             if cur and (KEEP_DEFAULT.match(cur) or cur.lower() in cfg["keep"]):
                 continue
+            slot = {"latin": "lt", "ea": "ea", "cs": "cs"}[child]
+            if child == "cs" and el is None:
+                continue  # cs는 원래 지정된 곳만 정리
             if bold_face:
                 set_face(rpr, child, bold_face); stats["runs"] += 1
             elif mode == "force":
-                set_face(rpr, child, cfg["fonts"][(role, child)]); stats["runs"] += 1
+                set_face(rpr, child, cfg["fonts"][(role, "latin" if child == "latin" else "ea")]); stats["runs"] += 1
             elif title and title_shapes and rpr.tag == q("rPr") and is_title(rpr, title_shapes) and not _is_ph_title(rpr):
-                set_face(rpr, child, f"+mj-{'lt' if child == 'latin' else 'ea'}"); stats["runs"] += 1
+                set_face(rpr, child, f"+mj-{slot}"); stats["runs"] += 1
             elif cur and not cur.startswith("+"):
-                el.set("typeface", f"+{'mj' if title else 'mn'}-{'lt' if child == 'latin' else 'ea'}"); stats["runs"] += 1
+                el.set("typeface", f"+{'mj' if title else 'mn'}-{slot}"); stats["runs"] += 1
     return stats
+
+
+def pick_weight(entries, want, base):
+    """entries: 그 역할 가족의 manifest 항목들. 원하는 굵기와 가장 가까운 것을 (글꼴 이름, 굵게 여부)로.
+    가장 가까운 것이 역할의 기본 굵기면 (None, _) → 테마 참조로 둔다."""
+    have = {e["weight"]: e for e in entries if e["weight"] in WORDER}
+    if not have:
+        return None
+    wi = WORDER.index(want)
+    best = min(have, key=lambda w: (abs(WORDER.index(w) - wi), -WORDER.index(w) if wi >= 3 else WORDER.index(w)))
+    e = have[best]
+    if base and e["weight"] == base["weight"]:
+        return (None, False)
+    return (e["family"], bool(e["bold"]))
 
 
 def _is_ph_title(el):
@@ -153,6 +214,19 @@ def _is_ph_title(el):
         ph = anc.find("p:nvSpPr/p:nvPr/p:ph", NS)
         return ph is not None and ph.get("type") in TITLE_PH
     return False
+
+
+def write_theme_xml(path, fonts):
+    """Office 글꼴 테마(fontScheme) 파일. Windows: %APPDATA%\\Microsoft\\Templates\\Document Themes\\Theme Fonts\\
+    macOS: ~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts/"""
+    name = os.path.splitext(os.path.basename(path))[0]
+    root = etree.Element(q("fontScheme"), nsmap={"a": A}); root.set("name", name)
+    for tag, role in (("majorFont", "title"), ("minorFont", "body")):
+        fs = etree.SubElement(root, q(tag))
+        for child, key in (("latin", "latin"), ("ea", "ea"), ("cs", "ea")):
+            etree.SubElement(fs, q(child)).set("typeface", fonts[(role, key)])
+        h = etree.SubElement(fs, q("font")); h.set("script", "Hang"); h.set("typeface", fonts[(role, "ea")])
+    open(path, "wb").write(etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True, pretty_print=True))
 
 
 def deck_chars(z):
@@ -175,6 +249,7 @@ def main():
     ap.add_argument("--mode", choices=["theme", "force"], default="theme")
     ap.add_argument("--title-bold", action="store_true", help="manifest 없이 쓸 때, 제목을 굵게 스타일로")
     ap.add_argument("--manifest", help="fetch_fonts.py가 만든 manifest.json")
+    ap.add_argument("--theme-xml", help="PowerPoint 글꼴 테마 파일(.xml)도 만든다. 디자인 → 글꼴에 등록하면 새 슬라이드에도 같은 글꼴")
     a = ap.parse_args()
 
     man = None
@@ -214,8 +289,15 @@ def main():
         bb = next((m for w in ("Bold", "SemiBold", "ExtraBold") for m in cands if m["weight"] == w), None)
         if bb and not bb["bold"]:
             body_bold_face = bb["family"]  # 굵은 글꼴 이름이 따로 있음 → b=1 대신 그 글꼴로
+    # 역할별로 받은 굵기들(굵기 이름이 든 원래 글꼴을 옮길 때)
+    weights = {}
+    if man:
+        for role, e in (("title", tea or te), ("body", bea or be)):
+            if e:
+                weights[role] = [m for m in man if m["font"] == e["font"]]
     cfg = {"fonts": fonts, "keep": {k.strip().lower() for k in a.keep.split(",") if k.strip()},
-           "title_nobold": title_nobold, "body_bold_face": body_bold_face}
+           "title_nobold": title_nobold, "body_bold_face": body_bold_face,
+           "weights": weights, "base": {"title": tea or te, "body": bea or be}}
 
     try:
         zin = zipfile.ZipFile(a.src)
@@ -226,7 +308,7 @@ def main():
     part_re = re.compile(r"^ppt/(presentation|theme/theme\d+|slides/slide\d+|slideLayouts/slideLayout\d+|slideMasters/slideMaster\d+|"
                          r"notesMasters/notesMaster\d+|notesSlides/notesSlide\d+|handoutMasters/handoutMaster\d+|"
                          r"charts/chart\d+|diagrams/drawing\d+|diagrams/data\d+)\.xml$")
-    stats = {"theme": 0, "runs": 0, "parts": 0, "title_boxes": 0, "bold_title": 0, "bold_body": 0, "bold_body_fake": 0}
+    stats = {"theme": 0, "runs": 0, "parts": 0, "title_boxes": 0, "bold_title": 0, "bold_body": 0, "bold_body_fake": 0, "weight_kept": 0}
     fd, tmp = tempfile.mkstemp(suffix=".pptx", dir=os.path.dirname(os.path.abspath(a.dst)) or ".")
     os.close(fd)
     with zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
@@ -262,6 +344,11 @@ def main():
     print(f"  본문: {fonts[('body', 'latin')]}" + (f" / 한글 {fonts[('body', 'ea')]}" if fonts[('body', 'ea')] != fonts[('body', 'latin')] else ""))
     if stats["bold_title"]:
         print(f"  · 제목의 굵게 {stats['bold_title']}곳을 껐습니다('{fonts[('title', 'latin')]}'에는 굵게 스타일 파일이 따로 없어, 그대로 두면 가짜 굵게가 됨).")
+    if stats["weight_kept"]:
+        print(f"  · 굵기가 이름에 든 원래 글꼴 {stats['weight_kept']}곳은 새 가족의 가장 가까운 굵기로 바꿨습니다.")
+    if a.theme_xml:
+        write_theme_xml(a.theme_xml, fonts)
+        print(f"  · 글꼴 테마 파일: {a.theme_xml} (PowerPoint 디자인 → 글꼴 → 글꼴 사용자 지정 목록에 나오도록 테마 폴더에 넣으면 새 슬라이드에도 적용)")
     if stats["bold_body"]:
         print(f"  · 본문 굵은 글자 {stats['bold_body']}곳을 '{body_bold_face}' 글꼴로 바꿨습니다.")
     if stats["bold_body_fake"] and be and not any(m["font"] == be["font"] and m["bold"] for m in man):

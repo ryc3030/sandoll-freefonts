@@ -81,8 +81,45 @@ def main():
             d = ad.diagnose(ad.extract(str(f))); r = ad.recommend(d, DATA)
             ok = fn(d, r); fails += not ok
             print(f"{'✓' if ok else '✗'} {name:<18} — {desc}")
+        fails += apply_checks(Path(td))
     print(f"\n실패 {fails}건")
     sys.exit(1 if fails else 0)
+
+
+def apply_checks(td):
+    """apply_fonts.py: 굵기 이름이 든 원래 글꼴의 굵기 보존, cs 정리, 글꼴 테마 파일."""
+    import json, subprocess, zipfile
+    from lxml import etree
+    A = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
+    p = Presentation(); s = p.slides.add_slide(p.slide_layouts[1]); s.shapes.title.text = "제목"
+    tf = s.placeholders[1].text_frame
+    for i, (t, face) in enumerate([("가", "Noto Sans KR Black"), ("나", "나눔스퀘어 Bold"), ("다", "Pretendard Light"), ("라", "맑은 고딕")]):
+        para = tf.paragraphs[0] if i == 0 else tf.add_paragraph(); para.text = t
+        rpr = para.runs[0]._r.get_or_add_rPr()
+        for c in ("latin", "ea", "cs"):
+            rpr.append(rpr.makeelement(A + c, {"typeface": face}))
+    src, dst, xml = td / "w.pptx", td / "o.pptx", td / "theme.xml"
+    p.save(src)
+    man = [{"font": "16951", "name": "프리텐다드", "weight": w, "file": "", "family": fam, "typoFamily": "Pretendard", "bold": b,
+            "missing": "", "hangul": 11172} for w, fam, b in [("Regular", "Pretendard", False), ("Bold", "Pretendard", True),
+                                                              ("ExtraBold", "Pretendard ExtraBold", False)]]
+    (td / "m.json").write_text(json.dumps(man, ensure_ascii=False), "utf-8")
+    subprocess.run([sys.executable, ROOT / "skill/scripts/apply_fonts.py", src, dst, "--manifest", td / "m.json",
+                    "--title", "프리텐다드:ExtraBold", "--body", "프리텐다드:Regular", "--theme-xml", xml], check=True, capture_output=True)
+    root = etree.fromstring(zipfile.ZipFile(dst).read("ppt/slides/slide1.xml"))
+    got = {}
+    for r in root.iter(A + "r"):
+        rp = r.find(A + "rPr")
+        if rp is not None and rp.find(A + "ea") is not None:
+            got[r.find(A + "t").text] = (rp.find(A + "ea").get("typeface"), rp.find(A + "cs").get("typeface"), rp.get("b"))
+    want = {"가": ("Pretendard ExtraBold", "Pretendard ExtraBold", None), "나": ("Pretendard", "Pretendard", "1"),
+            "다": ("+mn-ea", "+mn-cs", None), "라": ("+mn-ea", "+mn-cs", None)}
+    ok1 = got == want
+    ok2 = xml.exists() and b'script="Hang" typeface="Pretendard ExtraBold"' in xml.read_bytes()
+    print(f"{'✓' if ok1 else '✗'} {'굵기 보존·cs':<18} — 'Noto Sans KR Black'은 ExtraBold로, 'Bold'는 Bold로, Light·일반은 테마 참조로"
+          + ("" if ok1 else f"   (결과: {got})"))
+    print(f"{'✓' if ok2 else '✗'} {'글꼴 테마 파일':<18} — --theme-xml이 제목·본문 글꼴 테마를 만든다")
+    return (not ok1) + (not ok2)
 
 
 if __name__ == "__main__":

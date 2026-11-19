@@ -28,7 +28,8 @@ python3 -c "import fontTools, lxml" 2>/dev/null || pip install --break-system-pa
 - 스크립트는 저장소의 최신 데이터(매주 갱신)를 먼저 읽고, 인터넷이 막혀 있으면 함께 든 `data/`를 쓴다.
 - 폰트 파일은 인터넷으로 받는다. 인터넷이 막힌 환경(일부 챗봇 샌드박스, Codex 기본 샌드박스)에서는 사용자가 폰트 파일을 올려 주면
   `fetch_fonts.py --local 파일.ttf`로 적용한다. 분석(`analyze_deck.py`)과 적용(`apply_fonts.py`)은 인터넷 없이도 된다.
-  `--install`(홈 폴더에 폰트 설치)이 막히면 빼고 실행한다.
+- PDF 내보내기(`export_pdf.py`)에는 LibreOffice(`soffice`)와 poppler(`pdffonts`, `pdftoppm`)가 필요하다. 없으면 바뀐 피피티만 넘기고
+  PowerPoint에서 PDF로 저장하도록 안내한다.
 - 최신 스크립트: https://github.com/ryc3030/sandoll-freefonts/tree/main/skill/scripts
 
 """ + skill[end:]
