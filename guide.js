@@ -19,6 +19,7 @@
   const why = (e) => {
     if (/내용 우선/.test(e.way)) return `만든 곳은 공공기관이지만 내용이 '${esc(e.genre)}' 성격이 뚜렷해 그에 맞는 서체를 골랐습니다.`;
     if (/공공/.test(e.way)) return "공공기관의 정책 보고 자료라 공공 기본값인 프리텐다드를 골랐습니다. □ ○ ※ Ⅰ 기호를 모두 갖춘 폰트입니다.";
+    if (/기업/.test(e.genre + e.way)) return "회사의 실적 보고 자료라 숫자와 표가 잘 읽히는 프리텐다드를 골랐습니다.";
     return "";
   };
 
@@ -41,7 +42,7 @@
         </div>
         <div class="ex-diag">
           <p class="ex-label">요청</p>
-          <p class="ex-ask">이 피피티에 어울리는 무료 폰트로 바꿔 줘</p>
+          <p class="ex-ask">${(e.polish || []).length > 3 ? "어울리는 무료 폰트로 바꾸고, 그래프랑 디자인도 같이 손봐 줘" : "이 피피티에 어울리는 무료 폰트로 바꿔 줘"}</p>
           <p class="ex-label">스킬의 답</p>
           <dl class="kv">
             <dt>진단</dt><dd>${esc(e.genre)}${regName(e.register) ? ` · 문체 ${esc(regName(e.register))}` : ""}</dd>
@@ -51,6 +52,7 @@
           </dl>
           <p class="ex-why">${why(e)}</p>
           ${ag ? `<p class="ex-label">기관 전용 서체 제안</p><ul class="ex-ag">${ag}</ul>` : ""}
+          ${(e.polish || []).length ? `<p class="ex-label">그래프·디자인 보정</p><ul class="ex-ag">${e.polish.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` : ""}
         </div>
       </div>
     </article>`;

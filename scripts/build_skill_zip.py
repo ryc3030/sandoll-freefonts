@@ -22,7 +22,7 @@ skill = skill[:start] + """## 0. 준비
 
 ```bash
 SKILL_DIR="<이 SKILL.md가 있는 폴더>"
-python3 -c "import fontTools, lxml" 2>/dev/null || pip install --break-system-packages -q fonttools lxml 2>/dev/null || pip install -q fonttools lxml
+python3 -c "import fontTools, lxml, PIL" 2>/dev/null || pip install --break-system-packages -q fonttools lxml pillow 2>/dev/null || pip install -q fonttools lxml pillow
 ```
 - 아래 명령의 스크립트 경로는 모두 `"$SKILL_DIR"/scripts/` 기준이다.
 - 스크립트는 저장소의 최신 데이터(매주 갱신)를 먼저 읽고, 인터넷이 막혀 있으면 함께 든 `data/`를 쓴다.

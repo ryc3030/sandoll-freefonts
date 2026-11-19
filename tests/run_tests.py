@@ -82,6 +82,7 @@ def main():
             ok = fn(d, r); fails += not ok
             print(f"{'✓' if ok else '✗'} {name:<18} — {desc}")
         fails += apply_checks(Path(td))
+        fails += polish_checks(Path(td))
     print(f"\n실패 {fails}건")
     sys.exit(1 if fails else 0)
 
@@ -120,6 +121,39 @@ def apply_checks(td):
           + ("" if ok1 else f"   (결과: {got})"))
     print(f"{'✓' if ok2 else '✗'} {'글꼴 테마 파일':<18} — --theme-xml이 제목·본문 글꼴 테마를 만든다")
     return (not ok1) + (not ok2)
+
+
+def polish_checks(td):
+    """polish_deck.py: 흔한 실수를 넣은 덱을 보정해 결과를 확인한다."""
+    import subprocess, zipfile
+    from lxml import etree
+    sys.path.insert(0, str(ROOT / "tests"))
+    import messy_deck
+    src, dst = td / "messy.pptx", td / "polished.pptx"
+    messy_deck.build(src, messy_deck.sample_image())
+    out = subprocess.run([sys.executable, ROOT / "skill/scripts/polish_deck.py", src, "--fix", dst, "--contrast"],
+                         capture_output=True, text=True)
+    z = zipfile.ZipFile(dst)
+    charts = "".join(z.read(n).decode() for n in z.namelist() if n.startswith("ppt/charts/chart"))
+    s2, s3 = (etree.fromstring(z.read(f"ppt/slides/slide{i}.xml")) for i in (2, 3))
+    NSx = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main", "p": "http://schemas.openxmlformats.org/presentationml/2006/main"}
+    title = lambda r: r.find(".//p:sp/p:spPr/a:xfrm/a:off", NSx).attrib
+    pic = s3.find(".//p:pic/p:spPr/a:xfrm/a:ext", NSx)
+    ratio = int(pic.get("cx")) / int(pic.get("cy"))
+    checks = [
+        ("3D → 2D", "3DChart" not in charts and "view3D" not in charts and "serAx" not in charts),
+        ("막대 축 0", '<c:min val="0"/>' in charts),
+        ("보조 눈금선·범례", "minorGridlines" not in charts and charts.count("<c:legend") == 1),
+        ("그래프 글자", 'sz="900"' not in charts),
+        ("사진 비율", abs(ratio / (4 / 3) - 1) < 0.02),
+        ("제목 위치", title(s2) == title(s3)),
+        ("대비", "C8C8C8" not in z.read("ppt/slides/slide3.xml").decode()),
+        ("원그래프 진단", "조각이 8개" in out.stdout),
+    ]
+    bad = [n for n, ok in checks if not ok]
+    print(f"{'✓' if not bad else '✗'} {'그래프·디자인 보정':<18} — 3D·축·눈금선·범례·글자 크기·사진 비율·제목 위치·대비"
+          + (f"   (실패: {', '.join(bad)})" if bad else ""))
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":

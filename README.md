@@ -29,16 +29,18 @@ Agent Skills 표준(SKILL.md)으로 만들어 아래 도구에서 그대로 쓸 
 
 `skill/` 폴더가 스킬 본체입니다. "이 피피티에 어울리는 무료 폰트 적용해 줘"라고 하면 AI가 덱의 분야·글의 문체·밀도·색감을 분석해 폰트 짝을 고릅니다.
 이어서 OFL 폰트(산돌 OFL 23종, Google Fonts 38종)를 공개 배포처에서 받아 PPTX의 테마·마스터·슬라이드·표·차트 글꼴을 한 번에 바꾸고,
-PDF로 내보내 확인한 뒤 **바뀐 피피티, PDF, 폰트 묶음(라이선스 포함)**을 함께 넘깁니다.
+그래프와 디자인의 흔한 실수를 바로잡은 뒤 PDF로 내보내 확인하고 **바뀐 피피티, PDF, 폰트 묶음(라이선스 포함)**을 함께 넘깁니다.
 
 - `skill/SKILL.md` — 스킬 본문
 - `skill/scripts/analyze_deck.py` — PPTX 진단(발행 주체·분야·문체·구조·시각·기호 등 30여 개 변수)과 폰트 짝 추천. 공공 덱의 기본값은 프리텐다드이고, 내용 성격(축제·전시·아동·학술 등)이 뚜렷하면 그에 맞는 서체를 고르며, 기관 전용 서체(서울·경기·부산·교육청 등)는 후보로 제시
 - `scripts/glyph_coverage.py` → `data/glyph-coverage.json` — 폰트별 빠진 기호(□ ※ Ⅰ 등)와 한글 글자 수. 기호가 빠진 폰트는 추천에서 감점
 - `skill/scripts/fetch_fonts.py` — `data/fontfiles.json`의 OFL 폰트를 받아 PowerPoint 글꼴 이름을 알려 줌
 - `skill/scripts/apply_fonts.py` — PPTX 글꼴을 제목·본문 두 가지로 통일. 굵기가 이름에 든 원래 글꼴은 가까운 굵기로 옮기고, 빠진 기호·드문 한글을 경고하며, PowerPoint 글꼴 테마 파일(`--theme-xml`)도 만듦
+- `skill/scripts/polish_deck.py` — 그래프·디자인 진단과 보정. 3D 그래프 → 2D, 0이 아닌 값에서 시작하는 막대 축 → 0부터, 작은 그래프 글자 → 12pt 이상, 짙은 눈금선·보조 눈금선·불필요한 범례 정리, 늘어난 사진 비율 복원, 어긋난 제목 위치·왼쪽 끝 맞춤은 기본으로 고치고, 흐린 글자(WCAG 대비)·넘치는 글자·그래프 색 통일은 옵션(`--contrast`, `--fit`, `--chart-colors`)
 - `skill/scripts/export_pdf.py` — 바뀐 피피티를 PDF로 내보냄. 받은 폰트만 보이는 빈 환경에서 변환해 폰트가 실제로 들어갔는지 확인하고, LibreOffice가 한글과 숫자 사이를 벌리는 설정을 끔(접근성 태그 포함)
 - `skill/scripts/license_report.py` — 공모전·납품용 폰트 라이선스 내역서(폰트·굵기·라이선스·출처·파일 해시)
-- `tests/run_tests.py` — 스킬 회귀 시험(성격이 다른 덱 11종, 분석 검사 2종, 적용 검사 2종). 워크플로가 매번 돌림
+- `tests/run_tests.py` — 스킬 회귀 시험(성격이 다른 덱 11종, 분석 검사 2종, 적용 검사 2종, 그래프·디자인 보정 검사 1종). 워크플로가 매번 돌림
+- `tests/messy_deck.py` — 그래프·디자인 실수를 일부러 넣은 시험용 덱(보정 시험과 사용 예시 4에 씀)
 - `data/fontfiles.json` — 자동 다운로드 대상(OFL 23종)과 굵기별 파일 주소
 
 ```bash
@@ -46,6 +48,7 @@ python3 skill/scripts/analyze_deck.py in.pptx
 python3 skill/scripts/fetch_fonts.py --list
 python3 skill/scripts/fetch_fonts.py 프리텐다드 --weights Regular,Bold,ExtraBold --out fonts
 python3 skill/scripts/apply_fonts.py in.pptx out.pptx --manifest fonts/manifest.json --title 프리텐다드:ExtraBold --body 프리텐다드:Regular
+python3 skill/scripts/polish_deck.py out.pptx --fix out.pptx --manifest fonts/manifest.json      # 그래프·디자인 보정
 python3 skill/scripts/export_pdf.py out.pptx --fonts fonts --manifest fonts/manifest.json --png after
 ```
 
@@ -72,7 +75,7 @@ guide.html, guide.js               사용방법 페이지(웹 사용법·스킬 
 docs/examples/make_examples.py    전후 비교 예시 다시 만들기(스킬을 실제로 돌려 렌더링)
 scripts/build_manual.py           사용설명서 PDF(docs/USER-GUIDE-ko.pdf) 만들기 → 스킬 ZIP에 포함
 scripts/build_skill_zip.py        설치용 스킬 ZIP 만들기 → dist/free-korean-fonts-ppt.zip
-skill/                            스킬 본체 (PPT 분석·폰트 적용·PDF 내보내기)
+skill/                            스킬 본체 (PPT 분석·폰트 적용·그래프·디자인 보정·PDF 내보내기)
 scripts/scrape.py                 수집기 (Python 3 + beautifulsoup4). 배포처 주소의 추적 꼬리표(?ref=, utm_)는 지움
 .github/workflows/update.yml      매주 자동 갱신
 ```

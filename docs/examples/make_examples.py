@@ -28,6 +28,7 @@ DECKS = [
     dict(key="memorial", title="현충일 추념식", author="서울지방보훈청", accent="2B2B2B",
          slides=[("제72회 현충일 추념식", ["나라를 위해 희생하신 분들을 기억합니다"]),
                  ("식순", ["개식", "국민의례", "헌화 및 분향", "추념사", "추모 공연", "폐식"])]),
+    dict(key="report", title="분기 실적 보고(그래프·디자인 보정)", author="에이크미 경영기획팀", messy=True, slides=[None] * 4),
     dict(key="kids", title="어린이 교통안전 교육", author="서울특별시교육청 학생안전과", accent="E8743B",
          slides=[("어린이 교통안전, 이렇게 지켜요", ["서울특별시교육청 · 초등 저학년용"]),
                  ("우리 반 안전 약속", ["횡단보도에서는 손을 들고 건너요", "초록불이 켜져도 좌우를 살펴요",
@@ -106,9 +107,14 @@ def main():
     summary = []
     with tempfile.TemporaryDirectory() as td:
         td = Path(td)
-        for d in DECKS:
+        for d in sorted(DECKS, key=lambda d: d.get("messy", False)):   # 보정 예시는 맨 뒤
             src, dst, fonts = td / f"{d['key']}.pptx", td / f"{d['key']}-out.pptx", td / f"fonts-{d['key']}"
-            build(d, src)
+            if d.get("messy"):   # 그래프·디자인 실수를 일부러 넣은 덱(tests/messy_deck.py)
+                sys.path.insert(0, str(ROOT / "tests"))
+                import messy_deck
+                messy_deck.build(src, messy_deck.sample_image())
+            else:
+                build(d, src)
             aj = td / f"{d['key']}.json"
             subprocess.run([sys.executable, S / "analyze_deck.py", src, "--json", aj, "--data", ROOT / "data"], check=True, capture_output=True)
             a = json.loads(aj.read_text())
@@ -118,11 +124,17 @@ def main():
             weights = sorted({tw, bw, "Bold"})
             subprocess.run([sys.executable, S / "fetch_fonts.py", *fams, "--weights", ",".join(weights), "--out", fonts,
                             "--data", ROOT / "data"], check=True, capture_output=True)
-            subprocess.run([sys.executable, S / "apply_fonts.py", src, dst, "--manifest", fonts / "manifest.json",
+            mid = td / f"{d['key']}-fonted.pptx"
+            subprocess.run([sys.executable, S / "apply_fonts.py", src, mid, "--manifest", fonts / "manifest.json",
                             "--title", f"{tn}:{tw}", "--body", f"{bn}:{bw}"], check=True, capture_output=True)
+            pj = td / f"{d['key']}-polish.json"
+            subprocess.run([sys.executable, S / "polish_deck.py", mid, "--fix", dst, "--manifest", fonts / "manifest.json",
+                            "--contrast", "--json", pj], check=True, capture_output=True)
+            pol = json.loads(pj.read_text())
+            polish = [f"{k}장: {m}" for k, ms in sorted(pol["slides"].items(), key=lambda t: int(t[0])) for m in ms] + pol["deck"]
             render(src, f"{d['key']}-before"); render(dst, f"{d['key']}-after", fonts)
             diag = a["analysis"]
-            summary.append(dict(key=d["key"], title=d["title"], author=d["author"], pages=len(d["slides"]),
+            summary.append(dict(key=d["key"], title=d["title"], author=d["author"], pages=len(d["slides"]), polish=polish,
                                 genre=diag["genres"][0][0] if diag["genres"] else "", way=pair["방식"],
                                 titleFont=pair["제목"], bodyFont=pair["본문"], 
                                 agency=[dict(agency=x["agency"], fonts=x["fonts"], url=x["url"]) for x in a["recommendation"]["agency_fonts"]],
