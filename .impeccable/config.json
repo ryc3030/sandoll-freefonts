@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "guide.html"
+        ],
+        "createdAt": "2026-11-19T06:09:54.215Z",
+        "reason": "Claude: guide.html reuses the existing site masthead (kicker+h1) from index.html, which predates this session; changing only the guide would break consistency"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "guide.html"
+        ],
+        "createdAt": "2026-11-19T06:09:54.228Z",
+        "reason": "Claude: palette comes from the site's shared style.css used by index.html, which predates this session; guide must match the index"
+      }
+    ]
+  }
+}

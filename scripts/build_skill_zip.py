@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """설치용 스킬 ZIP(dist/free-korean-fonts-ppt.zip)을 만든다.
 
-ZIP 안: free-korean-fonts-ppt/{SKILL.md, scripts/*.py, data/*.json, data/OFL-1.1.txt, README.md}
+ZIP 안: free-korean-fonts-ppt/{SKILL.md, scripts/*.py, data/*.json, data/OFL-1.1.txt, README.md, USER-GUIDE-ko.pdf}
+사용설명서 PDF는 scripts/build_manual.py로 미리 만들어 docs/에 커밋해 둔 것을 넣는다.
 Claude·ChatGPT·Codex·Gemini CLI 등 Agent Skills(SKILL.md) 표준을 읽는 도구에 그대로 넣을 수 있다.
 """
 import re, zipfile
@@ -49,9 +50,11 @@ with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
         put(z, f"{NAME}/scripts/{f.name}", f.read_bytes())
     for f in ["fontfiles.json", "google-fonts.json", "glyph-coverage.json", "agency-fonts.json", "fonts.json", "OFL-1.1.txt"]:
         put(z, f"{NAME}/data/{f}", (ROOT / "data" / f).read_bytes())
+    put(z, f"{NAME}/USER-GUIDE-ko.pdf", (ROOT / "docs" / "USER-GUIDE-ko.pdf").read_bytes())
     put(z, f"{NAME}/README.md", (
         "# free-korean-fonts-ppt\n\n피피티를 분석해 어울리는 무료 한글 폰트를 고르고 적용하는 Agent Skill입니다.\n"
         "원본·최신판: https://github.com/ryc3030/sandoll-freefonts\n\n"
+        "**사용설명서와 전후 예시: 같은 폴더의 USER-GUIDE-ko.pdf** (설치·요청하는 법·결과물·폰트 고르는 기준·예시 3종·FAQ)\n\n"
         "## 설치\n- Claude(claude.ai·데스크톱): 설정 → 기능(Capabilities) → 스킬에서 이 ZIP 업로드\n"
         "- Claude Code: `~/.claude/skills/`에 압축을 풀기\n"
         "- OpenAI Codex: 프로젝트의 `.agents/skills/`(또는 `.codex/skills/`)에 압축을 풀기\n"
