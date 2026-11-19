@@ -5,7 +5,8 @@
     "oc": "Open Color(MIT) github.com/yeun/open-color",
     "urban": "Urban Institute 그래프 스타일(vega-themes, BSD-3-Clause) github.com/vega/vega-themes",
     "brewer": "ColorBrewer Dark2(Apache-2.0) github.com/axismaps/colorbrewer",
-    "okabe": "Okabe & Ito(2008) 색각 이상 친화 팔레트"
+    "okabe": "Okabe & Ito(2008) 색각 이상 친화 팔레트",
+    "leonardo": "목표 대비율로 색 단계 만들기(adobe/leonardo, Apache-2.0) github.com/adobe/leonardo"
   },
   "presets": {
     "public": {
@@ -15,19 +16,26 @@
       ],
       "text": "1E2124",
       "title": "063A74",
+      "accent": "256EF4",
+      "gray": "8A949E",
       "muted": "58616A",
       "light": "F4F5F6",
       "line": "CDD1D5",
       "grid": "E6E8EA",
+      "hlink": "0B50D0",
+      "tints": [
+        "568EF6",
+        "82ACF9",
+        "B1CBFB"
+      ],
       "accents": [
         "256EF4",
-        "C78500",
-        "228738",
-        "D63D4A",
-        "6D7882",
-        "063A74"
+        "063A74",
+        "8A949E",
+        "568EF6",
+        "82ACF9",
+        "B1CBFB"
       ],
-      "hlink": "0B50D0",
       "contrast": {
         "text": 16.2,
         "title": 11.3,
@@ -41,19 +49,26 @@
       ],
       "text": "1E2124",
       "title": "052B57",
+      "accent": "346FB2",
+      "gray": "8A949E",
       "muted": "58616A",
       "light": "F4F5F6",
       "line": "CDD1D5",
       "grid": "E6E8EA",
-      "accents": [
-        "052B57",
-        "6D7882",
-        "346FB2",
-        "B1B8BE",
-        "33363D",
-        "8A949E"
-      ],
       "hlink": "1C589C",
+      "tints": [
+        "4F89CC",
+        "78A4D7",
+        "A3C1E4"
+      ],
+      "accents": [
+        "346FB2",
+        "052B57",
+        "8A949E",
+        "4F89CC",
+        "78A4D7",
+        "A3C1E4"
+      ],
       "contrast": {
         "text": 16.2,
         "title": 14.1,
@@ -67,19 +82,26 @@
       ],
       "text": "262223",
       "title": "0A4C6A",
+      "accent": "1696D2",
+      "gray": "9D9D9D",
       "muted": "5C5859",
       "light": "F5F5F5",
       "line": "D2D2D2",
       "grid": "DEDDDD",
+      "hlink": "12719E",
+      "tints": [
+        "42B5EB",
+        "8DD2F3",
+        "D5EFFB"
+      ],
       "accents": [
         "1696D2",
-        "FDBF11",
         "0A4C6A",
-        "EC008B",
-        "55B748",
-        "5C5859"
+        "9D9D9D",
+        "42B5EB",
+        "8DD2F3",
+        "D5EFFB"
       ],
-      "hlink": "12719E",
       "contrast": {
         "text": 15.7,
         "title": 9.3,
@@ -93,19 +115,26 @@
       ],
       "text": "212529",
       "title": "5F3DC4",
+      "accent": "15AABF",
+      "gray": "868E96",
       "muted": "495057",
       "light": "F8F9FA",
       "line": "DEE2E6",
       "grid": "E9ECEF",
-      "accents": [
-        "7950F2",
-        "15AABF",
-        "FAB005",
-        "F06595",
-        "12B886",
-        "868E96"
-      ],
       "hlink": "7048E8",
+      "tints": [
+        "19CCE5",
+        "94E7F3",
+        "CBF4F9"
+      ],
+      "accents": [
+        "15AABF",
+        "5F3DC4",
+        "868E96",
+        "19CCE5",
+        "94E7F3",
+        "CBF4F9"
+      ],
       "contrast": {
         "text": 15.4,
         "title": 7.1,
@@ -120,19 +149,26 @@
       ],
       "text": "212529",
       "title": "1B2A4A",
+      "accent": "1B9E77",
+      "gray": "868E96",
       "muted": "495057",
       "light": "F8F9FA",
       "line": "DEE2E6",
       "grid": "E9ECEF",
+      "hlink": "364FC7",
+      "tints": [
+        "21BF8F",
+        "42DFB0",
+        "BEF4E4"
+      ],
       "accents": [
         "1B9E77",
-        "D95F02",
-        "7570B3",
-        "E7298A",
-        "66A61E",
-        "E6AB02"
+        "1B2A4A",
+        "868E96",
+        "21BF8F",
+        "42DFB0",
+        "BEF4E4"
       ],
-      "hlink": "364FC7",
       "contrast": {
         "text": 15.4,
         "title": 14.2,
@@ -146,19 +182,26 @@
       ],
       "text": "343A40",
       "title": "862E9C",
+      "accent": "E8590C",
+      "gray": "868E96",
       "muted": "495057",
-      "light": "F8F0FC",
+      "light": "F8F9FA",
       "line": "DEE2E6",
       "grid": "E9ECEF",
+      "hlink": "9C36B5",
+      "tints": [
+        "F68649",
+        "F9B28B",
+        "FCDDCB"
+      ],
       "accents": [
         "E8590C",
-        "0C8599",
         "862E9C",
-        "5C940D",
-        "C92A2A",
-        "868E96"
+        "868E96",
+        "F68649",
+        "F9B28B",
+        "FCDDCB"
       ],
-      "hlink": "9C36B5",
       "contrast": {
         "text": 11.5,
         "title": 7.3,
@@ -172,19 +215,26 @@
       ],
       "text": "343A40",
       "title": "1864AB",
+      "accent": "FF922B",
+      "gray": "ADB5BD",
       "muted": "495057",
       "light": "FFF9DB",
       "line": "FFE066",
       "grid": "F1F3F5",
+      "hlink": "1971C2",
+      "tints": [
+        "FFC38B",
+        "FFD9B6",
+        "FFE9D3"
+      ],
       "accents": [
         "FF922B",
-        "339AF0",
-        "51CF66",
-        "FCC419",
-        "F06595",
-        "20C997"
+        "1864AB",
+        "ADB5BD",
+        "FFC38B",
+        "FFD9B6",
+        "FFE9D3"
       ],
-      "hlink": "1971C2",
       "contrast": {
         "text": 11.5,
         "title": 6.1,
@@ -198,19 +248,26 @@
       ],
       "text": "212529",
       "title": "C92A2A",
+      "accent": "FD7E14",
+      "gray": "868E96",
       "muted": "495057",
       "light": "FFF5F5",
       "line": "DEE2E6",
       "grid": "E9ECEF",
-      "accents": [
-        "F03E3E",
-        "FD7E14",
-        "FAB005",
-        "1C7ED6",
-        "12B886",
-        "495057"
-      ],
       "hlink": "1864AB",
+      "tints": [
+        "FEB170",
+        "FED9BB",
+        "FFE9D6"
+      ],
+      "accents": [
+        "FD7E14",
+        "C92A2A",
+        "868E96",
+        "FEB170",
+        "FED9BB",
+        "FFE9D6"
+      ],
       "contrast": {
         "text": 15.4,
         "title": 5.5,
@@ -224,19 +281,26 @@
       ],
       "text": "212529",
       "title": "0B7285",
+      "accent": "F76707",
+      "gray": "868E96",
       "muted": "495057",
       "light": "E3FAFC",
       "line": "DEE2E6",
       "grid": "E9ECEF",
-      "accents": [
-        "1098AD",
-        "F76707",
-        "37B24D",
-        "7048E8",
-        "FAB005",
-        "868E96"
-      ],
       "hlink": "0B7285",
+      "tints": [
+        "FA9B5B",
+        "FCC6A3",
+        "FEE9DA"
+      ],
+      "accents": [
+        "F76707",
+        "0B7285",
+        "868E96",
+        "FA9B5B",
+        "FCC6A3",
+        "FEE9DA"
+      ],
       "contrast": {
         "text": 15.4,
         "title": 5.6,
@@ -250,19 +314,26 @@
       ],
       "text": "212529",
       "title": "5F3DC4",
+      "accent": "22B8CF",
+      "gray": "ADB5BD",
       "muted": "495057",
       "light": "F3F0FF",
       "line": "D0BFFF",
       "grid": "E9ECEF",
-      "accents": [
-        "845EF7",
-        "22B8CF",
-        "FCC419",
-        "F06595",
-        "51CF66",
-        "ADB5BD"
-      ],
       "hlink": "7048E8",
+      "tints": [
+        "70D7E7",
+        "B1EAF2",
+        "D1F2F8"
+      ],
+      "accents": [
+        "22B8CF",
+        "5F3DC4",
+        "ADB5BD",
+        "70D7E7",
+        "B1EAF2",
+        "D1F2F8"
+      ],
       "contrast": {
         "text": 15.4,
         "title": 7.1,
@@ -272,17 +343,17 @@
   },
   "chartPalettes": {
     "colorblind": {
-      "name": "색각 이상 친화(Okabe-Ito)",
+      "name": "색각 이상 친화(Okabe-Ito 파랑·주황 + 회색)",
       "src": [
         "okabe"
       ],
       "accents": [
         "0072B2",
         "E69F00",
-        "009E73",
-        "D55E00",
-        "CC79A7",
-        "56B4E9"
+        "8A8A8A",
+        "008CDB",
+        "0EA8FF",
+        "65C8FF"
       ]
     }
   },
@@ -317,6 +388,7 @@
     }
   },
   "rules": {
+    "maxColors": 3,
     "lineSpacing": 1.2,
     "paraSpaceBefore": 6,
     "titleTracking": -0.02,

@@ -24,6 +24,7 @@ ASKS = [
     ("디자인", "어울리는 폰트로 바꾸고 디자인도 다듬어 줘", "분야별 프리셋(표준 강도)으로 색·제목·표·그래프 정리"),
     ("확 바꾸기", "폰트랑 디자인을 확 바꿔 줘. 표지랑 그래프도 보기 좋게", "템플릿 색까지 바꾸고 표지·내용 장식(강한 강도)"),
     ("템플릿 유지", "회사 템플릿 색은 그대로 두고 그래프랑 표만 깔끔하게 정리해 줘", "그래프·표·행간만(약한 강도)"),
+    ("접근성", "그림·그래프에 대체 텍스트를 넣고 접근성 문제를 고쳐 줘", "AI가 그림을 보고 쓴 설명, 표 머리글·문서 제목·언어"),
     ("폰트 지정", "제목은 G마켓 산스 Bold, 본문은 프리텐다드로 적용해 줘", "지정한 폰트로 적용(기호 누락 경고는 알려 줌)"),
     ("공모전·납품", "공모전 제출용이야. 폰트 라이선스 내역서도 같이 만들어 줘", "적용 + 폰트·굵기·라이선스·출처·파일 해시 내역서"),
     ("기관 서체", "서울시 행사 자료야. 서울남산체 파일을 첨부할게, 이걸로 적용해 줘", "첨부한 파일로 적용(재배포 묶음에는 넣지 않음)"),
@@ -56,7 +57,7 @@ FAQ = [
     ("그래프와 디자인은 무엇을 고치나요? 제 디자인이 바뀌지는 않나요?",
      "거의 언제나 잘못인 것만 자동으로 고칩니다. 3D 그래프는 2D로, 0이 아닌 값에서 시작하는 막대 축은 0부터, 작은 그래프 글자는 12pt 이상으로 바꾸고, 늘어난 사진과 조금씩 어긋난 제목 위치를 바로잡습니다. 색·배치처럼 취향이 갈리는 것은 바꾸지 않습니다. 흐린 글자, 넘치는 글자, 그래프 색 통일은 알려 준 뒤 원할 때만 고치며, 고친 내역은 답에 모두 적습니다."),
     ("디자인 다듬기는 어떤 기준을 따르나요?",
-     "공개된 디자인 자원에서 값을 가져와 분야별 프리셋을 만들었습니다. 공공·추모는 정부 디자인 시스템 KRDS의 색 토큰, 기업 보고는 Urban Institute 그래프 스타일, IT·문화·아동·홍보·교육은 Open Color, 학술은 ColorBrewer, 색각 이상 배려는 Okabe-Ito 팔레트입니다. 제목·본문 색은 흰 바탕과의 대비가 4.5:1 이상입니다. 기본 강도에서는 회사·기관 템플릿의 색을 바꾸지 않습니다."),
+     "공개된 디자인 자원에서 값을 가져와 분야별 프리셋을 만들었습니다. 공공·추모는 KRDS 색 토큰, 기업 보고는 Urban Institute 그래프 스타일, 그 밖은 Open Color, 학술은 ColorBrewer, 색각 이상 배려는 Okabe-Ito입니다. 색은 제목색·강조색 하나·회색 세 가지까지만 쓰고, 계열이 많으면 강조색의 옅은 단계(Adobe Leonardo 방식)를 씁니다. 검사 규칙은 intern(정렬·제목), Microsoft·Community-Access(접근성), FT 차트 닥터(그래프 종류)를 참고했습니다."),
     ("PDF는 PowerPoint에서 저장한 것과 같나요?",
      "거의 같지만 LibreOffice로 만든 PDF라 줄바꿈이 조금 다를 수 있습니다. 제출용 PDF가 PowerPoint 화면과 똑같아야 하면 fonts.zip의 폰트를 설치한 뒤 PowerPoint에서 파일 → 다른 이름으로 저장 → PDF로 다시 만드세요."),
     ("목록에 없는 폰트를 쓰고 싶어요.",
@@ -166,7 +167,7 @@ figcaption {{ font-size: 8pt; color: #6b665d; margin-top: 1mm; }}
 .pol {{ font-size: 8.2pt; line-height: 1.4; column-count: 2; column-gap: 6mm; margin: 0; padding-left: 4mm; }} .pol li {{ margin-bottom: 0.8mm; break-inside: avoid; }}
 .compact .pair {{ width: 66%; margin: 0 auto 2mm; }} .compact .diag {{ margin-top: 2mm; }}
 .note {{ font-size: 8.3pt; color: #6b665d; }}
-dl.faq dt {{ font-weight: 700; margin-top: 3mm; font-size: 9.6pt; }} dl.faq dd {{ margin: 0.8mm 0 0; color: #3a3833; font-size: 9pt; line-height: 1.5; }}
+dl.faq dt {{ font-weight: 700; margin-top: 2.6mm; font-size: 9.4pt; }} dl.faq dd {{ margin: 0.6mm 0 0; color: #3a3833; font-size: 8.7pt; line-height: 1.45; }}
 </style></head><body>
 
 <section class="page cover">
@@ -190,8 +191,8 @@ dl.faq dt {{ font-weight: 700; margin-top: 3mm; font-size: 9.6pt; }} dl.faq dd {
     <li><b>고르기</b>제목 1개와 본문 1개, 두 가족 이내로 짝을 정합니다. □ ※ Ⅰ 같은 기호가 빠진 폰트는 피합니다.</li>
     <li><b>내려받기</b>재배포가 허용된 폰트(산돌구름 OFL·Google Fonts)만 공식 배포처에서 받습니다.</li>
     <li><b>적용</b>테마·마스터·슬라이드·표·차트·노트의 글꼴을 한 번에 바꿉니다. 텍스트 상자로 만든 제목에도 제목 글꼴을 입히고, 원래 굵기 차이도 살립니다.</li>
-    <li><b>보정</b>3D 그래프, 0에서 시작하지 않는 막대 축, 작은 그래프 글자, 늘어난 사진, 조금씩 어긋난 제목 위치를 고칩니다. 흐린 글자와 넘치는 글자는 알려 주고, 원하면 고칩니다.</li>
-    <li><b>다듬기</b>분야별 디자인 프리셋(KRDS·Urban Institute·Open Color 등)으로 색 체계·제목·표·그래프를 정리합니다.</li>
+    <li><b>보정</b>3D 그래프, 잘린 막대 축, 작은 그래프 글자, 늘어난 사진, 어긋난 위치를 고치고, 그래프 종류(FT 차트 닥터)와 접근성(대체 텍스트·제목·표 머리글)을 검사합니다.</li>
+    <li><b>다듬기</b>분야별 프리셋(KRDS·Urban Institute·Open Color 등)으로 정리합니다. 색은 세 가지까지, 두 줄 제목은 줄 길이를 고르게.</li>
     <li><b>PDF·확인</b>받은 폰트만 있는 빈 환경에서 PDF로 내보내고, 폰트가 실제로 들어갔는지와 넘치거나 잘린 글자가 없는지 봅니다.</li>
     <li><b>넘기기</b>바뀐 피피티, PDF, 폰트 묶음(라이선스 포함)과 진단 요약을 돌려줍니다.</li>
   </ol>
@@ -244,9 +245,9 @@ dl.faq dt {{ font-weight: 700; margin-top: 3mm; font-size: 9.6pt; }} dl.faq dd {
 <section class="page">
   <p class="eyeline">7</p><h2>자주 묻는 질문</h2>
   <dl class="faq">{faq}</dl>
-  <div class="box" style="margin-top:8mm"><p>예시 그림은 스킬을 실제로 돌려 만든 PDF를 쪽마다 옮긴 것입니다. 원본 그림의 ‘2027 년’처럼 벌어진 간격은 원본 글꼴(맑은 고딕)이 없는 환경에서 대체 글꼴이 섞인 탓입니다.</p>
+  <div class="box" style="margin-top:5mm;font-size:8.3pt"><p>예시 그림은 스킬을 실제로 돌려 만든 PDF를 쪽마다 옮긴 것입니다. 원본 그림의 ‘2027 년’처럼 벌어진 간격은 원본 글꼴(맑은 고딕)이 없는 환경에서 대체 글꼴이 섞인 탓입니다.</p>
   <p>폰트 라이선스는 바뀔 수 있습니다. 쓰기 전에 각 폰트의 원문 라이선스를 확인하세요. 각 폰트의 저작권은 해당 제작사에 있습니다.</p>
-  <p>디자인 프리셋의 공공·추모 색은 행정안전부가 공공누리 제1유형으로 개방한 ‘범정부 UI/UX 디자인시스템(KRDS)’ 디자인 토큰을 이용했으며, 해당 저작물은 KRDS 누리집(www.krds.go.kr)에서 무료로 내려받을 수 있습니다. 그 밖의 디자인 값은 Open Color(MIT), vega-themes(BSD-3-Clause), ColorBrewer(Apache-2.0)에서 가져왔습니다.</p></div>
+  <p>디자인 프리셋의 공공·추모 색은 행정안전부가 공공누리 제1유형으로 개방한 ‘범정부 UI/UX 디자인시스템(KRDS)’ 디자인 토큰을 이용했으며, 해당 저작물은 KRDS 누리집(www.krds.go.kr)에서 무료로 내려받을 수 있습니다. 그 밖의 디자인 값은 Open Color(MIT), vega-themes(BSD-3-Clause), ColorBrewer(Apache-2.0)에서 가져왔고, 검사·보정 방식은 intern·accessibility-agents·smartcrop.js·FT 차트 닥터(MIT), Leonardo·balance-text(Apache-2.0)를 참고했습니다.</p></div>
 </section>
 </body></html>"""
 

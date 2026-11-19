@@ -131,26 +131,35 @@ python3 ~/ffskill/polish_deck.py output.pptx --manifest fonts/manifest.json     
 python3 ~/ffskill/polish_deck.py output.pptx --fix polished.pptx --manifest fonts/manifest.json && mv polished.pptx output.pptx
 ```
 
-- `--fix`가 기본으로 고치는 것은 거의 언제나 잘못인 것들이다.
+- `--fix`가 기본으로 고치는 것은 거의 언제나 잘못인 것들이다(검사 규칙은 markusz/intern, 접근성 규칙은 Microsoft 접근성 검사·Community-Access/accessibility-agents를 참고).
   - 그래프: 3D 그래프 → 같은 종류의 2D, 0이 아닌 값에서 시작하는 막대·영역 그래프 축 → 0부터, 작은 그래프 글자 → 12pt 이상(제목 14pt),
     짙은 주 눈금선 → 옅은 가는 선, 보조 눈금선 삭제, 계열이 하나뿐인 그래프의 범례 삭제
-  - 디자인: 비율이 틀어진 사진 → 원래 비율로(원래 틀 안에 맞춰 넣음), 슬라이드마다 조금씩 어긋난 제목 위치 → 가장 많이 쓴(없으면 레이아웃의) 위치,
-    한 슬라이드에서 0.1인치 안으로 어긋난 왼쪽 끝 → 맞춤
+  - 디자인: 비율이 틀어진 사진 → 원래 비율로(원래 틀 안에 맞춰 넣음. `--image-fit crop`이면 틀은 두고 윤곽·채도가 많은 곳을 남겨 자름, smartcrop 방식),
+    슬라이드마다 조금씩 어긋난 제목 위치 → 가장 많이 쓴(없으면 레이아웃의) 위치, 한 슬라이드에서 0.1인치 안으로 어긋난 왼쪽 끝·위쪽 끝 → 맞춤,
+    보이지 않는 빈 글상자 → 지움
+  - 접근성: 표의 머리글 행 지정, 문서 속성의 제목(첫 슬라이드 제목)·언어(ko-KR)
 - 옵션은 진단 결과를 보고 켠다.
   - `--contrast`: '배경과 대비가 낮은 글자'가 나왔고 7단계 그림에서도 읽기 어려울 때. 그 글자를 검정이나 흰색 중 대비가 큰 쪽으로 바꾼다.
   - `--fit`: '넘치는 것으로 추정'이 나왔고 그림에서도 넘칠 때. 본문 12pt, 제목 20pt 아래로는 줄이지 않으며, 그래도 넘치면 상자를 키우거나 글을 줄이자고 제안한다.
   - `--chart-colors`: 그래프 색이 덱과 따로 놀거나 사용자가 색 통일을 원할 때. 계열 색을 테마 강조색으로 맞춘다.
   - 위치를 건드리면 안 되는 덱(인쇄 판형이 정해진 자료 등)은 `--no-align`, 사진은 `--no-images`로 뺀다.
-- 원그래프 조각 7개 이상, 슬라이드 밖으로 나간 개체, 12pt보다 작은 본문 글자, 글자 색 가짓수는 진단만 한다. 답에서 한 줄씩 알리고 고칠 방법을 제안한다.
+- 진단만 하는 것: 그래프 종류(FT Visual Vocabulary 기준 — 조각 6개 이상 원그래프, 점 3개 이하 선 그래프, 이름이 긴 세로 막대, 계열 5개 이상 쌓은 막대, 값 축 둘),
+  슬라이드 밖 개체, 12pt 미만 본문, 겹친 글상자, 제목 없음·같은 제목·문장부호로 끝나는 제목, 70자 넘는 글머리, 본문 글자 크기 4가지 이상,
+  직접 칠한 색 계열 4가지 이상(색은 세 가지까지 원칙), 병합한 표 칸, 가운데 두 칸 띄어쓰기. 답에서 한 줄씩 알리고 고칠 방법을 제안한다.
+- **대체 텍스트**: 진단 결과에 '대체 텍스트가 없는 그림·그래프'가 나오면 `--json report.json`의 `media` 목록(slide, name, kind)을 보고,
+  7단계 그림에서 그 그림·그래프를 직접 확인해 한 문장(150자 이하, 그래프는 무엇이 어떻게 변하는지와 핵심 수치)으로 설명을 쓴다.
+  `[{"slide": 2, "name": "Chart 2", "alt": "…"}]` 형식의 JSON으로 저장해 `polish_deck.py output.pptx --fix polished.pptx --alt alt.json`으로 넣는다.
+  확신이 없는 그림(인물·로고 등)은 추측하지 말고 사용자에게 묻는다.
 - 사용자가 "폰트만 바꿔 줘"처럼 범위를 정했으면 `--fix` 없이 진단만 하고, 고칠지 묻는다.
 
 ## 6. 디자인 다듬기
 
 ```bash
-python3 ~/ffskill/style_deck.py output.pptx --out styled.pptx && mv styled.pptx output.pptx      # 분야 자동, 표준 강도
+python3 ~/ffskill/style_deck.py output.pptx --out styled.pptx --manifest fonts/manifest.json && mv styled.pptx output.pptx   # 분야 자동, 표준 강도
 python3 ~/ffskill/polish_deck.py output.pptx --manifest fonts/manifest.json                       # 다듬은 뒤 다시 진단만
 ```
 
+- **색은 세 가지까지**: 제목색(짙은 색)·강조색 하나·무채색(회색). 그래프 계열이 넷 이상이면 새 색을 더하지 않고 강조색의 옅은 단계(adobe/leonardo의 목표 대비율 방식)를 쓴다.
 - 덱의 분야를 분석해 프리셋을 고른다(`--preset`으로 지정, `--list`로 목록). 프리셋 값은 공개 디자인 자원에서 가져왔다.
   | 프리셋 | 쓰는 곳 | 출처 |
   |---|---|---|
@@ -164,7 +173,9 @@ python3 ~/ffskill/polish_deck.py output.pptx --manifest fonts/manifest.json     
     표(제목 줄 진한 바탕, 옅은 줄무늬, 가로 선만, 숫자 열 오른쪽 정렬), 본문 행간 1.2·문단 앞 6pt.
   - `standard`(기본): light + 테마 색 체계(기본 Office 테마일 때만), 내용 슬라이드 제목 크기·제목 색·왼쪽 정렬·자간 -2%, 글머리표 강조색,
     꾸밈 없는 기본 서식 덱이면 장식(표지 왼쪽 띠, 내용 슬라이드 위쪽 가는 띠, 쪽 번호).
-  - `bold`: standard + 브랜드 템플릿이어도 색 체계 교체·장식, 도형에 직접 지정한 색을 가장 가까운 프리셋 색으로.
+  - `bold`: standard + 브랜드 템플릿이어도 색 체계 교체·장식, 도형에 직접 칠한 색을 제목색·강조색 중 가까운 쪽으로.
+  - `--manifest`를 주면 두 줄로 넘어가는 제목의 마지막 줄에 한두 어절만 남지 않게 줄 길이를 고르게 나눈다(adobe/balance-text 방식).
+  - 장식 도형(띠)은 '장식용'으로 표시해 화면 낭독기가 건너뛴다.
 - 고르는 법: 기본은 `standard`. 회사·기관 템플릿을 지켜야 하면 `light`, "확 바꿔 줘"·"예쁘게 다시"면 `bold`.
   사용자가 "폰트만"이라고 했으면 이 단계를 건너뛴다. 정렬을 건드리면 안 되면 `--keep-align`.
 - 어두운 배경 덱은 글자·바탕 색을 건드리지 않고 강조색만 바꾼다.
@@ -230,3 +241,6 @@ PDF는 LibreOffice로 그린 것이라 줄바꿈이 PowerPoint와 조금 다를 
 - 굵기 보존, cs 글꼴 정리, 글꼴 테마 파일은 achimnol/pptx-tool(MIT)의 처리 방식을 참고했다.
 - 그래프 보정 기준(3D 지양, 막대 축은 0부터, 보조선 최소화)은 데이터 시각화의 일반 원칙을 따랐고, 대비 기준은 WCAG 2.1(본문 4.5:1, 큰 글자 3:1)이다.
 - 디자인 프리셋은 `data/design-tokens.json`(만드는 스크립트: `scripts/build_design_tokens.py`, 제목·본문 색이 흰 바탕과 4.5:1 이상인지 검사)에 있다.
+- 참고한 GitHub 자원: markusz/intern(MIT, 검사 규칙), Community-Access/accessibility-agents(MIT, 접근성 규칙), adobe/leonardo(Apache-2.0, 색 단계),
+  adobe/balance-text(Apache-2.0, 제목 줄 균형), ft-interactive/chart-doctor(MIT, 그래프 종류), jwagner/smartcrop.js(MIT, 사진 자르기),
+  KRDS-uiux/krds-uiux, yeun/open-color, vega/vega-themes, axismaps/colorbrewer, achimnol/pptx-tool.

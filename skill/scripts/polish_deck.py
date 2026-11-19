@@ -328,13 +328,28 @@ def fix_chart(root, frame_w, fix, opts, notes):
         notes.append(("그래프", "계열이 하나뿐인데 범례가 있습니다" + (" → 지움" if fix else "")))
         if fix:
             chart.remove(leg); changed = True
-    # 6) 원그래프 조각 수(진단만)
+    # 6) 그래프 종류 고르기(FT Visual Vocabulary 기준, 진단만)
     for ct in types:
-        if ln(ct) in ("pieChart", "pie3DChart", "doughnutChart"):
-            for s in ct.findall("c:ser", NS):
-                n = len(s.findall("c:val//c:pt", NS))
-                if n >= 7:
-                    notes.append(("그래프", f"원그래프 조각이 {n}개라 비교하기 어렵습니다. 막대 그래프나 '기타' 묶기를 권합니다(진단만)"))
+        kind = ln(ct).replace("3DChart", "Chart")
+        sers = ct.findall("c:ser", NS)
+        npt = max((len(x.findall("c:val//c:pt", NS)) for x in sers), default=0)
+        if kind in ("pieChart", "doughnutChart"):
+            if npt >= 6:
+                notes.append(("그래프", f"원그래프 조각이 {npt}개라 비교하기 어렵습니다. 부분과 전체는 조각 5개 이하일 때만 원그래프가 낫고, "
+                                       "그 이상은 큰 순서로 늘어놓은 가로 막대나 '기타' 묶기를 권합니다(FT Visual Vocabulary, 진단만)"))
+        elif kind == "lineChart" and 0 < npt <= 3:
+            notes.append(("그래프", f"점이 {npt}개뿐인 선 그래프입니다. 시점이 적으면 세로 막대가 비교하기 쉽습니다(FT Visual Vocabulary, 진단만)"))
+        elif kind == "barChart":
+            bd = ct.find("c:barDir", NS)
+            labels = [v.text or "" for v in ct.iterfind("c:ser/c:cat//c:v", NS)][:npt]
+            if bd is not None and bd.get("val") == "col" and npt >= 5 and labels and sum(map(len, labels)) / len(labels) >= 6:
+                notes.append(("그래프", "항목 이름이 길어 세로 막대 아래에서 줄바꿈되거나 기울어집니다. 순위·비교는 가로 막대가 읽기 쉽습니다(FT Visual Vocabulary, 진단만)"))
+            g = ct.find("c:grouping", NS)
+            if g is not None and g.get("val") in ("stacked", "percentStacked") and len(sers) > 4:
+                notes.append(("그래프", f"쌓은 막대에 계열이 {len(sers)}개입니다. 가운데 조각끼리는 비교가 어려우니 4개 이하로 묶어 주세요(진단만)"))
+    live_val = [ax for ax in plot.findall("c:valAx", NS) if not (ax.find("c:delete", NS) is not None and ax.find("c:delete", NS).get("val") == "1")]
+    if len(live_val) >= 2 and len(types) >= 2:
+        notes.append(("그래프", "값 축이 둘인 그래프입니다. 두 축의 눈금을 어떻게 잡느냐에 따라 관계가 달라 보이니, 가능하면 그래프 두 개로 나누세요(진단만)"))
     # 7) 테마 색(옵션)
     if fix and opts.chart_colors:
         k = 0
@@ -543,6 +558,188 @@ def image_size(data):
         return None
 
 
+
+# ── 사진 자르기(smartcrop 방식) ─────────────────────────────────────────
+def smart_crop(data, want):
+    """jwagner/smartcrop.js(MIT)의 생각을 단순화: 가장자리(윤곽)와 채도가 많은 곳을 중요하다고 보고,
+    원하는 비율의 창을 밀어 가며 중요도가 가장 큰 자리를 고른다(가운데를 우대해 주제가 잘리지 않게). 반환: 자를 비율(l, t, r, b)."""
+    try:
+        from PIL import Image, ImageFilter
+        im = Image.open(io.BytesIO(data)).convert("RGB")
+    except Exception:
+        return 0, 0, 0, 0
+    im.thumbnail((240, 240))
+    w, h = im.size
+    flat = lambda img: list(img.get_flattened_data() if hasattr(img, "get_flattened_data") else img.getdata())
+    edge = flat(im.convert("L").filter(ImageFilter.FIND_EDGES))
+    sat = flat(im.convert("HSV").split()[1])
+    energy = [0.9 * e + 0.1 * s_ for e, s_ in zip(edge, sat)]
+    if w / h > want:            # 이미지가 더 넓다 → 가로를 자른다
+        cw = max(1, round(h * want))
+        cols = [sum(energy[y * w + x] for y in range(h)) for x in range(w)]
+        best, bx = -1, 0
+        run = sum(cols[:cw])
+        for x in range(0, w - cw + 1):
+            if x:
+                run += cols[x + cw - 1] - cols[x - 1]
+            score = run * (1 - 0.8 * abs((x + cw / 2) / w - 0.5))
+            if score > best:
+                best, bx = score, x
+        return bx / w, 0, (w - bx - cw) / w, 0
+    ch = max(1, round(w / want))
+    rows = [sum(energy[y * w:(y + 1) * w]) for y in range(h)]
+    best, by = -1, 0
+    run = sum(rows[:ch])
+    for y in range(0, h - ch + 1):
+        if y:
+            run += rows[y + ch - 1] - rows[y - 1]
+        score = run * (1 - 0.8 * abs((y + ch / 2) / h - 0.5))
+        if score > best:
+            best, by = score, y
+    return 0, by / h, 0, (h - by - ch) / h
+
+
+# ── 검사(intern 규칙)·접근성(Microsoft 접근성 검사·Community-Access 규칙) ──
+HUE_GROUP = 30   # 색상환에서 30도 안은 같은 색으로 본다
+
+
+def hue_groups(hexes):
+    groups = []
+    for hx in hexes:
+        r, g, b = (int(hx[i:i + 2], 16) / 255 for i in (0, 2, 4))
+        h, l_, sat = colorsys.rgb_to_hls(r, g, b)
+        if sat < 0.18 or l_ > 0.93 or l_ < 0.07:
+            continue          # 무채색(검정·회색·흰색)은 세지 않는다
+        deg = h * 360
+        if not any(min(abs(deg - d), 360 - abs(deg - d)) < HUE_GROUP for d in groups):
+            groups.append(deg)
+    return len(groups)
+
+
+def lint_and_access(deck, slides, notes, deck_notes, fix, a):
+    W, H = deck.size()
+    media, titles, sizes, colors = [], [], Counter(), []
+    alt_in = {}
+    if a.alt:
+        for it in json.load(open(a.alt, encoding="utf-8")):
+            alt_in[(int(it["slide"]), it["name"])] = it["alt"].strip()
+    for i, s in enumerate(slides, 1):
+        root = deck.xml(s)
+        t = title_shape(root)
+        ttext = "".join(t.itertext()).strip() if t is not None else ""
+        titles.append(ttext)
+        if not ttext:
+            notes[i].append(("접근성", "슬라이드 제목이 없습니다. 화면 낭독기는 제목으로 슬라이드를 찾습니다(진단만)"))
+        elif re.search(r"[.,:;。]$", ttext):
+            notes[i].append(("검사", f"제목 '{ttext[:16]}'이 마침표·쉼표로 끝납니다. 제목은 이름표라 문장부호를 빼는 편이 깔끔합니다(진단만)"))
+        # 대체 텍스트
+        for el in root.iter(q(P, "pic"), q(P, "graphicFrame")):
+            nv = el.find(".//p:cNvPr", NS)
+            if nv is None:
+                continue
+            kind = "그림" if ln(el) == "pic" else ("그래프" if el.find(".//c:chart", NS) is not None else ("표" if el.find(".//a:tbl", NS) is not None else "개체"))
+            if kind == "표":
+                continue
+            deco = any("decorative" in etree.tostring(x).decode() for x in nv.iter(q(A, "ext")))
+            key = (i, nv.get("name"))
+            if key in alt_in and fix:
+                nv.set("descr", alt_in[key]); deck.touch(s)
+            d = (nv.get("descr") or "").strip()
+            if (not d or re.search(r"\.(png|jpe?g|gif|bmp|emf|wmf|tiff?|svg)$", d, re.I)) and not deco:
+                media.append({"slide": i, "name": nv.get("name"), "kind": kind, "now": d})
+            elif len(nv.get("descr") or "") > 150:
+                notes[i].append(("접근성", f"{kind} '{nv.get('name')}'의 대체 텍스트가 150자를 넘습니다. 짧게 줄이세요(진단만)"))
+        # 표: 머리글 행·병합 칸
+        for tbl in root.iter(q(A, "tbl")):
+            tp = tbl.find("a:tblPr", NS)
+            if tp is None or tp.get("firstRow") != "1":
+                notes[i].append(("접근성", "표에 머리글 행 표시가 없습니다" + (" → 첫 줄을 머리글로 지정" if fix else "")))
+                if fix:
+                    if tp is None:
+                        tp = etree.Element(q(A, "tblPr")); tbl.insert(0, tp)
+                    tp.set("firstRow", "1"); deck.touch(s)
+            if any(tc.get(k) for tc in tbl.iter(q(A, "tc")) for k in ("gridSpan", "rowSpan", "hMerge", "vMerge")):
+                notes[i].append(("접근성", "표에 병합한 칸이 있습니다. 화면 낭독기가 칸 위치를 잃기 쉬우니 가능하면 병합을 풀어 주세요(진단만)"))
+        # 빈 글상자·겹친 글상자·글 다듬기·크기 가짓수·색
+        boxes = []
+        for sh in list(shapes(root)):
+            if ln(sh) != "sp" or sh.find("p:txBody", NS) is None:
+                continue
+            text = "".join(x.text or "" for x in sh.iter(q(A, "t")))
+            if not text.strip():
+                sp = sh.find("p:spPr", NS)
+                visible = sp is not None and (sp.find("a:solidFill", NS) is not None or sp.find("a:gradFill", NS) is not None
+                                              or sp.find("a:blipFill", NS) is not None or (sp.find("a:ln", NS) is not None and sp.find("a:ln/a:noFill", NS) is None))
+                styled = sh.find("p:style", NS) is not None
+                if ph_type(sh) is None and not visible and not styled:
+                    notes[i].append(("검사", "보이지 않는 빈 글상자가 있습니다" + (" → 지움" if fix else "")))
+                    if fix:
+                        sh.getparent().remove(sh); deck.touch(s)
+                continue
+            xf = xfrm_of(sh)
+            if xf is not None and xf.find("a:off", NS) is not None and xf.find("a:ext", NS) is not None:
+                o, e = xf.find("a:off", NS), xf.find("a:ext", NS)
+                boxes.append((int(o.get("x")), int(o.get("y")), int(e.get("cx")), int(e.get("cy")), text.strip()[:10]))
+            for p_ in sh.findall("p:txBody/a:p", NS):
+                pt = "".join(x.text or "" for x in p_.iter(q(A, "t")))
+                if re.search(r"\S {2,}\S", pt):
+                    notes[i].append(("검사", f"'{pt.strip()[:12]}' 문단 가운데 띄어쓰기가 두 칸 이상입니다(개조식 정렬용이면 그대로 두세요, 진단만)"))
+                if sh is not t and ph_type(sh) in ("body", "obj") and len(pt.strip()) > 70:
+                    notes[i].append(("검사", f"'{pt.strip()[:12]}…' 글머리 한 줄이 {len(pt.strip())}자입니다. 발표 화면의 요점은 짧을수록 읽힙니다(진단만)"))
+            if sh is not t and ph_type(sh) not in ("ctrTitle", "subTitle", "title"):
+                for rp in sh.iter(q(A, "rPr")):
+                    if rp.get("sz") and int(rp.get("sz")) > 1200:
+                        sizes[int(rp.get("sz"))] += 1
+            for c in sh.iter(q(A, "srgbClr")):
+                colors.append(c.get("val").upper())
+        for j in range(len(boxes)):
+            for k in range(j + 1, len(boxes)):
+                x1, y1, w1, h1, n1 = boxes[j]; x2, y2, w2, h2, n2 = boxes[k]
+                ov = max(0, min(x1 + w1, x2 + w2) - max(x1, x2)) * max(0, min(y1 + h1, y2 + h2) - max(y1, y2))
+                if ov > 0.15 * min(w1 * h1, w2 * h2):
+                    notes[i].append(("검사", f"글상자 '{n1}'와 '{n2}'가 겹칩니다(진단만)"))
+        for c in root.iter(q(P, "pic")):
+            pass
+    # 덱 전체
+    dup = [x for x, n in Counter(t for t in titles if t).items() if n > 1]
+    if dup:
+        deck_notes.append(("접근성", "같은 제목을 쓴 슬라이드가 있습니다: " + ", ".join(f"'{d[:14]}'" for d in dup[:3]) + ". '(계속)'처럼 구별해 주세요(진단만)"))
+    if len(sizes) > 3:
+        top = ", ".join(f"{k // 100}pt" for k, _ in sizes.most_common())
+        deck_notes.append(("검사", f"본문 글자 크기가 {len(sizes)}가지입니다({top}). 2~3가지로 줄이면 위계가 분명해집니다(진단만)"))
+    for n in sorted(x for x in deck.names if re.match(r"ppt/charts/chart\d+\.xml$", x)):
+        for c in deck.xml(n).iter(q(A, "srgbClr")):
+            colors.append(c.get("val").upper())
+    groups = hue_groups(set(colors))
+    if groups > 3:
+        deck_notes.append(("디자인", f"직접 칠한 색이 {groups}가지 색 계열입니다. 제목색·강조색 하나·회색, 세 가지 안으로 줄이면 깔끔합니다"
+                           " (style_deck.py --level bold가 가까운 색으로 정리, 진단만)"))
+    if media:
+        by = Counter(m["kind"] for m in media)
+        deck_notes.append(("접근성", "대체 텍스트가 없는 " + ", ".join(f"{k} {v}개" for k, v in by.items())
+                           + ". 그림을 보고 설명을 써서 --alt로 넣으세요(목록은 --json의 media)"))
+    # 문서 속성: 제목·언어
+    cp = "docProps/core.xml"
+    if cp in deck.names:
+        core = deck.xml(cp)
+        DC = "http://purl.org/dc/elements/1.1/"
+        tt = core.find(f"{{{DC}}}title")
+        if (tt is None or not (tt.text or "").strip()) and titles and titles[0]:
+            deck_notes.append(("접근성", "문서 속성에 제목이 없습니다" + (f" → 첫 슬라이드 제목 '{titles[0][:20]}'로" if fix else "")))
+            if fix:
+                if tt is None:
+                    tt = etree.SubElement(core, f"{{{DC}}}title")
+                tt.text = titles[0]; deck.touch(cp)
+        lg = core.find(f"{{{DC}}}language")
+        if lg is None or not (lg.text or "").strip():
+            deck_notes.append(("접근성", "문서 언어가 지정되지 않았습니다" + (" → ko-KR" if fix else "")))
+            if fix:
+                if lg is None:
+                    lg = etree.SubElement(core, f"{{{DC}}}language")
+                lg.text = "ko-KR"; deck.touch(cp)
+    return media
+
+
 def main():
     ap = argparse.ArgumentParser(description="피피티 그래프·디자인 진단과 보정")
     ap.add_argument("pptx")
@@ -553,7 +750,10 @@ def main():
     ap.add_argument("--fit", action="store_true", help="넘치는 것으로 추정되는 글자를 줄여 상자에 맞춤")
     ap.add_argument("--no-align", action="store_true", help="위치 맞추기(제목 위치·왼쪽 끝)를 하지 않음")
     ap.add_argument("--no-images", action="store_true", help="사진 비율 바로잡기를 하지 않음")
-    ap.add_argument("--json", help="진단 결과를 JSON으로 저장")
+    ap.add_argument("--image-fit", choices=["contain", "crop"], default="contain",
+                    help="늘어난 사진: contain=틀 안에 맞춰 넣기(기본), crop=틀을 지키고 중요한 부분을 남겨 자르기(smartcrop 방식)")
+    ap.add_argument("--alt", help="대체 텍스트 JSON([{slide, name, alt}])을 그림·그래프에 넣는다(--fix와 함께)")
+    ap.add_argument("--json", help="진단 결과를 JSON으로 저장(대체 텍스트가 없는 그림·그래프 목록 media 포함)")
     a = ap.parse_args()
     fix = bool(a.fix)
     deck = Deck(a.pptx)
@@ -612,7 +812,17 @@ def main():
             want, have = sw / sh_, cx / cy
             if abs(have / want - 1) > 0.03:
                 notes[i].append(("디자인", f"사진 비율이 {abs(have / want - 1) * 100:.0f}% 틀어져 늘어나 보입니다" + (" → 원래 비율로" if fix else "")))
-                if fix:   # 원래 틀 안에 맞춰 넣는다(틀보다 커지지 않아 주변 개체를 덮지 않음), 틀 가운데에 둔다
+                if fix and a.image_fit == "crop" and (sr is None or not any(int(sr.get(k, "0")) for k in "ltrb")):
+                    l_, t_, r_, b_ = smart_crop(deck.z.read(tgt[0]), have)
+                    bf = pic.find("p:blipFill", NS)
+                    if sr is None:
+                        sr = etree.Element(q(A, "srcRect")); blip.addnext(sr)
+                    for k, v in zip("ltrb", (l_, t_, r_, b_)):
+                        if v:
+                            sr.set(k, str(int(v * 100000)))
+                    notes[i][-1] = ("디자인", notes[i][-1][1].replace("→ 원래 비율로", "→ 틀은 그대로 두고 중요한 부분을 남겨 자름(smartcrop 방식)"))
+                    deck.touch(s)
+                elif fix:   # 원래 틀 안에 맞춰 넣는다(틀보다 커지지 않아 주변 개체를 덮지 않음), 틀 가운데에 둔다
                     if have > want:
                         ncx = round(cy * want); off.set("x", str(int(off.get("x")) + (cx - ncx) // 2)); ext.set("cx", str(ncx))
                     else:
@@ -670,6 +880,25 @@ def main():
                         o.set("x", str(tgt))
             if moved:
                 notes[i].append(("디자인", f"왼쪽 끝이 거의 같은데 조금 어긋난 개체 {moved}개" + (" → 맞춤" if fix else "")))
+                if fix:
+                    deck.touch(s)
+            # 위쪽 끝(intern CLOSE_Y): 같은 줄에 놓인 개체의 윗변이 0.1인치 안으로 어긋남
+            items = []
+            for sh in shapes(root):
+                xf = xfrm_of(sh)
+                if xf is None or xf.get("rot") or xf.find("a:off", NS) is None or sh is title_shape(root):
+                    continue
+                items.append((int(xf.find("a:off", NS).get("y")), xf.find("a:off", NS)))
+            cnt = Counter(y for y, _ in items)
+            moved = 0
+            for y, o in items:
+                near = [v for v in cnt if v != y and abs(v - y) <= 0.1 * IN and (cnt[v] > cnt[y] or (cnt[v] == cnt[y] and v < y))]
+                if near:
+                    moved += 1
+                    if fix:
+                        o.set("y", str(max(near, key=lambda v: (cnt[v], -v))))
+            if moved:
+                notes[i].append(("디자인", f"위쪽 끝이 거의 같은데 조금 어긋난 개체 {moved}개" + (" → 맞춤" if fix else "")))
                 if fix:
                     deck.touch(s)
 
@@ -772,8 +1001,7 @@ def main():
             notes[i].append(("디자인", f"배경과 대비가 낮은 글자 {len(low)}곳(가장 낮은 곳 '{worst[0]}' {worst[1]:.1f}:1, 기준 4.5:1)"
                              + (" → 검정·흰색 중 대비가 큰 쪽으로" if fix and a.contrast else "")))
     deck_notes = []
-    if len(colors_used) > 6:
-        deck_notes.append(("디자인", f"직접 지정한 글자 색이 {len(colors_used)}가지입니다. 강조색은 2~3가지로 줄이는 편이 읽기 쉽습니다(진단만)"))
+    media = lint_and_access(deck, slides, notes, deck_notes, fix, a)
 
     # 출력
     total = sum(len(v) for v in notes.values()) + len(deck_notes)
@@ -789,7 +1017,7 @@ def main():
         deck.save(a.fix)
         print(f"저장: {a.fix} (바뀐 XML {len(deck.dirty)}개)")
     if a.json:
-        json.dump({"slides": {str(k): [m for _, m in v] for k, v in notes.items()}, "deck": [m for _, m in deck_notes]},
+        json.dump({"slides": {str(k): [m for _, m in v] for k, v in notes.items()}, "deck": [m for _, m in deck_notes], "media": media},
                   open(a.json, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 

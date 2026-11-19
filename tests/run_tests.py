@@ -149,7 +149,9 @@ def polish_checks(td):
         ("사진 비율", abs(ratio / (4 / 3) - 1) < 0.02),
         ("제목 위치", title(s2) == title(s3)),
         ("대비", "C8C8C8" not in z.read("ppt/slides/slide3.xml").decode()),
-        ("원그래프 진단", "조각이 8개" in out.stdout),
+        ("원그래프 진단", "조각이 8개" in out.stdout and "FT Visual Vocabulary" in out.stdout),
+        ("문서 제목·언어", "<dc:language>ko-KR</dc:language>" in z.read("docProps/core.xml").decode()),
+        ("대체 텍스트 목록", "대체 텍스트가 없는 그래프 2개" in out.stdout),
     ]
     bad = [n for n, ok in checks if not ok]
     print(f"{'✓' if not bad else '✗'} {'그래프·디자인 보정':<18} — 3D·축·눈금선·범례·글자 크기·사진 비율·제목 위치·대비"
@@ -185,7 +187,14 @@ def style_checks(td):
     s2, s3 = z.read("ppt/slides/slide2.xml").decode(), z.read("ppt/slides/slide3.xml").decode()
     chart = "".join(z.read(n).decode() for n in z.namelist() if n.startswith("ppt/charts/chart"))
     deco = lambda zz: sum(zz.read(n).decode().count('name="ffs-deco') for n in zz.namelist() if n.startswith("ppt/slides/slide"))
+    alt = td / "alt.json"
+    alt.write_text('[{"slide": 4, "name": "Chart 2", "alt": "2024~2026년 지방세 수입 막대 그래프"}]', "utf-8")
+    pol = subprocess.run([sys.executable, ROOT / "skill/scripts/polish_deck.py", out1, "--fix", td / "alt.pptx", "--alt", alt],
+                         capture_output=True, text=True)
+    s4 = zipfile.ZipFile(td / "alt.pptx").read("ppt/slides/slide4.xml").decode()
     checks = [
+        ("대체 텍스트 넣기", 'descr="2024~2026년 지방세 수입 막대 그래프"' in s4),
+        ("색 세 가지", '<a:accent2><a:srgbClr val="063A74"/>' in theme and '<a:accent3><a:srgbClr val="8A949E"/>' in theme),
         ("KRDS 프리셋", "public" in r1.stdout and '<a:accent1><a:srgbClr val="256EF4"/>' in theme),
         ("제목 정렬·자간", 'algn="l"' in s2 and 'spc="-64"' in s2),
         ("표 제목 줄", '063A74' in s3 and 'algn="r"' in s3),

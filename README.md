@@ -59,6 +59,13 @@ python3 skill/scripts/export_pdf.py out.pptx --fonts fonts --manifest fonts/mani
 
 - [KRDS-uiux/krds-uiux](https://github.com/KRDS-uiux/krds-uiux): 공공·추모 프리셋 색. 디자인 프리셋의 공공·추모 색은 행정안전부가 공공누리 제1유형으로 개방한 ‘범정부 UI/UX 디자인시스템(KRDS)’ 디자인 토큰을 이용했으며, 해당 저작물은 KRDS 누리집(www.krds.go.kr)에서 무료로 내려받을 수 있습니다.
 - [yeun/open-color](https://github.com/yeun/open-color)(MIT): IT·문화·아동·홍보·교육·게임 프리셋 색.
+- [markusz/intern](https://github.com/markusz/intern)(MIT): PowerPoint 검사 규칙(제목 위치·크기 일관성, 어긋난 위·왼쪽 끝, 빈 글상자, 같은 제목, 글자 크기·색 가짓수, 겹친 글상자)을 `polish_deck.py`에 옮겼습니다.
+- [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents)(MIT): PowerPoint 접근성 규칙(대체 텍스트, 슬라이드 제목, 같은 제목, 표 머리글, 병합 칸, 문서 제목·언어).
+- [adobe/leonardo](https://github.com/adobe/leonardo)(Apache-2.0): 목표 대비율로 색 단계를 만드는 방식 → 그래프 계열이 많을 때 새 색 대신 강조색의 옅은 단계.
+- [adobe/balance-text](https://github.com/adobe/balance-text)(Apache-2.0): 두 줄 제목의 줄 길이를 고르게 나누는 방식.
+- [ft-interactive/chart-doctor](https://github.com/ft-interactive/chart-doctor)(MIT) Visual Vocabulary: 그래프 종류 진단(조각 많은 원그래프, 점 적은 선 그래프, 이름 긴 세로 막대, 값 축 둘).
+- [jwagner/smartcrop.js](https://github.com/jwagner/smartcrop.js)(MIT): 윤곽·채도로 중요한 곳을 찾아 사진을 자르는 방식(`--image-fit crop`).
+- 코드는 옮기지 않고 방식만 참고해 파이썬으로 새로 작성했습니다. 색은 세 가지까지(제목색·강조색 하나·회색) 쓰는 것이 이 스킬의 원칙입니다.
 - [vega/vega-themes](https://github.com/vega/vega-themes)(BSD-3-Clause) urbaninstitute 테마: 기업 보고 프리셋 색과 그래프 스타일(값 축선 없음, 옅은 눈금선, 눈금 표시 없음).
 - [axismaps/colorbrewer](https://github.com/axismaps/colorbrewer)(Apache-2.0): 학술 프리셋 그래프 색(Dark2). 색각 이상 친화 그래프 색은 Okabe & Ito(2008).
 

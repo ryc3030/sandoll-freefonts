@@ -30,7 +30,8 @@ DECKS = [
                  dict(t="Ⅱ. 2027년 재원별 편성 현황(조 원)", table=[["구분", "2026년", "2027년", "증감"],
                                                                  ["지방세", "112.4", "115.1", "+2.7"], ["지방교부세", "66.8", "68.0", "+1.2"],
                                                                  ["국고보조금", "79.5", "81.3", "+1.8"], ["합계", "258.7", "264.4", "+5.7"]], note=NOTE),
-                 dict(t="Ⅲ. 연도별 지방세 수입(조 원)", chart=("bar", ["2022", "2023", "2024", "2025", "2026"], {"지방세 수입": (98.4, 104.1, 109.0, 112.4, 115.1)}), note=NOTE)]),
+                 dict(t="Ⅲ. 연도별 지방세 수입(조 원)", chart=("bar", ["2022", "2023", "2024", "2025", "2026"], {"지방세 수입": (98.4, 104.1, 109.0, 112.4, 115.1)}), note=NOTE,
+                      alt="2022년 98.4조 원에서 2026년 115.1조 원으로 해마다 늘어난 지방세 수입 막대 그래프")]),
     dict(key="memorial", title="현충일 추념식", author="서울지방보훈청", level="standard",
          ask="어울리는 무료 폰트로 바꾸고 디자인도 다듬어 줘",
          slides=[dict(t="제72회 현충일 추념식", sub="나라를 위해 희생하신 분들을 기억합니다"),
@@ -41,11 +42,15 @@ DECKS = [
          ask="아이들이 보기 좋게 폰트와 디자인을 확 바꿔 줘",
          slides=[dict(t="어린이 교통안전, 이렇게 지켜요", sub="서울특별시교육청 · 초등 저학년용"),
                  dict(t="등굣길 사고는 언제 일어날까요?", chart=("pie", ["길을 건널 때", "차 사이에서 뛰어나올 때", "놀다가", "그 밖에"],
-                                                        {"비율": (46, 22, 18, 14)}), note=NOTE),
+                                                        {"비율": (46, 22, 18, 14)}), note=NOTE,
+                      alt="등굣길 사고 원인 원그래프: 길을 건널 때 46%, 차 사이에서 뛰어나올 때 22%, 놀다가 18%, 그 밖에 14%"),
                  dict(t="우리 반 안전 약속", b=["횡단보도에서는 손을 들고 건너요", "초록불이 켜져도 좌우를 살펴요",
                                              "등하굣길에는 보호자와 함께해요", "놀이는 차도에서 멀리 떨어져서 해요"])]),
-    dict(key="report", title="분기 실적 보고(그래프·디자인 보정)", author="에이크미 경영기획팀", messy=True, level="bold",
-         ask="폰트 바꾸고, 그래프랑 디자인도 확 바꿔 줘", slides=[None] * 4),
+    dict(key="report", title="분기 실적 보고(그래프·디자인 보정)", author="에이크미 경영기획팀", messy=True, level="bold", image_fit="crop",
+         ask="폰트 바꾸고, 그래프랑 디자인도 확 바꿔 줘", slides=[None] * 4,
+         alt={2: "1분기 92억 원에서 4분기 전망 101억 원으로 늘어나는 분기별 매출 막대 그래프",
+              3: "점검을 마친 공장 설비와 지붕 위로 뜬 해를 그린 그림",
+              4: "제품군 A~H의 매출 비중 원그래프: A 31%, B 22%, C 14%, D 11%, 나머지 네 제품군 22%"}),
 ]
 
 
@@ -152,10 +157,17 @@ def main():
                             "--title", f"{tn}:{tw}", "--body", f"{bn}:{bw}"], check=True, capture_output=True)
             pj, sj = td / f"{d['key']}-polish.json", td / f"{d['key']}-style.json"
             fixed = td / f"{d['key']}-fixed.pptx"
+            # 대체 텍스트: 스킬을 쓰는 AI가 그림을 보고 쓰는 설명을 예시에서는 미리 적어 둔다
+            mj = td / f"{d['key']}-media.json"
+            subprocess.run([sys.executable, S / "polish_deck.py", mid, "--json", mj], check=True, capture_output=True)
+            alts = d.get("alt") or {i + 1: sp.get("alt") for i, sp in enumerate(d["slides"]) if sp and sp.get("alt")}
+            altj = td / f"{d['key']}-alt.json"
+            altj.write_text(json.dumps([{"slide": m["slide"], "name": m["name"], "alt": alts[m["slide"]]}
+                                        for m in json.loads(mj.read_text())["media"] if alts.get(m["slide"])], ensure_ascii=False), "utf-8")
             subprocess.run([sys.executable, S / "polish_deck.py", mid, "--fix", fixed, "--manifest", fonts / "manifest.json",
-                            "--contrast", "--json", pj], check=True, capture_output=True)
+                            "--contrast", "--alt", altj, "--json", pj, "--image-fit", d.get("image_fit", "contain")], check=True, capture_output=True)
             subprocess.run([sys.executable, S / "style_deck.py", fixed, "--out", dst, "--level", d["level"], "--json", sj,
-                            "--data", ROOT / "data"], check=True, capture_output=True)
+                            "--manifest", fonts / "manifest.json", "--data", ROOT / "data"], check=True, capture_output=True)
             pol = json.loads(pj.read_text())
             polish = [f"{k}장: {m}" for k, ms in sorted(pol["slides"].items(), key=lambda t: int(t[0])) for m in ms] + pol["deck"]
             style = json.loads(sj.read_text())["notes"]

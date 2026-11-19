@@ -17,7 +17,10 @@
             표(제목 줄 진한 바탕, 옅은 줄무늬, 세로 선 없이 가로 선만, 숫자 열 오른쪽 정렬), 본문 행간 1.2·문단 간격
   standard  light + 테마 색 체계(기본 Office 테마일 때만), 내용 슬라이드 제목의 크기·색·왼쪽 정렬·자간(-2%), 글머리표 색,
             꾸밈 없는 기본 서식 덱이면 장식(표지 왼쪽 띠, 내용 슬라이드 위쪽 가는 띠, 쪽 번호)
-  bold      standard + 브랜드 테마여도 색 체계 교체·장식, 도형에 직접 지정한 색을 가장 가까운 프리셋 색으로
+  bold      standard + 브랜드 테마여도 색 체계 교체·장식, 도형에 직접 칠한 색을 제목색·강조색 중 가까운 쪽으로
+
+색 원칙: 색은 세 가지까지(제목색·강조색 하나·무채색). 그래프 계열이 넷 이상이면 강조색의 옅은 단계를 쓴다.
+--manifest를 주면 두 줄 제목의 줄 길이를 고르게 나눈다(adobe/balance-text 방식). 장식 도형은 '장식용'으로 표시해 화면 낭독기가 건너뛴다.
 
 브랜드 색을 지키려면 --level light, 위치·정렬을 건드리지 않으려면 --keep-align.
 적용 뒤에는 polish_deck.py(실수 바로잡기)와 export_pdf.py(그림 확인)를 이어서 돌린다.
@@ -419,14 +422,14 @@ def style_tables(root, preset):
 
 # ── 직접 지정한 도형 색(bold) ───────────────────────────────────────────
 def recolor_shapes(root, preset):
-    pal = preset["accents"] + [preset["title"]]
+    pal = [preset["accent"], preset["title"]]   # 색은 세 가지까지: 제목색·강조색 + 무채색
     n = 0
     for sh in root.iter(q(P, "sp")):
         f = sh.find("p:spPr/a:solidFill/a:srgbClr", NS)
         if f is None:
             continue
         h, l_, s = colorsys.rgb_to_hls(*hexs(f.get("val")))
-        if s < 0.2 or l_ > 0.92 or l_ < 0.08:
+        if s < 0.18 or l_ > 0.93 or l_ < 0.07:
             continue   # 무채색·아주 밝은·아주 어두운 색은 그대로
         new = nearest(f.get("val"), pal)
         if new.upper() != f.get("val").upper():
@@ -435,13 +438,15 @@ def recolor_shapes(root, preset):
 
 
 DECO = "ffs-deco"
+DECORATIVE = ('<a:extLst><a:ext uri="{C183D7F6-B498-43B3-948B-1728B52AA6E4}">'
+              '<adec:decorative xmlns:adec="http://schemas.microsoft.com/office/drawing/2017/decorative" val="1"/></a:ext></a:extLst>')
 
 
 def add_rect(root, name, x, y, cx, cy, scheme, front=False):
     tree = root.find("p:cSld/p:spTree", NS)
     ids = [int(e.get("id")) for e in root.iter(q(P, "cNvPr")) if (e.get("id") or "").isdigit()]
     sp = etree.fromstring(
-        f'<p:sp xmlns:p="{P}" xmlns:a="{A}"><p:nvSpPr><p:cNvPr id="{max(ids + [1]) + 1}" name="{name}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>'
+        f'<p:sp xmlns:p="{P}" xmlns:a="{A}"><p:nvSpPr><p:cNvPr id="{max(ids + [1]) + 1}" name="{name}">{DECORATIVE}</p:cNvPr><p:cNvSpPr/><p:nvPr/></p:nvSpPr>'
         f'<p:spPr><a:xfrm><a:off x="{int(x)}" y="{int(y)}"/><a:ext cx="{int(cx)}" cy="{int(cy)}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom>'
         f'<a:solidFill><a:schemeClr val="{scheme}"/></a:solidFill><a:ln><a:noFill/></a:ln></p:spPr>'
         f'<p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:endParaRPr lang="ko-KR"/></a:p></p:txBody></p:sp>')
@@ -499,6 +504,80 @@ def decorate(deck, slides, preset, keep_align=False):
     return n
 
 
+def title_box_width(deck, slide, sh):
+    xf = xfrm_of(sh)
+    if xf is not None and xf.find("a:ext", NS) is not None:
+        return int(xf.find("a:ext", NS).get("cx"))
+    lay = deck.first(slide, "slideLayout")
+    mas = deck.first(lay, "slideMaster") if lay else None
+    for part in (lay, mas):
+        for lsh in shapes(deck.xml(part)) if part else []:
+            x = xfrm_of(lsh)
+            if ph_type(lsh) == ph_type(sh) and x is not None and x.find("a:ext", NS) is not None:
+                return int(x.find("a:ext", NS).get("cx"))
+    return None
+
+
+def balance_titles(deck, slides, meas):
+    """adobe/balance-text 방식: 두 줄로 넘어가는 제목의 마지막 줄에 한두 어절만 남으면, 두 줄 길이가 비슷해지는 어절 사이에서 줄을 나눈다."""
+    n = 0
+    for s in slides:
+        root = deck.xml(s)
+        t = title_shape(root)
+        if t is None:
+            continue
+        paras = [p for p in t.findall("p:txBody/a:p", NS) if "".join(x.text or "" for x in p.iter(q(A, "t"))).strip()]
+        if len(paras) != 1 or paras[0].find("a:br", NS) is not None:
+            continue
+        runs = paras[0].findall("a:r", NS)
+        if len(runs) != 1:
+            continue
+        r = runs[0]; rp = r.find("a:rPr", NS); text = r.findtext("a:t", default="", namespaces=NS)
+        if rp is None or not rp.get("sz") or " " not in text.strip():
+            continue
+        width = title_box_width(deck, s, t)
+        bp = t.find("p:txBody/a:bodyPr", NS)
+        ins = (int(bp.get("lIns", 91440)) + int(bp.get("rIns", 91440))) if bp is not None else 182880
+        if not width:
+            continue
+        avail = width - ins
+        size = int(rp.get("sz")) / 100 * 12700
+        face = pdk.theme_faces(deck, s).get("mj", "")
+        if face not in meas.fonts:
+            continue
+        wd = lambda x: meas.width(x, face, size) * (1 + float(rp.get("spc", "0")) / 100 / (size / 12700) * 0)  # 자간은 측정에 거의 영향 없음
+        words = text.split(" ")
+        total = wd(text)
+        if total <= avail or total > avail * 1.9:
+            continue   # 한 줄이거나 세 줄 이상
+        # 지금 줄바꿈(어절 단위)의 마지막 줄 길이
+        cur, last = "", ""
+        for w_ in words:
+            trial = (cur + " " + w_).strip()
+            if wd(trial) <= avail:
+                cur = trial
+            else:
+                cur = w_
+        last = cur
+        if wd(last) > avail * 0.4:
+            continue
+        best = None
+        for k in range(1, len(words)):
+            a1, a2 = " ".join(words[:k]), " ".join(words[k:])
+            m = max(wd(a1), wd(a2))
+            if m <= avail * 0.96 and (best is None or m < best[0]):
+                best = (m, k)
+        if not best:
+            continue
+        k = best[1]
+        r.find("a:t", NS).text = " ".join(words[:k])
+        br = etree.Element(q(A, "br")); br.append(etree.fromstring(etree.tostring(rp)))
+        r2 = etree.fromstring(etree.tostring(r)); r2.find("a:t", NS).text = " ".join(words[k:])
+        r.addnext(br); br.addnext(r2)
+        n += 1; deck.touch(s)
+    return n
+
+
 def plain_template(deck):
     """기본 Office 테마이고 마스터·레이아웃에 그림이나 장식 도형이 없으면 '꾸밈 없는 기본 서식'으로 본다."""
     for n in deck.names:
@@ -521,6 +600,7 @@ def main():
     ap.add_argument("--level", choices=["light", "standard", "bold"], default="standard")
     ap.add_argument("--chart-palette", help="그래프만 다른 팔레트로(예: colorblind)")
     ap.add_argument("--keep-align", action="store_true", help="제목 정렬을 바꾸지 않음")
+    ap.add_argument("--manifest", help="fetch_fonts.py의 manifest.json(제목 줄 균형을 맞출 때 실제 글꼴 폭을 씀)")
     ap.add_argument("--data", help="data 폴더(오프라인)")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--json", help="바꾼 내역을 JSON으로")
@@ -556,6 +636,10 @@ def main():
     if a.level != "light":
         style_theme(deck, preset, a.level == "bold", notes, dark)
     style_text(deck, slides, preset, tokens, a.level, a.keep_align, notes, dark)
+    if a.level != "light" and a.manifest:
+        b = balance_titles(deck, slides, pdk.Measure(a.manifest))
+        if b:
+            notes.append(f"제목 {b}개: 마지막 줄에 한두 어절만 남지 않게 줄 길이를 고르게 나눔(balance-text 방식)")
     charts, chart_notes, tables, recol = 0, [], 0, 0
     for s in slides:
         rel = deck.rels(s)
@@ -580,7 +664,7 @@ def main():
     if tables:
         notes.append(f"표 {tables}개: 제목 줄 진한 바탕·흰 굵은 글자, 옅은 줄무늬, 가로 선만, 숫자 열 오른쪽 정렬")
     if recol:
-        notes.append(f"직접 지정한 도형 색 {recol}곳을 가장 가까운 프리셋 색으로")
+        notes.append(f"직접 칠한 도형 색 {recol}곳을 제목색·강조색 중 가까운 쪽으로(색은 세 가지까지)")
     if not dark and (a.level == "bold" or (a.level == "standard" and plain)):
         d = decorate(deck, slides, preset, a.keep_align)
         if d:
